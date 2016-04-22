@@ -24,3 +24,6 @@ fields:
   text:
     label: Texte
     type: textarea
+  tags:
+    label: Tags
+    type: tags
