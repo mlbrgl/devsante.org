@@ -1,0 +1,81 @@
+main.home {
+
+  h1 {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  .icon {
+
+  }
+
+
+  #derniers-articles-theme {
+    @include breakpoint ($laptop) {
+      @include span(6 of 12);
+    }
+    .inner {
+      background-color: $lighter-grey;
+      padding: 15px;
+      @include clearfix;
+    }
+    .teaser {
+      margin-bottom: $default_bottom_margin;
+    }
+    margin-bottom: $default_bottom_margin;
+  }
+
+
+  #derniers-articles {
+    @include breakpoint ($laptop) {
+      @include span(6 of 12 last);
+    }
+    .article {
+      @include breakpoint($tablet) {
+        @include span (3 of 6)
+      }
+      @include breakpoint ($laptop) {
+        @include span(3 of 6);
+      }     
+    }
+    .article.last {
+      @include last;
+    }
+  }
+
+
+  #message, #numeros-speciaux, #actualites, #a-lire {
+    @include breakpoint ($tablet) {
+      @include span (6 of 12);
+    }
+    @include breakpoint ($laptop) {
+      @include span(3 of 12);
+    }
+    margin-bottom: $default_bottom_margin;
+  }
+
+  #numeros-speciaux, #a-lire {
+    @include breakpoint ($tablet-only) {
+      @include last;
+    }
+  }
+
+  #a-lire {
+    @include breakpoint ($laptop) {
+      @include last;
+    }
+  }
+
+  #communication-ponctuelle {
+    @include span(full);
+    @include breakpoint ($laptop) {
+      @include span(6 of 12 break);
+    }
+  }
+}

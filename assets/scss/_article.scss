@@ -1,0 +1,21 @@
+main.article {
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    line-height: 1.5rem;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    
+    @include breakpoint ($laptop)
+     {
+      line-height: 2.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+     }
+  }
+
+}

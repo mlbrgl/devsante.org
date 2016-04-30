@@ -1,11 +1,15 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+  <main class="liste-articles" role="main">
+    
+    <div class="content">
+      
+      <h1><?php echo $page->title()->html() ?></h1>
 
-    <h1><?php echo $page->title()->html() ?></h1>
+      <? snippet('liste_articles') ?>
 
-    <? snippet('liste_articles') ?>
-
+    </div>
+    
   </main>
 
 <? snippet('sidebar_menu') ?>

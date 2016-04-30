@@ -1,0 +1,38 @@
+$default_bottom_margin: 1.5rem;
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+/* Bottom margins only for consistency */
+h1, h2, h3, h4, p, ul{
+  margin-top: 0;
+}
+
+p, li {
+  margin-bottom: $default_bottom_margin;
+}
+
+h1, h2, h3, h4 {
+  color: $dark-blue;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-blue;
+}
+
+a:hover {
+  color: $cyan;
+}
+
+.meta {
+  margin-bottom: 0.5rem;
+}
+
+.auteur, .date {
+  color: $dark-grey;
+  font-style: italic;
+}

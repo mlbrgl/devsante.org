@@ -1,0 +1,57 @@
+$search_box_height: 2.3rem;
+
+header {
+
+  color: #ffffff;
+  background-color: $dark-blue;
+  font-size: 0.8rem;
+
+  .top {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    @include span(50%);
+    .title {
+      margin-left: 0.8rem;      
+    }
+  }
+
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search {
+  background-color: $light-grey;
+  height: $search_box_height;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  
+  @include breakpoint ($laptop) {
+    margin-bottom: 4rem;
+  }
+}
+
+.search-box {
+  @include span(full);
+  
+  //stick the search button to the left of the viewport on mobile and tablet
+  @include pull($container_padding);
+  @include breakpoint($laptop) {
+    @include pull(0);
+  }
+  
+  height: 100%;
+  span {
+    display: inline-block;
+    padding: 0 0.8rem;
+    background-color: $dark-grey;
+    line-height: $search_box_height;
+    color: #ffffff;
+  }
+}

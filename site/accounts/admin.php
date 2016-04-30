@@ -7,5 +7,9 @@ password: >
 language: fr
 role: admin
 history:
+  - base-documentaire/medecine/article-1
+  - >
+    base-documentaire/chirurgie/article-chirurgie
+  - base-documentaire/medecine/article-3
   - base-documentaire/chirurgie
-token: 3ddfb5121b71e42c0ba35fc0a16c07e98de858c9
+token: 643b2c43cfa90514cc955833d54a915f0a16ffb0

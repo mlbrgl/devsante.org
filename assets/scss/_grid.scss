@@ -1,0 +1,77 @@
+@import "node_modules/susy/sass/susy";
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  //column-width: 50px,
+  gutters: 0.5, // The size of a gutter in relation to a single column
+  gutter-position: after,
+  container-position: center,
+  container: 1320px,
+   debug: (
+       image: show,
+       color: blue,
+       output: overlay,
+       toggle: top right,
+     ),
+   //use-custom: (rem: true)
+);
+
+@include global-box-sizing(border-box);
+
+// define breakpoints
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1366px;
+$tablet-only: $tablet $laptop - 1;
+
+//define layouts
+$tablet-layout-home: ();
+$laptop-layout-home: ();
+$desktop-layout-home: ();
+
+$container_padding: 30px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+main, .container {
+  @include container(720px);
+  @include pad($container_padding);
+}
+
+header {
+  .container {
+    @include container;
+    @include pad($container_padding);
+  }
+}
+main .content {
+  @include span(12 of 12);
+}
+
+// Home specific grid
+main.home {
+  @include clearfix;
+  @include container;
+  @include pad($container_padding);
+  /*@include breakpoint($tablet) {
+    @include container($tablet-layout-home);
+  }
+  
+  @include breakpoint($laptop) {
+    @include container($laptop-layout-home);
+  }
+  
+  @include breakpoint($desktop) {
+    @include container($desktop-layout-home);
+  }*/
+
+}
+
+
