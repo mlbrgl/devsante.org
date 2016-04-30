@@ -11,7 +11,7 @@
 
   <?php echo css('assets/css/app.css') ?>
   <?php echo css('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700') ?>
-  <?php echo css('assets/fonts/open-iconic/css/open-iconic-foundation.min.css'); ?>
+  <?php echo css('assets/fonts/devsante/style.css'); ?>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
       <div class="container">
 
         <div class="menu"> 
-          <span class="fi-menu" title="menu" aria-hidden="true"></span>
+          <span class="i-menu" title="menu" aria-hidden="true"></span>
           <span class="title">MENU</span>
         </div>
 
@@ -44,7 +44,7 @@
     <div class="search">
       <div class="container">
         <div class="search-box">
-          <span class="fi-magnifying-glass"></span>
+          <span class="i-search"></span>
         </div>
       </div>
     </div>

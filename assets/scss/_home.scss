@@ -1,8 +1,7 @@
 main.home {
 
   h1 {
-    font-size: 1rem;
-    line-height: 1;
+    font-size: 0.9rem;
     font-weight: normal;
     text-transform: uppercase;
   }
@@ -11,18 +10,41 @@ main.home {
     font-weight: normal;
   }
 
-  .icon {
-
+  //matches icon prefixed classes
+  [class^="i-"], [class*=" i-"] {
+    margin-right: 0.9rem;  
   }
 
 
-  #derniers-articles-theme {
+  .derniers-articles {
+    @include span(full);
     @include breakpoint ($laptop) {
       @include span(6 of 12);
     }
+    h1 {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $dark_blue;
+    }
+    @include breakpoint ($tablet) {
+      h2 {
+      font-size: 1.8rem;
+      }
+    }
+  }
+
+  .derniers-articles.theme{
+    h1 {
+      @include breakpoint ($tablet) {
+        margin-bottom: 0;
+      }
+    }
     .inner {
-      background-color: $lighter-grey;
-      padding: 15px;
+      @include breakpoint($smartphone-only) {
+        @include bleed-x($container_padding)
+      }
+      background-color: $lighter_grey;
+      padding: 1.5rem;
       @include clearfix;
     }
     .teaser {
@@ -32,10 +54,8 @@ main.home {
   }
 
 
-  #derniers-articles {
-    @include breakpoint ($laptop) {
-      @include span(6 of 12 last);
-    }
+  .derniers-articles.standard {
+    @include last;
     .article {
       @include breakpoint($tablet) {
         @include span (3 of 6)
@@ -50,7 +70,8 @@ main.home {
   }
 
 
-  #message, #numeros-speciaux, #actualites, #a-lire {
+  .annexes {
+    @include span(full);
     @include breakpoint ($tablet) {
       @include span (6 of 12);
     }
@@ -58,10 +79,23 @@ main.home {
       @include span(3 of 12);
     }
     margin-bottom: $default_bottom_margin;
+    
+    h1 {
+      @include pad(0.3rem);
+      line-height: 2rem;
+      background-color: $lighter_grey;
+      color: $dark_grey;
+      span {
+        color: $dark_blue;
+        line-height: inherit;
+        display: inline-block;
+        border-bottom: 1px solid $dark_blue;
+      }
+    }
   }
 
   #numeros-speciaux, #a-lire {
-    @include breakpoint ($tablet-only) {
+    @include breakpoint ($tablet_only) {
       @include last;
     }
   }
@@ -77,5 +111,24 @@ main.home {
     @include breakpoint ($laptop) {
       @include span(6 of 12 break);
     }
+    height:100%;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+
+    @include nested(6) {
+      .inner {
+        @include span(5);
+      }
+      .title {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+      }
+      .plus {
+        height: inherit;
+        @include span(1 last);
+        display: block;
+        background-color: $medium_grey;
+      }
+    }
+    background-color: $lighter_grey;
   }
 }
