@@ -1,5 +1,6 @@
   <footer class="footer cf" role="contentinfo">
 
+<?php /*
     <div class="copyright">
       <?php echo $site->copyright()->kirbytext() ?>
     </div>
@@ -9,6 +10,7 @@
     </div>
 
   </footer>
+*/ ?>
 
 </body>
 </html>

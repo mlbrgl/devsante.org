@@ -17,33 +17,37 @@
 <body>
 
   <header class="header cf" role="banner">
-
-    <div class="row">
       
-      <div class="columns">
-        
-        <div class="top">
-          
-          <div class="menu"> 
-            <span class="fi-menu" title="menu" aria-hidden="true"></span>
-            <span class="title">MENU</span>
-          </div>
+    <div class="top">
 
-          <div class="socials">
-          </div>
+      <div class="container">
 
+        <div class="menu"> 
+          <span class="fi-menu" title="menu" aria-hidden="true"></span>
+          <span class="title">MENU</span>
         </div>
 
-        <div class="logo"><a href="/">
-          <a class="logo" href="<?php echo url() ?>">
-            <img src="<?php echo url('assets/img/logo.png') ?>" alt="<?php echo $site->title()->html() ?>" />
-          </a>
+        <div class="socials">
         </div>
 
-        <?php snippet('menu') ?>
-        
       </div>
-
+    
     </div>
 
+    <div class="logo"><a href="/">
+      <a href="<?php echo url() ?>">
+        <img src="<?php echo url('assets/img/logo.png') ?>" alt="<?php echo $site->title()->html() ?>" />
+      </a>
+    </div>
+
+
+    <div class="search">
+      <div class="container">
+        <div class="search-box">
+          <span class="fi-magnifying-glass"></span>
+        </div>
+      </div>
+    </div>
+
+        
   </header>
