@@ -8,7 +8,7 @@
 
       <div class="meta">
         <div class="auteur"><?php echo $page->author() ?></div>
-        <div class="date"><time datetime="<?php echo $page->date('c') ?>"><?php echo $page->date('j F Y', 'date') ?></time></div>
+        <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->date('%d %B %Y','datetime') ?></time></div>
       </div>
 
       <div class="teaser">
@@ -37,6 +37,6 @@
     
   </main>
 
-  <?php snippet('menu') ?>
+  <!-- <?php snippet('menu') ?> -->
   
 <?php snippet('footer') ?>

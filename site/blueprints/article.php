@@ -12,11 +12,13 @@ fields:
     label: Auteur
     type: text
     width: 1/2
-  date:
+  datetime:
     label: Mis à jour le 
-    type: date
-    default: today
-    format: DD/MM/YYYY
+    type: datetime
+    date: 
+      format: DD/MM/YYYY
+    required: true
+    default: now
     width: 1/2
   teaser:
     label: Accroche

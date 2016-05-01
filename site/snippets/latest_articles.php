@@ -1,5 +1,5 @@
 <?php
-$latest_articles = $pages->find('articles')->children()->limit(2);
+$latest_articles = $pages->find('articles')->children()->flip()->limit(2);
 $last = $latest_articles->last();
 ?>
 
@@ -12,7 +12,7 @@ $last = $latest_articles->last();
     </h2>
     <div class="meta">
       <div class="auteur"><?php echo html($article->author()) ?></div>
-      <div class="date"><time datetime="<?php echo $page->date('c') ?>"> <?php echo html($article->date('%d %B %Y')) ?> </time></div>
+      <div class="date"><time datetime="<?php echo $article->datetime() ?>"> <?php echo html($article->date('%d %B %Y','datetime')) ?> </time></div>
     </div>
     <div class="teaser">
       <p><?php echo html($article->teaser()->excerpt(300)) ?></p>

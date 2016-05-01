@@ -7,7 +7,7 @@
 <? foreach($descendants->sortBy('date', 'desc') as $article): ?>
   <div class="article">
     <h3> <a href="<?= $article->url() ?>"><?= $article->title()->html() ?></a></h3>
-    <time datetime="<?php echo $article->date('c') ?>"><?php echo $article->date('j/m/Y', 'date') ?></time>
+    <time datetime="<?php echo $article->datetime() ?>"><?php echo $article->date('%d %B %Y', 'datetime') ?></time>
     <p class="teaser"> <?= $article->text()->kt()->excerpt(140) ?> </p>
   </div>
 <? endforeach ?>
