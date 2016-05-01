@@ -133,19 +133,22 @@ main.home {
         top: 0;
         height: 100%;
         width: span(1);
-        overflow: hidden; // to hide the overflowing a's padding
 
         a {
           position: relative;
           display: block;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100%;
-          padding: 200% 0; // will overflow but hidden in the parent
+          height: 100%;
           text-align: center;
           color: $white;
           font-weight: bold;
           background-color: $medium_grey;
+
+          span {
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+          }
         }
         a:hover {
           background-color: $dark_blue;

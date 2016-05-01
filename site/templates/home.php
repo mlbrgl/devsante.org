@@ -52,7 +52,7 @@
       <div>Cras tincidunt purus fringilla mauris vehicula tempor.</div>
     </div>
     <div class="plus">
-      <a href="/"> > </a>
+      <a href="/"><span>></span></a>
     </div>
   </div>
   
