@@ -47,13 +47,16 @@
     
 
   <div id="communication-ponctuelle">
-    <div class="inner">
+    <div class="text">
       <div class="title">Emplacement ponctuel pour communiquer</div>
-      <div>Cras tincidunt purus fringilla mauris vehicula tempor. Cras tincidunt purus fringilla mauris vehicula tempor. Cras tincidunt purus fringilla mauris vehicula tempor.</div>
+      <div>Cras tincidunt purus fringilla mauris vehicula tempor.</div>
     </div>
-    <a href="/" class="plus"> > </a>
+    <div class="plus">
+      <a href="/"> > </a>
+    </div>
   </div>
   
+
 </main>
 
 <?php snippet('footer') ?>

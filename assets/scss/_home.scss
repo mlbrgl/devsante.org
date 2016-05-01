@@ -100,6 +100,11 @@ main.home {
     }
   }
 
+  #message {
+    @include breakpoint ($laptop) {
+      @include break;
+    }
+  }
   #a-lire {
     @include breakpoint ($laptop) {
       @include last;
@@ -107,15 +112,15 @@ main.home {
   }
 
   #communication-ponctuelle {
+    position: relative;
     @include span(full);
     @include breakpoint ($laptop) {
       @include span(6 of 12 break);
     }
-    height:100%;
     padding: 1.5rem 0 1.5rem 1.5rem;
 
-    @include nested(6) {
-      .inner {
+    @include with-layout(6) {
+      .text {
         @include span(5);
       }
       .title {
@@ -123,12 +128,30 @@ main.home {
         margin-bottom: 0.2rem;
       }
       .plus {
-        height: inherit;
-        @include span(1 last);
-        display: block;
-        background-color: $medium_grey;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: span(1);
+        overflow: hidden; // to hide the overflowing a's padding
+
+        a {
+          position: relative;
+          display: block;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          padding: 200% 0; // will overflow but hidden in the parent
+          text-align: center;
+          color: $white;
+          font-weight: bold;
+          background-color: $medium_grey;
+        }
+        a:hover {
+          background-color: $dark_blue;
+        }
       }
     }
     background-color: $lighter_grey;
   }
-}
+}  
