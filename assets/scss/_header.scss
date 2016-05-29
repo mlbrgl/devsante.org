@@ -3,7 +3,7 @@ $search_box_height: 2.3rem;
 header {
 
   color: #ffffff;
-  background-color: $dark-blue;
+  background-color: $dark_blue;
   font-size: 0.8rem;
 
   .top {
@@ -27,7 +27,7 @@ header {
 }
 
 .search {
-  background-color: $light-grey;
+  background-color: $light_grey;
   height: $search_box_height;
   font-size: 0.75rem;
   margin-bottom: 1.5rem;
@@ -50,7 +50,7 @@ header {
   span {
     display: inline-block;
     padding: 0 0.8rem;
-    background-color: $dark-grey;
+    background-color: $dark_grey;
     line-height: $search_box_height;
     color: #ffffff;
   }

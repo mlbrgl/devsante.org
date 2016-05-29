@@ -370,7 +370,7 @@ textarea {
   box-sizing: border-box; }
 
 main, .container {
-  max-width: 720px;
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 30px;
@@ -417,21 +417,19 @@ main, .container {
       background-clip: content-box;
       background-position: left top; }
 
-header .container {
-  max-width: 1320px;
+main.article {
+  max-width: 720px;
   margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px; }
-  header .container:after {
+  margin-right: auto; }
+  main.article:after {
     content: " ";
     display: block;
     clear: both; }
-  head:hover ~ header .container,
-  head:hover ~ body header .container {
+  head:hover ~ main.article,
+  head:hover ~ body main.article {
     position: relative; }
-    head:hover ~ header .container:before,
-    head:hover ~ body header .container:before {
+    head:hover ~ main.article:before,
+    head:hover ~ body main.article:before {
       position: absolute;
       top: 0;
       left: 0;
@@ -450,49 +448,6 @@ main .content {
   float: left;
   margin-left: 0;
   margin-right: 0; }
-
-main.home {
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  /*@include breakpoint($tablet) {
-    @include container($tablet-layout-home);
-  }
-  
-  @include breakpoint($laptop) {
-    @include container($laptop-layout-home);
-  }
-  
-  @include breakpoint($desktop) {
-    @include container($desktop-layout-home);
-  }*/ }
-  main.home:after {
-    content: "";
-    display: table;
-    clear: both; }
-  main.home:after {
-    content: " ";
-    display: block;
-    clear: both; }
-  head:hover ~ main.home,
-  head:hover ~ body main.home {
-    position: relative; }
-    head:hover ~ main.home:before,
-    head:hover ~ body main.home:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      content: " ";
-      z-index: 998;
-      background-image: linear-gradient(to right, blue, #4d4dff 66.66667%, transparent 66.66667%);
-      background-size: 8.57143%;
-      background-origin: content-box;
-      background-clip: content-box;
-      background-position: left top; }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -569,65 +524,102 @@ header {
     color: #ffffff; }
 
 main.home h1 {
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.9rem;
   font-weight: normal;
   text-transform: uppercase; }
 
 main.home h2 {
   font-weight: normal; }
 
-main.home #derniers-articles-theme {
-  margin-bottom: 1.5rem; }
+main.home [class^="i-"], main.home [class*=" i-"] {
+  margin-right: 0.9rem; }
+
+main.home .derniers-articles {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
   @media (min-width: 1024px) {
-    main.home #derniers-articles-theme {
+    main.home .derniers-articles {
       width: 48.57143%;
       float: left;
       margin-right: 2.85714%; } }
-  main.home #derniers-articles-theme .inner {
+  main.home .derniers-articles h1 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #365086; }
+  @media (min-width: 768px) {
+    main.home .derniers-articles h2 {
+      font-size: 1.8rem; } }
+
+main.home .derniers-articles.theme {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 768px) {
+    main.home .derniers-articles.theme h1 {
+      margin-bottom: 0; } }
+  main.home .derniers-articles.theme .inner {
     background-color: #e5e6e7;
-    padding: 15px; }
-    main.home #derniers-articles-theme .inner:after {
+    padding: 1.5rem; }
+    @media (max-width: 768px) {
+      main.home .derniers-articles.theme .inner {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        margin-right: -30px;
+        margin-left: -30px;
+        padding-right: 30px;
+        padding-left: 30px; } }
+    main.home .derniers-articles.theme .inner:after {
       content: "";
       display: table;
       clear: both; }
-  main.home #derniers-articles-theme .teaser {
+  main.home .derniers-articles.theme .teaser {
     margin-bottom: 1.5rem; }
 
-@media (min-width: 1024px) {
-  main.home #derniers-articles {
-    width: 48.57143%;
-    float: right;
-    margin-right: 0; } }
-
-@media (min-width: 768px) {
-  main.home #derniers-articles .article {
-    width: 47.05882%;
-    float: left;
-    margin-right: 5.88235%; } }
-
-@media (min-width: 1024px) {
-  main.home #derniers-articles .article {
-    width: 47.05882%;
-    float: left;
-    margin-right: 5.88235%; } }
-
-main.home #derniers-articles .article.last {
+main.home .derniers-articles.standard {
   float: right;
   margin-right: 0; }
+  @media (min-width: 768px) {
+    main.home .derniers-articles.standard .article {
+      width: 47.05882%;
+      float: left;
+      margin-right: 5.88235%; } }
+  @media (min-width: 1024px) {
+    main.home .derniers-articles.standard .article {
+      width: 47.05882%;
+      float: left;
+      margin-right: 5.88235%; } }
+  main.home .derniers-articles.standard .article.last {
+    float: right;
+    margin-right: 0; }
 
-main.home #message, main.home #numeros-speciaux, main.home #actualites, main.home #a-lire {
+main.home .annexes {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
-    main.home #message, main.home #numeros-speciaux, main.home #actualites, main.home #a-lire {
+    main.home .annexes {
       width: 48.57143%;
       float: left;
       margin-right: 2.85714%; } }
   @media (min-width: 1024px) {
-    main.home #message, main.home #numeros-speciaux, main.home #actualites, main.home #a-lire {
+    main.home .annexes {
       width: 22.85714%;
       float: left;
       margin-right: 2.85714%; } }
+  main.home .annexes h1 {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    line-height: 2rem;
+    background-color: #e5e6e7;
+    color: #777879; }
+    main.home .annexes h1 span {
+      color: #365086;
+      line-height: inherit;
+      display: inline-block;
+      border-bottom: 1px solid #365086; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   main.home #numeros-speciaux, main.home #a-lire {
@@ -635,21 +627,56 @@ main.home #message, main.home #numeros-speciaux, main.home #actualites, main.hom
     margin-right: 0; } }
 
 @media (min-width: 1024px) {
+  main.home #message {
+    clear: both; } }
+
+@media (min-width: 1024px) {
   main.home #a-lire {
     float: right;
     margin-right: 0; } }
 
 main.home #communication-ponctuelle {
+  position: relative;
   width: 100%;
   float: left;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  background-color: #e5e6e7; }
   @media (min-width: 1024px) {
     main.home #communication-ponctuelle {
       clear: both;
       width: 48.57143%;
       float: left;
       margin-right: 2.85714%; } }
+  main.home #communication-ponctuelle .text {
+    width: 82.35294%;
+    float: left;
+    margin-right: 5.88235%; }
+  main.home #communication-ponctuelle .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem; }
+  main.home #communication-ponctuelle .plus {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 11.76471%; }
+    main.home #communication-ponctuelle .plus a {
+      position: relative;
+      display: block;
+      height: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+      background-color: #c2c3c4; }
+      main.home #communication-ponctuelle .plus a span {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+    main.home #communication-ponctuelle .plus a:hover {
+      background-color: #365086; }
 
 main.article img {
   width: 100%; }
