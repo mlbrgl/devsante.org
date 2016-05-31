@@ -2,11 +2,6 @@
 
 <main class="home" role="main">
 
-  <div style="text-align:center; margin-bottom: 2rem; background-color: #FFFDBF; ;font-weight: bold; padding: 1rem;">
-    <a href="/articles">Consulter les articles</a>
-  </div>
-  
-
     <div class="derniers-articles theme">
       <h1><span class="i-bubble"></span>Les derniers articles sur <strong>la drépanocytose</strong></h1>
       <div class="inner">
