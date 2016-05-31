@@ -497,31 +497,59 @@ header {
   text-align: center;
   margin-bottom: 2rem; }
 
-.search {
+#search {
   background-color: #c0c1c2;
   height: 2.3rem;
-  font-size: 0.75rem;
-  margin-bottom: 1.5rem; }
-  @media (min-width: 1024px) {
-    .search {
-      margin-bottom: 4rem; } }
-
-.search-box {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  margin-left: -30px;
-  height: 100%; }
-  @media (min-width: 1024px) {
-    .search-box {
-      margin-left: 0%; } }
-  .search-box span {
-    display: inline-block;
-    padding: 0 0.8rem;
-    background-color: #777879;
+  font-size: 0.75rem; }
+  #search .search-box {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-left: -30px;
+    height: 100%; }
+    @media (min-width: 1024px) {
+      #search .search-box {
+        margin-left: 0%; } }
+    #search .search-box span {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 2.5rem;
+      height: 2.3rem;
+      background-color: #777879;
+      line-height: 2.3rem;
+      color: #ffffff; }
+  #search .search-input input {
+    width: 82.85714%;
+    float: left;
+    margin-right: 2.85714%;
+    height: 2.3rem;
     line-height: 2.3rem;
-    color: #ffffff; }
+    padding: 0 0.8rem;
+    color: #777879;
+    background-color: inherit;
+    border: none; }
+  #search .search-input input:focus {
+    outline: none; }
+
+#search-hits {
+  margin-bottom: 1rem; }
+  #search-hits article {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #365086;
+    color: #c2c3c4; }
+  #search-hits h1 {
+    font-weight: normal;
+    font-size: 1.8rem; }
+  #search-hits .text {
+    margin-bottom: 1rem; }
+  #search-hits .title {
+    font-size: 0.8rem; }
+  #search-hits em {
+    color: orange; }
 
 main.home h1 {
   font-size: 0.9rem;

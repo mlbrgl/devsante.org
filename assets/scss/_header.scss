@@ -26,32 +26,77 @@ header {
   margin-bottom: 2rem;
 }
 
-.search {
+#search {
   background-color: $light_grey;
   height: $search_box_height;
   font-size: 0.75rem;
-  margin-bottom: 1.5rem;
+  //margin-bottom: 1.5rem;
   
   @include breakpoint ($laptop) {
-    margin-bottom: 4rem;
+    //margin-bottom: 4rem;
+  }
+
+  .search-box {
+    @include span(full);
+    
+    //stick the search button to the left of the viewport on mobile and tablet
+    @include pull($container_padding);
+    @include breakpoint($laptop) {
+      @include pull(0);
+    }
+    
+    height: 100%;
+    span {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 2.5rem;
+      height: $search_box_height;
+      background-color: $dark_grey;
+      line-height: $search_box_height;
+      color: #ffffff;
+    }
+  }
+
+  .search-input {
+    input {
+      @include span(10 of 12);
+      height: $search_box_height;
+      line-height: $search_box_height;
+      padding: 0 0.8rem;
+      color: $dark_grey;
+      background-color: inherit;
+      border: none;
+    }
+
+    input:focus {
+      outline: none;
+    }
   }
 }
 
-.search-box {
-  @include span(full);
-  
-  //stick the search button to the left of the viewport on mobile and tablet
-  @include pull($container_padding);
-  @include breakpoint($laptop) {
-    @include pull(0);
+#search-hits {
+  margin-bottom: 1rem;
+
+  article {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid $dark_blue;
+    color: $medium_grey;
   }
-  
-  height: 100%;
-  span {
-    display: inline-block;
-    padding: 0 0.8rem;
-    background-color: $dark_grey;
-    line-height: $search_box_height;
-    color: #ffffff;
+  h1 {
+    font-weight: normal;
+    font-size: 1.8rem;
+  }
+  .text {
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+  em {
+    color: orange;
   }
 }
