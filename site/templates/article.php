@@ -36,7 +36,5 @@
     </div>
     
   </main>
-
-  <!-- <?php snippet('menu') ?> -->
   
 <?php snippet('footer') ?>
