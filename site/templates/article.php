@@ -7,7 +7,7 @@
       <h1><?php echo $page->title()->html() ?></h1>
 
       <div class="meta">
-        <div class="auteur"><?php echo $page->author() ?></div>
+        <div class="author"><?php echo $page->author() ?></div>
         <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->date('%d %B %Y','datetime') ?></time></div>
       </div>
 

@@ -30,7 +30,7 @@ header {
   background-color: $light_grey;
   height: $search_box_height;
   font-size: 0.75rem;
-  //margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   
   @include breakpoint ($laptop) {
     //margin-bottom: 4rem;
@@ -76,8 +76,6 @@ header {
 }
 
 #search-hits {
-  margin-bottom: 1rem;
-
   article {
     padding: 1rem;
     margin-top: 1rem;

@@ -1,4 +1,5 @@
 $default_bottom_margin: 1.5rem;
+$home_bottom_margin: 0.8rem;
 
 body{
   font-family: 'Open Sans', sans-serif;
@@ -10,15 +11,6 @@ h1, h2, h3, h4, p, ul{
   margin-top: 0;
 }
 
-p, li {
-  margin-bottom: $default_bottom_margin;
-}
-
-h1, h2, h3, h4 {
-  color: $dark_blue;
-  margin-bottom: 0.5rem;
-}
-
 a {
   text-decoration: none;
   color: $dark_blue;
@@ -28,11 +20,35 @@ a:hover {
   color: $cyan;
 }
 
-.meta {
-  margin-bottom: 0.5rem;
+main img {
+  width: 100%;
 }
 
-.auteur, .date {
+.meta {
+  margin-bottom: $home_bottom_margin;
   color: $dark_grey;
+}
+
+.author {
   font-style: italic;
+}
+
+.date {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: $dark_grey;
+  color: $white;
+  padding: 1em;
+}
+
+td {
+  background-color: $light_grey;
+  padding: 0.5em;
 }

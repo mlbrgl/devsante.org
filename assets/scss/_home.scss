@@ -1,13 +1,15 @@
 main.home {
 
-  h1 {
+  h1, h2 {
+    color: $dark_blue;
+    font-weight: normal;
+  }
+
+  h1.section-title{
     font-size: 0.9rem;
     font-weight: normal;
     text-transform: uppercase;
-  }
-
-  h2 {
-    font-weight: normal;
+    margin-bottom: $default_bottom_margin;
   }
 
   //matches icon prefixed classes
@@ -15,26 +17,26 @@ main.home {
     margin-right: 0.9rem;  
   }
 
-
   .derniers-articles {
     @include span(full);
     @include breakpoint ($laptop) {
       @include span(6 of 12);
     }
-    h1 {
-      margin-bottom: 1.5rem;
+    h1.section-title{
       padding-bottom: 0.5rem;
       border-bottom: 1px solid $dark_blue;
     }
-    @include breakpoint ($tablet) {
-      h2 {
-      font-size: 1.8rem;
+    article {
+      h1 {
+        line-height: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: $home_bottom_margin;
       }
     }
   }
 
   .derniers-articles.theme{
-    h1 {
+    h1.section-title {
       @include breakpoint ($tablet) {
         margin-bottom: 0;
       }
@@ -56,7 +58,7 @@ main.home {
 
   .derniers-articles.standard {
     @include last;
-    .article {
+    article {
       @include breakpoint($tablet) {
         @include span (3 of 6)
       }
@@ -64,7 +66,7 @@ main.home {
         @include span(3 of 6);
       }     
     }
-    .article.last {
+    article.last {
       @include last;
     }
   }
@@ -80,7 +82,7 @@ main.home {
     }
     margin-bottom: $default_bottom_margin;
     
-    h1 {
+    h1.section-title {
       @include pad(0.3rem);
       line-height: 2rem;
       background-color: $lighter_grey;
@@ -91,6 +93,20 @@ main.home {
         display: inline-block;
         border-bottom: 1px solid $dark_blue;
       }
+    }
+    article {
+      h1 {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: normal;
+        margin-bottom: $home_bottom_margin;
+        a {
+          color:$black;
+        }
+      }
+    }
+    .date {
+      font-style: italic;
     }
   }
 

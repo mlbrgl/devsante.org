@@ -1,16 +1,16 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Articles
+files: false
 pages:
   template: article
+  sort: flip
   num:
     mode: date
     field: datetime
     format: %Y%m%d%H%I
-fields:
-  title:
-    label: Title
-    type:  text
-  text:
-    label: Texte
-    type:  textarea
+options:
+  preview: false
+  status: false
+  template: false
+  url: false

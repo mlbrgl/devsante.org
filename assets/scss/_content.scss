@@ -1,0 +1,25 @@
+main.article, main.news {
+
+  h1, h2, h3, h4 {
+    color: $dark_blue;
+    margin-bottom: 0.5rem;
+  }
+
+  p, ul, table{
+    margin-bottom: $default_bottom_margin;
+  }
+
+  h1 {
+    line-height: 2rem;
+    font-size: 1.8rem; 
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    
+    @include breakpoint ($laptop)
+     {
+      line-height: 2.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+     }
+  }
+}

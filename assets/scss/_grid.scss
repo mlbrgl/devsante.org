@@ -7,7 +7,7 @@ $susy: (
   gutters: 0.5, // The size of a gutter in relation to a single column
   gutter-position: after,
   container-position: center,
-  container: 1320px,
+  container: 720px,
    debug: (
        image: show,
        color: blue,
@@ -34,6 +34,19 @@ $desktop_layout_home: ();
 
 $container_padding: 30px;
 
+main {
+  @include container();
+}
+
+main.home, .wide-container {
+  @include container(1320px);
+  @include pad($container_padding);
+}
+
+main .content {
+  @include span(full);
+}
+
 @mixin clearfix {
   &:after {
     content: "";
@@ -41,20 +54,4 @@ $container_padding: 30px;
     clear: both;
   }
 }
-
-main, .container {
-  @include container;
-  @include pad($container_padding);
-}
-
-// Article specific grid
-main.article {
-  @include container(720px);
-}
-
-main .content {
-  @include span(full);
-}
-
-
 

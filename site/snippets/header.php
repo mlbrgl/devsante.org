@@ -22,7 +22,7 @@
       
     <div class="top">
 
-      <div class="container">
+      <div class="wide-container">
 
         <div class="menu"> 
           <span class="i-menu" title="menu" aria-hidden="true"></span>
@@ -44,7 +44,7 @@
 
 
     <div id="search">
-      <div class="container">
+      <div class="wide-container">
         <div class="search-box">
           <span class="i-search"></span>
           <div class="search-input"></div>
@@ -54,6 +54,6 @@
   
   </header>
   
-  <div class="container" id="search-hits">
+  <div class="wide-container" id="search-hits">
     <div class="content"></div>
   </div>
