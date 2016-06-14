@@ -1,6 +1,14 @@
 <?php
-$latest_articles = page('articles')->children()->flip()->limit(2);
+
+// Get the latest articles depending on the mode
+switch ($mode) {
+  case 'theme': $latest_articles = latest_content_get_pages(); break;
+  case 'standard': $latest_articles = page('articles')->children()->flip()->limit(2); break;
+  default: break;
+}
+
 $last = $latest_articles->last();
+
 ?>
 
 <?php foreach($latest_articles as $article): ?>
