@@ -32,3 +32,42 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 // Switch date handler for translated months and days
 c::set('date.handler', 'strftime'); 
 c::set('locale', 'fr_FR');
+//c::set('markdown.extra', true);
+
+// Timezone setting
+c::set('timezone','Europe/Paris');
+
+//Kirby Algolia
+c::set('kirby-algolia', array(
+  'algolia' => array(
+    'application_id' => 'BY1JXTA0MV',
+    'index' => 'devsante', // PROD
+    'api_key' => '***REMOVED***' 
+  ),
+  'blueprints' => array(
+    'article' => array(
+      'fields' => array(
+        'meta' => array('title', 'datetime', 'author'),
+        'boost' => array('teaser'),
+        'main' => array('text')
+      )
+    ),
+    'news' => array(
+      'fields' => array(
+        'meta' => array('title', 'datetime', 'author'),
+        'boost' => array('teaser'),
+        'main' => array('text')
+      )
+    )
+  ),
+  //'debug' => array('dry_run')
+));
+
+//Latest articles
+c::set('latest-content', array(
+  'search_phrase' => "drépanocy",
+  'limit' => 2,
+  'blueprint' => 'article',
+  'cache_filename' => 'latest_content.txt'
+));
+
