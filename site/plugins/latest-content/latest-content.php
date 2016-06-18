@@ -9,7 +9,7 @@ $kirby_algolia = kirby()->plugin('kirby-algolia');
 kirby()->hook('panel.page.hide', function($page) {
   $settings = c::get('latest-content');
   if($page->intendedTemplate() == $settings['blueprint']) {
-    _latest_content_update($settings['search_phrase'], $settings['limit']);
+    _latest_content_update($settings);
   }
 });
 
@@ -18,7 +18,7 @@ kirby()->hook('panel.page.hide', function($page) {
 kirby()->hook('panel.page.delete', function($page) {
   $settings = c::get('latest-content');
   if($page->intendedTemplate() == $settings['blueprint']) {
-    _latest_content_update($settings['search_phrase'], $settings['limit']);
+    _latest_content_update($settings);
   }
 });
 
@@ -32,7 +32,7 @@ kirby()->hook('panel.page.delete', function($page) {
 kirby()->hook('panel.page.sort', function($page) {
   $settings = c::get('latest-content');
   if($page->intendedTemplate() == $settings['blueprint']) {
-    _latest_content_update($settings['search_phrase'], $settings['limit']);
+    _latest_content_update($settings);
   }
 });
 
@@ -41,7 +41,7 @@ kirby()->hook('panel.page.sort', function($page) {
 kirby()->hook('panel.page.move', function($page, $old_page) {
   $settings = c::get('latest-content');
   if($page->isVisible() && $page->intendedTemplate() == $settings['blueprint']) {
-    _latest_content_update($settings['search_phrase'], $settings['limit']);
+    _latest_content_update($settings);
   }
 });
 
@@ -50,7 +50,7 @@ kirby()->hook('panel.page.move', function($page, $old_page) {
 kirby()->hook('panel.page.update', function($page) {
   $settings = c::get('latest-content'); 
   if($page->isVisible() && $page->intendedTemplate() == $settings['blueprint']) {
-    _latest_content_update($settings['search_phrase'], $settings['limit']);
+    _latest_content_update($settings);
   }
 });
 
@@ -62,7 +62,7 @@ kirby()->hook('panel.page.update', function($page) {
  * @param      string   $search_phrase  The search phrase
  * @param      integer  $limit          The limit
  */
-function _latest_content_update($search_phrase, $limit = 2) {
+function _latest_content_update($settings) {
   $cache_filepath = __DIR__ . '/' . c::get('latest-content')['cache_filename'];
 
   // Init Algolia
@@ -71,8 +71,12 @@ function _latest_content_update($search_phrase, $limit = 2) {
   $index = $client->initIndex($algolia_settings['index']);
 
   // Run search
-  $query_params = ['attributesToRetrieve' => '_id', 'hitsPerPage' => $limit, 'distinct' => 1];
-  $res = $index->search($search_phrase, $query_params);
+  $query_params = ['attributesToRetrieve' => '_id', 
+                   'hitsPerPage' => $settings['limit'], 
+                   'distinct' => 1,
+                   'facetFilters' => '_blueprint:' . $settings['blueprint']];
+                   
+  $res = $index->search($settings['search_phrase'], $query_params);
   
   // We remove the cache file before writing the new set of hits ids.
   // Technically, a home page could be generated when the file does not exist,
