@@ -19,9 +19,10 @@ main.home {
 
   .derniers-articles {
     @include span(full);
-    @include breakpoint ($laptop) {
-      @include span(6 of 12);
-    }
+    // Uncomment to restore wide homepage
+    // @include breakpoint ($laptop) {
+    //   @include span(6 of 12);
+    // }
     h1.section-title{
       padding-bottom: 0.5rem;
       border-bottom: 1px solid $dark_blue;
@@ -61,9 +62,6 @@ main.home {
     article {
       @include breakpoint($tablet) {
         @include span (3 of 6)
-      }
-      @include breakpoint ($laptop) {
-        @include span(3 of 6);
       }     
     }
     article.last {
@@ -77,9 +75,10 @@ main.home {
     @include breakpoint ($tablet) {
       @include span (6 of 12);
     }
-    @include breakpoint ($laptop) {
-      @include span(3 of 12);
-    }
+    // Uncomment to restore wide homepage
+    // @include breakpoint ($laptop) {
+    //   @include span(3 of 12);
+    // }
     margin-bottom: $default_bottom_margin;
     
     h1.section-title {
@@ -111,28 +110,33 @@ main.home {
   }
 
   #numeros-speciaux, #a-lire {
-    @include breakpoint ($tablet_only) {
+    // Replace tablet by tablet_only to restore wide homepage
+    @include breakpoint ($tablet) {
       @include last;
     }
   }
 
-  #message {
-    @include breakpoint ($laptop) {
-      @include break;
-    }
-  }
-  #a-lire {
-    @include breakpoint ($laptop) {
-      @include last;
-    }
-  }
+  // Uncomment to restore wide homepage
+  // #message {
+  //   @include breakpoint ($laptop) {
+  //     @include break;
+  //   }
+  // }
+  // #a-lire {
+  //   @include breakpoint ($laptop) {
+  //     @include last;
+  //   }
+  // }
 
   #communication-ponctuelle {
     position: relative;
     @include span(full);
-    @include breakpoint ($laptop) {
-      @include span(6 of 12 break);
-    }
+
+    // Uncomment to restore wide homepage
+    // @include breakpoint ($laptop) {
+    //   @include span(6 of 12 break);
+    // }
+    
     padding: 1.5rem 0 1.5rem 1.5rem;
 
     @include with-layout(6) {

@@ -38,7 +38,7 @@ main {
   @include container();
 }
 
-main.home, .wide-container {
+.wide-container {
   @include container(1320px);
   @include pad($container_padding);
 }
