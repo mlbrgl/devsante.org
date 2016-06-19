@@ -23,7 +23,7 @@ $susy: (
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1366px;
-$smartphone_only: max-width $tablet;
+$smartphone_only: max-width $tablet - 1;
 $tablet_only: $tablet $laptop - 1;
 
 
@@ -34,13 +34,13 @@ $desktop_layout_home: ();
 
 $container_padding: 30px;
 
-main {
+main, .container{
   @include container();
+  @include pad($container_padding);
 }
 
-.wide-container {
+.container.wide {
   @include container(1320px);
-  @include pad($container_padding);
 }
 
 main .content {

@@ -41,7 +41,7 @@ header {
     
     //stick the search button to the left of the viewport on mobile and tablet
     @include pull($container_padding);
-    @include breakpoint($laptop) {
+    @include breakpoint($tablet) {
       @include pull(0);
     }
     
