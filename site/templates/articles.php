@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet('top') ?>
 
   <main class="liste-articles" role="main">
     
@@ -13,4 +13,4 @@
   </main>
 
 <? snippet('sidebar_menu') ?>
-<? snippet('footer') ?>
+<? snippet('bottom') ?>

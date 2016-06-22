@@ -1,4 +1,4 @@
-<?php snippet('header') ?>
+<?php snippet('top') ?>
 
   <main class="main" role="main">
 
@@ -9,4 +9,4 @@
 
   </main>
 
-<?php snippet('footer') ?>
+<?php snippet('bottom') ?>
