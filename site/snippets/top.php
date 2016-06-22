@@ -18,7 +18,31 @@
 </head>
 <body>
   
-  <header class="header cf" role="banner"></header>
+  <header class="header cf" role="banner">
+    
+    <div class="top">
+
+      <div class="container wide">
+
+        <div class="menu"> 
+          <span class="i-menu" title="menu" aria-hidden="true"></span>
+          <span class="title">MENU</span>
+        </div>
+
+        <div class="socials">
+        </div>
+
+      </div>
+    
+    </div>
+
+    <div class="logo"><a href="/">
+      <a href="<?php echo url() ?>">
+        <img src="<?php echo url('assets/img/logo.png') ?>" alt="<?php echo $site->title()->html() ?>" />
+      </a>
+    </div>
+
+  </header>
 
   <div id="search">
     <div class="container wide">
