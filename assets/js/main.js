@@ -18,9 +18,10 @@ search.addWidget(
     container: '#search-hits .content',
     templates: {
       item: '<article class="result-item">' + 
-              '<h1><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></h1>' + 
+              '<h1><a href="/{{_id}}">{{title}}</a></h1>' +
+              '<div class="date">{{datetime}}</div>' +
+              '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
               '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
-              '<div class="title"><a href="/{{_id}}">{{title}}</a></div>' +
             '</article>'
     },
     //hitsPerPage: 5

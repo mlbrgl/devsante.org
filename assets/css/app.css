@@ -369,11 +369,13 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-main {
+main, .container {
   max-width: 720px;
   margin-left: auto;
-  margin-right: auto; }
-  main:after {
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px; }
+  main:after, .container:after {
     content: " ";
     display: block;
     clear: both; }
@@ -396,10 +398,12 @@ main {
     background: rgba(255, 255, 255, 0.5);
     color: red; }
   head:hover ~ main,
-  head:hover ~ body main {
+  head:hover ~ body main, head:hover ~ .container,
+  head:hover ~ body .container {
     position: relative; }
     head:hover ~ main:before,
-    head:hover ~ body main:before {
+    head:hover ~ body main:before, head:hover ~ .container:before,
+    head:hover ~ body .container:before {
       position: absolute;
       top: 0;
       left: 0;
@@ -413,23 +417,19 @@ main {
       background-clip: content-box;
       background-position: left top; }
 
-main.home, .wide-container {
+.container.wide {
   max-width: 1320px;
   margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px; }
-  main.home:after, .wide-container:after {
+  margin-right: auto; }
+  .container.wide:after {
     content: " ";
     display: block;
     clear: both; }
-  head:hover ~ main.home,
-  head:hover ~ body main.home, head:hover ~ .wide-container,
-  head:hover ~ body .wide-container {
+  head:hover ~ .container.wide,
+  head:hover ~ body .container.wide {
     position: relative; }
-    head:hover ~ main.home:before,
-    head:hover ~ body main.home:before, head:hover ~ .wide-container:before,
-    head:hover ~ body .wide-container:before {
+    head:hover ~ .container.wide:before,
+    head:hover ~ body .container.wide:before {
       position: absolute;
       top: 0;
       left: 0;
@@ -507,7 +507,7 @@ header {
 
 .logo {
   text-align: center;
-  margin-bottom: 2rem; }
+  padding-bottom: 2rem; }
 
 #search {
   background-color: #c0c1c2;
@@ -521,7 +521,7 @@ header {
     margin-right: 0;
     margin-left: -30px;
     height: 100%; }
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       #search .search-box {
         margin-left: 0%; } }
     #search .search-box span {
@@ -550,21 +550,39 @@ header {
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 1px solid #365086;
-  color: #c2c3c4; }
+  border-bottom: 1px solid #365086; }
 
 #search-hits h1 {
-  font-weight: normal;
-  font-size: 1.8rem; }
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    #search-hits h1 {
+      width: 48.57143%;
+      float: left;
+      margin-right: 2.85714%; } }
+
+#search-hits .date {
+  color: #777879; }
+  @media (min-width: 768px) {
+    #search-hits .date {
+      width: 48.57143%;
+      float: left;
+      margin-right: 2.85714%;
+      float: right;
+      margin-right: 0; } }
+
+#search-hits .heading {
+  clear: both;
+  font-size: 1.2rem; }
 
 #search-hits .text {
   margin-bottom: 1rem; }
 
-#search-hits .title {
-  font-size: 0.8rem; }
-
 #search-hits em {
-  color: orange; }
+  font-style: normal;
+  background-color: #b1d7fe; }
 
 main.home h1, main.home h2 {
   color: #365086;
@@ -584,11 +602,6 @@ main.home .derniers-articles {
   float: left;
   margin-left: 0;
   margin-right: 0; }
-  @media (min-width: 1024px) {
-    main.home .derniers-articles {
-      width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; } }
   main.home .derniers-articles h1.section-title {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #365086; }
@@ -605,7 +618,7 @@ main.home .derniers-articles.theme {
   main.home .derniers-articles.theme .inner {
     background-color: #e5e6e7;
     padding: 1.5rem; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       main.home .derniers-articles.theme .inner {
         -moz-box-sizing: content-box;
         -webkit-box-sizing: content-box;
@@ -629,11 +642,6 @@ main.home .derniers-articles.standard {
       width: 47.05882%;
       float: left;
       margin-right: 5.88235%; } }
-  @media (min-width: 1024px) {
-    main.home .derniers-articles.standard article {
-      width: 47.05882%;
-      float: left;
-      margin-right: 5.88235%; } }
   main.home .derniers-articles.standard article.last {
     float: right;
     margin-right: 0; }
@@ -647,11 +655,6 @@ main.home .annexes {
   @media (min-width: 768px) {
     main.home .annexes {
       width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; } }
-  @media (min-width: 1024px) {
-    main.home .annexes {
-      width: 22.85714%;
       float: left;
       margin-right: 2.85714%; } }
   main.home .annexes h1.section-title {
@@ -675,17 +678,8 @@ main.home .annexes {
   main.home .annexes .date {
     font-style: italic; }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   main.home #numeros-speciaux, main.home #a-lire {
-    float: right;
-    margin-right: 0; } }
-
-@media (min-width: 1024px) {
-  main.home #message {
-    clear: both; } }
-
-@media (min-width: 1024px) {
-  main.home #a-lire {
     float: right;
     margin-right: 0; } }
 
@@ -697,12 +691,6 @@ main.home #communication-ponctuelle {
   margin-right: 0;
   padding: 1.5rem 0 1.5rem 1.5rem;
   background-color: #e5e6e7; }
-  @media (min-width: 1024px) {
-    main.home #communication-ponctuelle {
-      clear: both;
-      width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; } }
   main.home #communication-ponctuelle .text {
     width: 82.35294%;
     float: left;
