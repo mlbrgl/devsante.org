@@ -47,7 +47,7 @@ function transform_data_item(item) {
 /**
  * Returns a formatted representation of the timestamp.
  * 
- * Fall back for IE
+ * Provides also a fallback for IE
  *
  * @param      string         $timestamp  The timestamp
  * @return     Date|string    The formatted date (currently dd/mm/yyyy)
