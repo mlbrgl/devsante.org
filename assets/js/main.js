@@ -25,7 +25,9 @@ search.addWidget(
     templates: {
       item: '<article class="result-item">' + 
               '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
-              '<div class="date">{{datetime}}</div>' +
+              '{{#datetime}}' + 
+                '<div class="date">{{datetime}}</div>' +
+              '{{/datetime}}' +
               '{{#_highlightResult._heading.value}}' +
                 '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
               '{{/_highlightResult._heading.value}}'+
@@ -53,15 +55,19 @@ function transform_data_item(item) {
  * @return     Date|string    The formatted date (currently dd/mm/yyyy)
  */
 function get_locale_date_string_fallback(timestamp) {
-  var curr_date = new Date(timestamp);
-  date_string = curr_date.toLocaleDateString();
+  if (typeof timestamp !== 'undefined') {
+    var curr_date = new Date(timestamp);
+    date_string = curr_date.toLocaleDateString();
 
-  // TODO test fallback for older IE
-  if(!date_string) {
-    var curr_day = curr_date.getDate();
-    var curr_month = curr_date.getMonth() + 1 ;
-    var curr_year = curr_date.getFullYear();
-    date_string = curr_day + '/' + curr_month + '/' +  curr_year;
+    // TODO test fallback for older IE
+    if(!date_string) {
+      var curr_day = curr_date.getDate();
+      var curr_month = curr_date.getMonth() + 1 ;
+      var curr_year = curr_date.getFullYear();
+      date_string = curr_day + '/' + curr_month + '/' +  curr_year;
+    }    
+  } else {
+    date_string = '';
   }
 
 return date_string;
