@@ -8,7 +8,6 @@ var src = {
     scss: 'assets/scss/app.scss',
     css: 'assets/css',
     php: 'site/**/*.php',
-    jsx: 'assets/js/components/*.jsx'
 };
 
 gulp.task('connect-sync', function() {
