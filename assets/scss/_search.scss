@@ -60,21 +60,31 @@
     }
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 0.2rem;
     text-transform: uppercase;
   }
   .date {
     @include breakpoint($tablet) {
       @include span(6 of 12);
       @include last;
+      text-align: right;
     }
     color: $dark_grey;
   }
   .heading {
     @include break;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    a {
+      font-weight: bold;
+      color: $black;
+    }
+    a:hover {
+      color: $dark_grey;
+    }
   }
   .text {
+    @include break;
     margin-bottom: 1rem;
   }
   em {

@@ -18,16 +18,20 @@ search.addWidget(
     container: '#search-hits .content',
     transformData: {
       item: function(item) {
-        item.datetime = get_locale_date_string_fallback(item.datetime);
+        item.datetime = get_locale_date_string_fallback(item.datetime * 1000);
         return item;
       }
     },
     templates: {
       item: '<article class="result-item">' + 
-              '<h1><a href="/{{_id}}">{{title}}</a></h1>' +
+              '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
               '<div class="date">{{datetime}}</div>' +
-              '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
-              '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
+              '{{#_highlightResult._heading.value}}' +
+                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
+              '{{/_highlightResult._heading.value}}'+
+              '{{#_snippetResult._content.value}}' +
+                '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
+              '{{/_snippetResult._content.value}}' +
             '</article>',
       empty: 'Votre recherche n\' a retourné aucun résultat'
     }

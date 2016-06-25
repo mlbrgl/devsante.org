@@ -565,7 +565,7 @@ header {
 #search-hits h1 {
   font-weight: bold;
   font-size: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 0.2rem;
   text-transform: uppercase; }
   @media (min-width: 768px) {
     #search-hits h1 {
@@ -581,13 +581,21 @@ header {
       float: left;
       margin-right: 2.85714%;
       float: right;
-      margin-right: 0; } }
+      margin-right: 0;
+      text-align: right; } }
 
 #search-hits .heading {
   clear: both;
-  font-size: 1.2rem; }
+  font-size: 1rem;
+  margin-bottom: 0.4rem; }
+  #search-hits .heading a {
+    font-weight: bold;
+    color: #000000; }
+  #search-hits .heading a:hover {
+    color: #777879; }
 
 #search-hits .text {
+  clear: both;
   margin-bottom: 1rem; }
 
 #search-hits em {
