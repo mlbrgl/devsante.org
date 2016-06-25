@@ -62,6 +62,5 @@
   
   
   <div class="container" id="search-hits">
-    <div class="header">Résultats de votre recherche ...</div>
     <div class="content"></div>
   </div>

@@ -556,11 +556,6 @@ header {
   #search .search-input input:focus {
     outline: none; }
 
-#search-hits .header {
-  color: #777879;
-  font-weight: bold;
-  margin-bottom: 3.5rem; }
-
 #search-hits article {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
