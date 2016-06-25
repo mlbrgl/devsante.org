@@ -3,7 +3,7 @@
 <main class="home" role="main">
 
     <section class="derniers-articles theme">
-      <h1 class="section-title"><span class="i-bubble"></span>Les derniers articles sur <strong>la drépanocytose</strong></h1>
+      <h1 class="section-title"><span class="i-quill"></span>Les derniers articles sur <strong>la drépanocytose</strong></h1>
       <div class="inner">
         <?php snippet('latest_articles', array('mode'=>'theme')); ?>
       </div>
@@ -11,7 +11,7 @@
 
     
     <section class="derniers-articles standard">
-      <h1 class="section-title"><span class="icon i-bubble"></span>Derniers articles</h1>
+      <h1 class="section-title"><span class="icon i-pushpin"></span>Derniers articles</h1>
       <?php snippet('latest_articles', array('mode'=>'standard')); ?>
     </section>
 

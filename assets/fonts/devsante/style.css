@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'devsante';
-    src:    url('fonts/devsante.eot?fi6uiv');
-    src:    url('fonts/devsante.eot?fi6uiv#iefix') format('embedded-opentype'),
-        url('fonts/devsante.ttf?fi6uiv') format('truetype'),
-        url('fonts/devsante.woff?fi6uiv') format('woff'),
-        url('fonts/devsante.svg?fi6uiv#devsante') format('svg');
+    src:    url('fonts/devsante.eot?qkpz2');
+    src:    url('fonts/devsante.eot?qkpz2#iefix') format('embedded-opentype'),
+        url('fonts/devsante.ttf?qkpz2') format('truetype'),
+        url('fonts/devsante.woff?qkpz2') format('woff'),
+        url('fonts/devsante.svg?qkpz2#devsante') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.i-quill:before {
+    content: "\e907";
+}
+.i-pushpin:before {
+    content: "\e946";
+}
+.i-cancel-circle:before {
+    content: "\ea0d";
+}
 .i-newspaper:before {
     content: "\e903";
 }
@@ -32,9 +41,6 @@
 }
 .i-files-empty:before {
     content: "\e906";
-}
-.i-bubble:before {
-    content: "\e900";
 }
 .i-menu:before {
     content: "\e901";

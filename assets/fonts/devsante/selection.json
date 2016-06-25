@@ -4,6 +4,92 @@
 		{
 			"icon": {
 				"paths": [
+					"M0 1024c128-384 463-1024 1024-1024-263 211-384 704-576 704s-192 0-192 0l-192 320h-64z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"quill",
+					"feather",
+					"write",
+					"edit"
+				],
+				"defaultCode": 59655,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "quill, feather",
+				"name": "quill",
+				"id": 7,
+				"order": 15,
+				"prevSize": 32,
+				"code": 59655
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 7
+		},
+		{
+			"icon": {
+				"paths": [
+					"M544 0l-96 96 96 96-224 256h-224l176 176-272 360.616v39.384h39.384l360.616-272 176 176v-224l256-224 96 96 96-96-480-480zM448 544l-64-64 224-224 64 64-224 224z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"pushpin",
+					"pin"
+				],
+				"defaultCode": 59718,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "pushpin, pin",
+				"name": "pushpin",
+				"id": 70,
+				"order": 16,
+				"prevSize": 32,
+				"code": 59718
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 70
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 928c-229.75 0-416-186.25-416-416s186.25-416 416-416 416 186.25 416 416-186.25 416-416 416z",
+					"M672 256l-160 160-160-160-96 96 160 160-160 160 96 96 160-160 160 160 96-96-160-160 160-160z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"cancel-circle",
+					"close",
+					"remove",
+					"delete"
+				],
+				"defaultCode": 59917,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "cancel-circle, close",
+				"name": "cancel-circle",
+				"id": 269,
+				"order": 17,
+				"prevSize": 32,
+				"code": 59917
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 269
+		},
+		{
+			"icon": {
+				"paths": [
 					"M896 256v-128h-896v704c0 35.346 28.654 64 64 64h864c53.022 0 96-42.978 96-96v-544h-128zM832 832h-768v-640h768v640zM128 320h640v64h-640zM512 448h256v64h-256zM512 576h256v64h-256zM512 704h192v64h-192zM128 448h320v320h-320z"
 				],
 				"attrs": [],
@@ -23,9 +109,9 @@
 				"name": "newspaper",
 				"code": 59651
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 4
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -51,9 +137,9 @@
 				"name": "bullhorn",
 				"code": 59653
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 26
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -80,36 +166,9 @@
 				"name": "files-empty",
 				"code": 59654
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 37
-		},
-		{
-			"icon": {
-				"paths": [
-					"M512 64c282.77 0 512 186.25 512 416 0 229.752-229.23 416-512 416-27.156 0-53.81-1.734-79.824-5.044-109.978 109.978-241.25 129.7-368.176 132.596v-26.916c68.536-33.578 128-94.74 128-164.636 0-9.754-0.758-19.33-2.164-28.696-115.796-76.264-189.836-192.754-189.836-323.304 0-229.75 229.23-416 512-416z"
-				],
-				"attrs": [],
-				"tags": [
-					"bubble",
-					"comment",
-					"chat",
-					"talk"
-				],
-				"grid": 16
-			},
-			"attrs": [],
-			"properties": {
-				"id": 422,
-				"order": 4,
-				"prevSize": 32,
-				"ligatures": "bubble, comment",
-				"name": "bubble",
-				"code": 59648
-			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 107
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -135,9 +194,9 @@
 				"name": "menu",
 				"code": 59649
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 188
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -160,9 +219,9 @@
 				"name": "bookmark",
 				"code": 59652
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 209
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 5
 		},
 		{
 			"icon": {
@@ -188,9 +247,9 @@
 				"name": "search",
 				"code": 59650
 			},
-			"setIdx": 0,
-			"setId": 0,
-			"iconIdx": 380
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 6
 		}
 	],
 	"height": 1024,
