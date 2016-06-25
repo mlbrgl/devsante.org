@@ -1,4 +1,4 @@
-<?php snippet('top') ?>
+<?php snippet('top', array('context' => 'home')) ?>
 
 <main class="home" role="main">
 

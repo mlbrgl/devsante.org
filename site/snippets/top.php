@@ -42,6 +42,13 @@
       </a>
     </div>
 
+    <?php if(isset($context) && $context == 'home'): ?>
+      <div id="baseline">
+        <div id="baseline-top">La banque de données des dernières nouveautés médicales</div>
+        <div id="baseline-bottom">Priorité dans la drépanocytose</div>
+      </div>
+    <?php endif; ?> 
+
   </header>
 
   <div id="search">
