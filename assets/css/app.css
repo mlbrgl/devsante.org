@@ -497,7 +497,7 @@ header {
   header .top {
     padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
   header .menu {
     width: 50%;
     float: left;
@@ -507,7 +507,17 @@ header {
 
 .logo {
   text-align: center;
-  padding-bottom: 2rem; }
+  padding-bottom: 1.8rem; }
+
+#baseline {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 3rem; }
+
+#baseline-bottom {
+  font-size: 1.3rem;
+  font-weight: bold; }
 
 #search {
   background-color: #c0c1c2;
@@ -583,6 +593,11 @@ header {
 #search-hits em {
   font-style: normal;
   background-color: #b1d7fe; }
+
+body.search header,
+body.search footer,
+body.search main {
+  display: none; }
 
 main.home h1, main.home h2 {
   color: #365086;

@@ -14,6 +14,7 @@
 
   <?php
     echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js');
+    echo js('assets/js/classList.min.js');
     echo js('assets/js/main.js');
   ?>
 
