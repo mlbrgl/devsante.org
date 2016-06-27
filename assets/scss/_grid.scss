@@ -7,13 +7,13 @@ $susy: (
   gutters: 0.5, // The size of a gutter in relation to a single column
   gutter-position: after,
   container-position: center,
-  container: 720px,
-   debug: (
-       image: show,
-       color: blue,
-       output: overlay,
-       toggle: top right,
-     ),
+  container: 767px,
+  // debug: (
+  //   image: show,
+  //   color: blue,
+  //   output: overlay,
+  //   toggle: top right,
+  //  ),
    //use-custom: (rem: true)
 );
 
@@ -41,6 +41,14 @@ main, .container{
 
 .container.wide {
   @include container(1320px);
+}
+
+#search .container {
+  @include container(1320px);
+  @include pad(0);
+  @include breakpoint($tablet) {
+    @include pad($container_padding);
+  }
 }
 
 main .content {

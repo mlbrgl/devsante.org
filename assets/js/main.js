@@ -42,10 +42,6 @@ search.addWidget(
 );
 
 
-function transform_data_item(item) {
-  console.log(item);
-}
-
 /**
  * Returns a formatted representation of the timestamp.
  * 
@@ -74,34 +70,62 @@ return date_string;
 }
 
 
-
 search.start();
 
-function search(helper) {  
-  // Init search
-  var search_hits = document.getElementById('search-hits');
-  var body = document.getElementsByTagName('body')[0];
-  var search_class = 'search';
-  
 
+/**
+ * Search callback
+ *
+ * @param      {string}  helper  The helper
+ */
+function search(helper) {  
   if(helper.state.query !== '') {
     //helper.search({hitsPerPage: 5});
     helper.search();
+    search_mode('on');
+    // TODO change style of search bar (blue, bigger)
+  }
+}
 
-    // Turn on "search mode"
+/**
+ * Show / hide search elements 
+ *
+ * @param      on|off  search_is  Search status
+ */
+function search_mode(search_is) {
+  var search_hits = document.getElementById('search-hits');
+  var body = document.getElementsByTagName('body')[0];
+  var cancel_search = document.querySelectorAll('#search .i-cancel-circle')[0];
+  var search_class = 'search';
+
+  // Turn search mode on
+  if(search_is == 'on') {
     if(!body.classList.contains(search_class)) {
       body.classList.add(search_class);
     }
     search_hits.style.display = '';
-
-    // TODO change style of search bar (blue, bigger)
-
+    cancel_search.style.display = 'block';
+  // Turn search mode off
   } else {
-    // Turn off "search mode"
     if(body.classList.contains(search_class)) {
       body.classList.remove(search_class);
     }
-    // Hide the results
     search_hits.style.display = 'none';
+    cancel_search.style.display = 'none';
   }
+}
+
+
+/**
+ * Clear text from the search input
+ *
+ * @param      {<type>}  event   The event
+ */
+function clear_search(event) {
+  event.preventDefault();
+
+  var search_input = document.querySelectorAll('#search .ais-search-box--input')[0];
+  search_input.value = '';
+
+  search_mode('off');
 }

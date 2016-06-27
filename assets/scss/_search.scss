@@ -3,22 +3,12 @@
   height: $search_box_height;
   font-size: 0.75rem;
   margin-bottom: 1.5rem;
-  
-  @include breakpoint ($laptop) {
-    //margin-bottom: 4rem;
-  }
 
   .search-box {
     @include span(full);
     
-    //stick the search button to the left of the viewport on mobile and tablet
-    @include pull($container_padding);
-    @include breakpoint($tablet) {
-      @include pull(0);
-    }
-    
     height: 100%;
-    span {
+    span, a{
       display: block;
       float: left;
       text-align: center;
@@ -28,11 +18,21 @@
       line-height: $search_box_height;
       color: #ffffff;
     }
+    a {
+      display:none;
+      float: right;
+      color: $white;
+      background: none;
+      font-size: 1rem;
+    }
+    a:hover {
+      color: $dark_grey;
+    }
   }
 
   .search-input {
     input {
-      @include span(10 of 12);
+      @include span(8 of 12);
       height: $search_box_height;
       line-height: $search_box_height;
       padding: 0 0.8rem;
@@ -98,4 +98,10 @@ body.search {
   main {
     display: none;
   }
+
+  // #search, #search .search-box span, #search .search-box a, #search .search-input input {
+  //  height: 4rem;
+  //  line-height: 4rem;
+  // }
+
 }
