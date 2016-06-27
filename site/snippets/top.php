@@ -38,12 +38,12 @@
 
     <div class="logo"><a href="/">
       <a href="<?php echo url() ?>">
-        <img src="<?php echo url('assets/img/logo.png') ?>" alt="<?php echo $site->title()->html() ?>" />
+        <img src="<?php echo url('assets/img/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
       </a>
     </div>
 
     <?php if(isset($context) && $context == 'home'): ?>
-      <div id="baseline">
+      <div id="baseline" class="container wide">
         <div id="baseline-top">La banque de données des dernières nouveautés médicales</div>
         <div id="baseline-bottom">Priorité dans la drépanocytose</div>
       </div>
@@ -51,16 +51,4 @@
 
   </header>
 
-  <div id="search">
-    <div class="container wide">
-      <div class="search-box">
-        <span class="i-search"></span>
-        <div class="search-input"></div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <div class="container" id="search-hits">
-    <div class="content"></div>
-  </div>
+  <?php snippet('search'); ?>

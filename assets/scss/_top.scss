@@ -22,18 +22,31 @@ header {
 }
 
 .logo {
+  margin: 0 auto;
   text-align: center;
-  padding-bottom: 1.8rem;
+  padding-bottom: 1.4rem;
+  width: 11.2rem;
+  @include breakpoint($tablet) {
+    padding-bottom: 1.8rem;
+    width: 14.3rem;
+  }
 }
 
 #baseline {
   text-transform: uppercase;
   text-align: center;
-  font-size: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  @include breakpoint($tablet) {
+    font-size: 1rem;
+    padding-bottom: 3rem;
+  }
 }
 
 #baseline-bottom {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
+
+  @include breakpoint($tablet) {
+    font-size: 1.3rem;
+  }
 }
