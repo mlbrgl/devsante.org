@@ -46,7 +46,7 @@ main.home {
       @include breakpoint($smartphone-only) {
         @include bleed-x($container_padding)
       }
-      background-color: $lighter_grey;
+      background-color: $light_grey;
       padding: 1.5rem;
       @include clearfix;
     }
@@ -84,7 +84,7 @@ main.home {
     h1.section-title {
       @include pad(0.3rem);
       line-height: 2rem;
-      background-color: $lighter_grey;
+      background-color: $light_grey;
       color: $dark_grey;
       span {
         color: $dark_blue;
@@ -175,6 +175,6 @@ main.home {
         }
       }
     }
-    background-color: $lighter_grey;
+    background-color: $light_grey;
   }
 }  
