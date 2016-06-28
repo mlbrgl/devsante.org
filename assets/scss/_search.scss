@@ -21,8 +21,6 @@
     a {
       display:none;
       float: right;
-      color: $dark_grey;
-      background: none;
       font-size: 1rem;
     }
     a:hover {
@@ -38,6 +36,7 @@
       padding: 0 0.8rem;
       color: $dark_grey;
       background-color: inherit;
+      font-size: 0.9rem;
       border: none;
     }
 
@@ -62,13 +61,11 @@
     margin-bottom: 0.2rem;
     text-transform: uppercase;
   }
-  .date {
-    @include breakpoint($tablet) {
-      @include span(6 of 12);
-      @include last;
-      text-align: right;
-    }
+  .date-author {
     color: $dark_grey;
+    @include breakpoint($tablet) {
+      @include span(6 of 12 last);
+    }
   }
   .heading {
     @include break;

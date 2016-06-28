@@ -4,6 +4,34 @@
 		{
 			"icon": {
 				"paths": [
+					"M608 192h160v-192h-160c-123.514 0-224 100.486-224 224v96h-128v192h128v512h192v-512h160l32-192h-192v-96c0-17.346 14.654-32 32-32z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"facebook",
+					"brand",
+					"social"
+				],
+				"defaultCode": 60048,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"ligatures": "facebook, brand10",
+				"name": "facebook",
+				"id": 400,
+				"order": 20,
+				"prevSize": 32,
+				"code": 60048
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 400
+		},
+		{
+			"icon": {
+				"paths": [
 					"M0 1024c128-384 463-1024 1024-1024-263 211-384 704-576 704s-192 0-192 0l-192 320h-64z"
 				],
 				"attrs": [],
@@ -26,9 +54,9 @@
 				"prevSize": 32,
 				"code": 59655
 			},
-			"setIdx": 0,
-			"setId": 2,
-			"iconIdx": 7
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -53,9 +81,9 @@
 				"prevSize": 32,
 				"code": 59718
 			},
-			"setIdx": 0,
-			"setId": 2,
-			"iconIdx": 70
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -79,13 +107,13 @@
 				"ligatures": "cancel-circle, close",
 				"name": "cancel-circle",
 				"id": 269,
-				"order": 17,
+				"order": 21,
 				"prevSize": 32,
 				"code": 59917
 			},
-			"setIdx": 0,
-			"setId": 2,
-			"iconIdx": 269
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -111,7 +139,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 0
+			"iconIdx": 3
 		},
 		{
 			"icon": {
@@ -139,7 +167,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 1
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -168,7 +196,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 2
+			"iconIdx": 5
 		},
 		{
 			"icon": {
@@ -196,7 +224,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 4
+			"iconIdx": 6
 		},
 		{
 			"icon": {
@@ -221,7 +249,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 5
+			"iconIdx": 7
 		},
 		{
 			"icon": {
@@ -249,7 +277,7 @@
 			},
 			"setIdx": 1,
 			"setId": 1,
-			"iconIdx": 6
+			"iconIdx": 8
 		}
 	],
 	"height": 1024,

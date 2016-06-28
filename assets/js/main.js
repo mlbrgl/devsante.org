@@ -26,7 +26,11 @@ search.addWidget(
       item: '<article class="result-item">' + 
               '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
               '{{#datetime}}' + 
-                '<div class="date">{{datetime}}</div>' +
+                '<div class="date-author">{{datetime}}' +
+                  '{{#author}}' + 
+                  ' | <span>{{author}}</span>' + 
+                  '{{/author}}' +
+                '</div>' +
               '{{/datetime}}' +
               '{{#_highlightResult._heading.value}}' +
                 '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 

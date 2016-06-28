@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'devsante';
-    src:    url('fonts/devsante.eot?qkpz2');
-    src:    url('fonts/devsante.eot?qkpz2#iefix') format('embedded-opentype'),
-        url('fonts/devsante.ttf?qkpz2') format('truetype'),
-        url('fonts/devsante.woff?qkpz2') format('woff'),
-        url('fonts/devsante.svg?qkpz2#devsante') format('svg');
+    src:    url('fonts/devsante.eot?mfbqsj');
+    src:    url('fonts/devsante.eot?mfbqsj#iefix') format('embedded-opentype'),
+        url('fonts/devsante.ttf?mfbqsj') format('truetype'),
+        url('fonts/devsante.woff?mfbqsj') format('woff'),
+        url('fonts/devsante.svg?mfbqsj#devsante') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.i-facebook:before {
+    content: "\ea90";
+}
 .i-quill:before {
     content: "\e907";
 }
