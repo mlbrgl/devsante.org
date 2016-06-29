@@ -23,20 +23,19 @@ search.addWidget(
       }
     },
     templates: {
-      item: '<article class="result-item">' + 
+      item: '<article>' + 
               '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
               '{{#datetime}}' + 
-                '<div class="date-author">{{datetime}}' +
-                  '{{#author}}' + 
-                  ' | <span>{{author}}</span>' + 
-                  '{{/author}}' +
-                '</div>' +
+                '<div class="search-date">{{datetime}}</div>' +
               '{{/datetime}}' +
               '{{#_highlightResult._heading.value}}' +
-                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
+                '<div class="search-heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
               '{{/_highlightResult._heading.value}}'+
+              '{{#author}}' + 
+                '<div class="search-author">{{author}}</div>' +
+              '{{/author}}' +
               '{{#_snippetResult._content.value}}' +
-                '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
+                '<div class="search-text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
               '{{/_snippetResult._content.value}}' +
             '</article>',
       empty: 'Votre recherche n\' a retourné aucun résultat'
@@ -99,7 +98,7 @@ function search(helper) {
 function search_mode(search_is) {
   var search_hits = document.getElementById('search-hits');
   var body = document.getElementsByTagName('body')[0];
-  var cancel_search = document.querySelectorAll('#search .i-cancel-circle')[0];
+  var cancel_search = document.querySelectorAll('#search .search-cancel')[0];
   var search_class = 'search';
 
   // Turn search mode on

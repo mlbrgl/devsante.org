@@ -492,27 +492,18 @@ header {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0;
-    height: 100%; }
-    #search .search-box span, #search .search-box a {
-      display: block;
-      float: left;
-      text-align: center;
-      width: 2.5rem;
-      height: 2.3rem;
-      background-color: #777879;
-      line-height: 2.3rem;
-      color: #ffffff; }
-    #search .search-box a {
-      display: none;
-      float: right;
-      color: #777879;
-      background: none;
-      font-size: 1rem; }
-    #search .search-box a:hover {
-      color: #cccfcf; }
+    margin-right: 0; }
+  #search .i-search {
+    height: 2.3rem;
+    line-height: 2.3rem;
+    display: block;
+    float: left;
+    text-align: center;
+    width: 2.5rem;
+    background-color: #777879;
+    color: #ffffff; }
   #search .search-input input {
-    width: 65.71429%;
+    width: 57.14286%;
     float: left;
     margin-right: 2.85714%;
     height: 2.3rem;
@@ -523,6 +514,20 @@ header {
     border: none; }
   #search .search-input input:focus {
     outline: none; }
+  #search .search-cancel {
+    display: none;
+    float: right;
+    color: #777879; }
+  #search .i-cancel-circle, #search .search-cancel-text {
+    display: block;
+    float: left;
+    line-height: 2.3rem; }
+  #search .i-cancel-circle {
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1rem; }
+  #search a:hover {
+    color: #cccfcf; }
 
 #search-hits article {
   margin-bottom: 1.5rem;
@@ -540,28 +545,34 @@ header {
       float: left;
       margin-right: 2.85714%; } }
 
-#search-hits .date {
-  color: #777879; }
+#search-hits .search-date {
+  color: #777879;
+  font-size: 0.9rem; }
   @media (min-width: 768px) {
-    #search-hits .date {
+    #search-hits .search-date {
       width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%;
       float: right;
       margin-right: 0;
       text-align: right; } }
 
-#search-hits .heading {
+#search-hits .search-author {
+  clear: both;
+  color: #777879;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem; }
+
+#search-hits .search-heading {
   clear: both;
   font-size: 1rem;
   margin-bottom: 0.4rem; }
-  #search-hits .heading a {
+  #search-hits .search-heading a {
     font-weight: bold;
     color: #000000; }
-  #search-hits .heading a:hover {
+  #search-hits .search-heading a:hover {
     color: #777879; }
 
-#search-hits .text {
+#search-hits .search-text {
   clear: both;
   margin-bottom: 1rem; }
 

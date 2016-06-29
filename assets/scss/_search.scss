@@ -1,3 +1,5 @@
+$search_box_height: 2.3rem;
+
 #search {
   background-color: $light_grey;
   height: $search_box_height;
@@ -6,44 +8,55 @@
 
   .search-box {
     @include span(full);
-    
-    height: 100%;
-    span, a{
-      display: block;
-      float: left;
-      text-align: center;
-      width: 2.5rem;
-      height: $search_box_height;
-      background-color: $dark_grey;
-      line-height: $search_box_height;
-      color: #ffffff;
-    }
-    a {
-      display:none;
-      float: right;
-      font-size: 1rem;
-    }
-    a:hover {
-      color: $medium_grey;
-    }
+  }
+
+  .i-search {
+    height: $search_box_height;
+    line-height: $search_box_height;
+    display: block;
+    float: left;
+    text-align: center;
+    width: 2.5rem;
+    background-color: $dark_grey;
+    color: #ffffff;
   }
 
   .search-input {
     input {
-      @include span(8 of 12);
+      @include span(7 of 12);
       height: $search_box_height;
       line-height: $search_box_height;
       padding: 0 0.8rem;
       color: $dark_grey;
       background-color: inherit;
-      font-size: 0.9rem;
       border: none;
     }
-
     input:focus {
       outline: none;
     }
   }
+
+  .search-cancel {
+    display:none;
+    float: right;
+    color: $dark_grey;
+  }
+  .i-cancel-circle, .search-cancel-text {
+    display: block;
+    float: left;
+    line-height: $search_box_height;
+  }
+  .i-cancel-circle{
+    // Non-conventional way of adding spacing to remain congruent with the
+    // i-search icon
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  a:hover {
+    color: $medium_grey;
+  }
+
 }
 
 #search-hits {
@@ -61,13 +74,22 @@
     margin-bottom: 0.2rem;
     text-transform: uppercase;
   }
-  .date-author {
+  .search-date {
     color: $dark_grey;
+    font-size: 0.9rem;
     @include breakpoint($tablet) {
       @include span(6 of 12 last);
+      text-align: right;
     }
   }
-  .heading {
+  .search-author {
+    @include break;
+    color: $dark_grey;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  .search-heading {
     @include break;
     font-size: 1rem;
     margin-bottom: 0.4rem;
@@ -79,7 +101,7 @@
       color: $dark_grey;
     }
   }
-  .text {
+  .search-text {
     @include break;
     margin-bottom: 1rem;
   }
