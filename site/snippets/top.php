@@ -44,8 +44,8 @@
 
     <?php if(isset($context) && $context == 'home'): ?>
       <div id="baseline" class="container wide">
-        <div id="baseline-top">La banque de données des dernières nouveautés médicales</div>
-        <div id="baseline-bottom">Priorité dans la drépanocytose</div>
+        <div id="baseline-top">(In)formation permanente des acteurs de la santé</div>
+        <div id="baseline-bottom">Priorité à la drépanocytose</div>
       </div>
     <?php endif; ?> 
 
