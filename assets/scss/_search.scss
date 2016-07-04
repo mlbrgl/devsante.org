@@ -16,7 +16,7 @@ $search_box_height: 2.3rem;
     display: block;
     float: left;
     text-align: center;
-    width: 2.5rem;
+    @include pad($icon_pad);
     background-color: $dark_grey;
     color: #ffffff;
   }

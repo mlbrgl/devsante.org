@@ -20,17 +20,15 @@
   
   <header class="header cf" role="banner">
     
-    <div class="top">
+    <div id="top">
 
       <div class="container wide">
 
-        <div class="menu"> 
+        <a href="#"> 
           <span class="i-menu" title="menu" aria-hidden="true"></span>
           <span class="title">MENU</span>
-        </div>
-
-        <div class="socials">
-        </div>
+        </a>
+        <a href="#" class="i-facebook"></a>
 
       </div>
     

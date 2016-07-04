@@ -100,7 +100,10 @@ main.home {
         line-height: normal;
         margin-bottom: $home_bottom_margin;
         a {
-          color:$black;
+          color: $black;
+        }
+        a:hover {
+          color: $hover;
         }
       }
     }
@@ -171,7 +174,7 @@ main.home {
           }
         }
         a:hover {
-          background-color: $dark_blue;
+          background-color: $hover;
         }
       }
     }

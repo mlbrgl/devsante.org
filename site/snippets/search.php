@@ -1,5 +1,5 @@
 <div id="search">
-  <div class="container">
+  <div class="container wide">
     <div class="search-box">
       <span class="i-search"></span>
       <div class="search-input"></div>

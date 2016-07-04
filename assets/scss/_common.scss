@@ -1,5 +1,6 @@
 $default_bottom_margin: 1.5rem;
 $home_bottom_margin: 0.8rem;
+$icon_pad: 0.9rem;
 
 body{
   font-family: 'Lato', sans-serif;
@@ -17,7 +18,7 @@ a {
 }
 
 a:hover {
-  color: $cyan;
+  color: $hover;
 }
 
 main img {

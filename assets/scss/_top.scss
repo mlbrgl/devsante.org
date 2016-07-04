@@ -4,34 +4,45 @@ header {
   background-color: $dark_blue;
   font-size: 0.8rem;
 
-  .top {
+  #top {
     padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem;
     @include breakpoint($tablet){
       margin-bottom: 2rem;
     }
-  }
 
-  .menu {
-    @include span(50%);
-    .title {
-      margin-left: 0.8rem;      
+    a {
+      color: $white;
+    }
+
+    a:hover {
+      color: $hover;
+    }
+
+    .i-menu, .i-facebook {
+      @include pad($icon_pad)
+    }
+
+    .i-facebook {
+      float: right;
+    }
+
+  }
+  
+
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1.4rem;
+    width: 8rem;
+    @include breakpoint($tablet) {
+      padding-bottom: 1.8rem;
+      width: 14.3rem;
     }
   }
-
 }
 
-.logo {
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 1.4rem;
-  width: 8rem;
-  @include breakpoint($tablet) {
-    padding-bottom: 1.8rem;
-    width: 14.3rem;
-  }
-}
 
 #baseline {
   text-transform: uppercase;

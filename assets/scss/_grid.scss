@@ -43,7 +43,7 @@ main, .container{
   @include container(1320px);
 }
 
-#search .container {
+#search .container, #top .container {
   @include container(1320px);
   @include pad(0);
   @include breakpoint($tablet) {
