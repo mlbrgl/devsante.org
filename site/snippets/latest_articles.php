@@ -3,7 +3,7 @@
 // Get the latest articles depending on the mode
 switch ($mode) {
   case 'theme': $latest_articles = latest_content_get_pages(); break;
-  case 'standard': $latest_articles = page('articles')->children()->flip()->limit(2); break;
+  case 'standard': $latest_articles = page('articles')->children()->visible()->flip()->limit(2); break;
   default: break;
 }
 
