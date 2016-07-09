@@ -1,6 +1,6 @@
 <?php snippet('top') ?>
 
-  <main class="inner" role="main">
+  <main class="internal" role="main">
 
     <div class="content">
 
