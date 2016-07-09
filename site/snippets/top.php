@@ -40,7 +40,7 @@
           <span class="i-menu icon" style="color:yellow;"></span>
           <span class="title" style="color:yellow;">ARTICLES DRÉPANOCYTOSE</span>
         </a>
-        <a href="#" class="i-facebook icon"></a>
+        <?php /* <a href="#" class="i-facebook icon"></a> */ ?>
 
       </div>
     

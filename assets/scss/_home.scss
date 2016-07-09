@@ -89,14 +89,16 @@ main.home {
       font-style: italic;
     }
   }
-
+  
+  // Numeros speciaux not output at the moment
   #numeros-speciaux, #a-lire {
     @include breakpoint ($tablet) {
       @include last;
     }
   }
 
-
+  // Communication ponctuelle not output at the moment
+  /*
   #communication-ponctuelle {
     position: relative;
     @include span(full);
@@ -140,4 +142,5 @@ main.home {
     }
     background-color: $light_grey;
   }
+  */
 }  
