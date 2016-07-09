@@ -2,10 +2,8 @@
 
     <div id="footer-top">
       <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 1</a></li>
-        <li class="last"><a href="#">Link 1</a></li>
+        <li><a href="/l-association/faire-un-don">FAIRE UN DON</a></li>
+        <li class="last"><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
       </ul>
     </div>
 
