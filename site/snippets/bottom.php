@@ -1,16 +1,22 @@
-<?php /*
-  <footer class="footer cf" role="contentinfo">
+  <footer class="container wide">
 
-    <div class="copyright">
-      <?php echo $site->copyright()->kirbytext() ?>
+    <div id="footer-top">
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li class="last"><a href="#">Link 1</a></li>
+      </ul>
     </div>
 
-    <div class="colophon">
-      <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b>♥</b></a>
-    </div>
+    <div id="footer-bottom">
+      <div class="copyright">
+        <?php echo $site->copyright()->kirbytext() ?>
+      </div>
 
+      <div class="footer-to-top"><a href="#">Haut <span class="i-quill icon"></span></a></div>
+    </div>
   </footer>
-*/ ?>
 
   <?php
     echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js');

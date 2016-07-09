@@ -41,10 +41,6 @@ main, .container{
 
 .container.wide {
   @include container(1320px);
-}
-
-#search .container, #top .container {
-  @include container(1320px);
   @include pad(0);
   @include breakpoint($tablet) {
     @include pad($container_padding);
