@@ -9,7 +9,7 @@ var search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search .search-input',
-    placeholder: 'Rechercher ...'
+    placeholder: 'douleurs drépanocytose, ...'
   })
 );
 
