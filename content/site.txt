@@ -1,4 +1,4 @@
-Title: Devsante
+Title: Développement et Santé
 
 ----
 
@@ -14,4 +14,4 @@ Keywords:
 
 ----
 
-Copyright: © (date: Year)
+Copyright: © Développement et Santé (date: Year)
