@@ -10,6 +10,8 @@ main.home {
     font-weight: normal;
     text-transform: uppercase;
     margin-bottom: $default_bottom_margin;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $dark_blue;
   }
 
   //matches icon prefixed classes
@@ -17,12 +19,8 @@ main.home {
     margin-right: 0.9rem;  
   }
 
+
   .derniers-articles {
-    @include span(full);
-    h1.section-title{
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid $dark_blue;
-    }
     article {
       h1 {
         line-height: 2rem;
@@ -52,7 +50,6 @@ main.home {
     margin-bottom: $default_bottom_margin;
   }
 
-
   .derniers-articles.standard {
     @include last;
     article {
@@ -74,18 +71,6 @@ main.home {
     }
     margin-bottom: $default_bottom_margin;
     
-    h1.section-title {
-      @include pad(0.3rem);
-      line-height: 2rem;
-      background-color: $light_grey;
-      color: $dark_grey;
-      span {
-        color: $dark_blue;
-        line-height: inherit;
-        display: inline-block;
-        border-bottom: 1px solid $dark_blue;
-      }
-    }
     article {
       h1 {
         font-size: 1.5rem;

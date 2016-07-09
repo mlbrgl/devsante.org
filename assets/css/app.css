@@ -606,23 +606,17 @@ main.home h1.section-title {
   font-size: 0.9rem;
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #365086; }
 
 main.home [class^="i-"], main.home [class*=" i-"] {
   margin-right: 0.9rem; }
 
-main.home .derniers-articles {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0; }
-  main.home .derniers-articles h1.section-title {
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #365086; }
-  main.home .derniers-articles article h1 {
-    line-height: 2rem;
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem; }
+main.home .derniers-articles article h1 {
+  line-height: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem; }
 
 main.home .derniers-articles.theme {
   margin-bottom: 1.5rem; }
@@ -672,17 +666,6 @@ main.home .annexes {
       width: 48.57143%;
       float: left;
       margin-right: 2.85714%; } }
-  main.home .annexes h1.section-title {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
-    line-height: 2rem;
-    background-color: #e5e6e7;
-    color: #777879; }
-    main.home .annexes h1.section-title span {
-      color: #365086;
-      line-height: inherit;
-      display: inline-block;
-      border-bottom: 1px solid #365086; }
   main.home .annexes article h1 {
     font-size: 1.5rem;
     font-style: italic;
@@ -738,20 +721,20 @@ main.home #communication-ponctuelle {
     main.home #communication-ponctuelle .plus a:hover {
       background-color: #0092f8; }
 
-main.inner h1, main.inner h2, main.inner h3, main.inner h4 {
+main.internal h1, main.internal h2, main.internal h3, main.internal h4 {
   color: #365086;
   margin-bottom: 0.5rem; }
 
-main.inner p, main.inner ul, main.inner table {
+main.internal p, main.internal ul, main.internal table {
   margin-bottom: 1.5rem; }
 
-main.inner h1 {
+main.internal h1 {
   line-height: 2rem;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: bold; }
   @media (min-width: 1024px) {
-    main.inner h1 {
+    main.internal h1 {
       line-height: 2.5rem;
       font-size: 2.5rem;
       margin-bottom: 2rem; } }
