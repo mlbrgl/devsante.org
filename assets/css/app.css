@@ -447,27 +447,35 @@ header {
     padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem; }
-    @media (min-width: 768px) {
-      header #top {
-        margin-bottom: 2rem; } }
     header #top a {
       color: #ffffff; }
     header #top a:hover {
       color: #0092f8; }
-    header #top .i-menu, header #top .i-facebook {
-      padding-left: 0.9rem;
-      padding-right: 0.9rem; }
+    header #top .icon {
+      display: none; }
+      @media (min-width: 768px) {
+        header #top .icon {
+          display: inline;
+          padding-left: 0.9rem;
+          padding-right: 0.9rem; } }
     header #top .i-facebook {
       float: right; }
   header .logo {
     margin: 0 auto;
     text-align: center;
     padding-bottom: 1.4rem;
-    width: 8rem; }
-    @media (min-width: 768px) {
-      header .logo {
-        padding-bottom: 1.8rem;
-        width: 14.3rem; } }
+    width: 9rem; }
+
+@media (min-width: 768px) {
+  body.home header #top {
+    margin-bottom: 2rem; } }
+
+body.home header .logo {
+  width: 11rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 768px) {
+    body.home header .logo {
+      width: 14.3rem; } }
 
 #baseline {
   text-transform: uppercase;
@@ -475,15 +483,26 @@ header {
   padding-bottom: 2rem; }
   @media (min-width: 768px) {
     #baseline {
-      font-size: 1rem;
-      padding-bottom: 3rem; } }
-
-#baseline-bottom {
-  font-size: 1rem;
-  font-weight: bold; }
+      font-size: 1.1rem;
+      padding-bottom: 2.8rem; } }
+  #baseline .line {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    @media (min-width: 768px) {
+      #baseline .line {
+        width: 50%;
+        float: left;
+        margin-right: 2.85714%;
+        margin-left: 0%;
+        margin-right: 0%; } }
   @media (min-width: 768px) {
-    #baseline-bottom {
-      font-size: 1.3rem; } }
+    #baseline .line.first {
+      text-align: right; } }
+  @media (min-width: 768px) {
+    #baseline .line.last {
+      text-align: left; } }
 
 #search {
   background-color: #e5e6e7;

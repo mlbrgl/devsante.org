@@ -8,9 +8,6 @@ header {
     padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem;
-    @include breakpoint($tablet){
-      margin-bottom: 2rem;
-    }
 
     a {
       color: $white;
@@ -20,8 +17,12 @@ header {
       color: $hover;
     }
 
-    .i-menu, .i-facebook {
-      @include pad($icon_pad)
+    .icon {
+      display: none;
+      @include breakpoint($tablet) {
+        display:inline;
+        @include pad($icon_pad)
+      }
     }
 
     .i-facebook {
@@ -30,16 +31,25 @@ header {
 
   }
   
-
   .logo {
     margin: 0 auto;
     text-align: center;
     padding-bottom: 1.4rem;
-    width: 8rem;
-    @include breakpoint($tablet) {
-      padding-bottom: 1.8rem;
-      width: 14.3rem;
-    }
+    width: 9rem;
+  }
+
+}
+
+body.home header #top {
+  @include breakpoint($tablet){
+    margin-bottom: 2rem;
+  }
+}
+body.home header .logo {
+  width: 11rem;
+  padding-bottom: 1rem;
+  @include breakpoint($tablet) {
+    width: 14.3rem;
   }
 }
 
@@ -49,16 +59,27 @@ header {
   text-align: center;
   padding-bottom: 2rem;
   @include breakpoint($tablet) {
-    font-size: 1rem;
-    padding-bottom: 3rem;
+    font-size: 1.1rem;
+    padding-bottom: 2.8rem;
   }
-}
 
-#baseline-bottom {
-  font-size: 1rem;
-  font-weight: bold;
+  .line {
+    @include span(full);
+    @include breakpoint($tablet) {
+      @include span(50%);
+      @include squish(0);
+    }
+  }
 
-  @include breakpoint($tablet) {
-    font-size: 1.3rem;
+  .line.first{
+    @include breakpoint($tablet) {
+      text-align: right;
+    }
+  }
+
+  .line.last{
+    @include breakpoint($tablet) {
+      text-align: left;
+    }
   }
 }

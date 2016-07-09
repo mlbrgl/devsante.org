@@ -16,7 +16,7 @@
 
 
 </head>
-<body>
+<body<?php ecco(isset($context), ' class="' . $context . '"');?>>
   
   <header class="header cf" role="banner">
     
@@ -25,10 +25,22 @@
       <div class="container wide">
 
         <a href="#"> 
-          <span class="i-menu" title="menu" aria-hidden="true"></span>
-          <span class="title">MENU</span>
+          <span class="i-quill icon"></span>
+          <span class="title">ARTICLES</span>
         </a>
-        <a href="#" class="i-facebook"></a>
+        <a href="#"> 
+          <span class="i-newspaper icon"></span>
+          <span class="title">ACTUALITES</span>
+        </a>
+        <a href="#"> 
+          <span class="i-menu icon"></span>
+          <span class="title">L'ASSOCIATION</span>
+        </a>
+        <a href="#"> 
+          <span class="i-menu icon" style="color:yellow;"></span>
+          <span class="title" style="color:yellow;">ARTICLES DRÉPANOCYTOSE</span>
+        </a>
+        <a href="#" class="i-facebook icon"></a>
 
       </div>
     
@@ -42,8 +54,8 @@
 
     <?php if(isset($context) && $context == 'home'): ?>
       <div id="baseline" class="container wide">
-        <div id="baseline-top">(In)formation permanente des acteurs de la santé</div>
-        <div id="baseline-bottom">Priorité à la drépanocytose</div>
+        <div class="line first">Information permanente&nbsp;</div>
+        <div class="line last">des acteurs de la santé</div>
       </div>
     <?php endif; ?> 
 
