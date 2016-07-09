@@ -738,20 +738,20 @@ main.home #communication-ponctuelle {
     main.home #communication-ponctuelle .plus a:hover {
       background-color: #0092f8; }
 
-main.article h1, main.article h2, main.article h3, main.article h4, main.news h1, main.news h2, main.news h3, main.news h4 {
+main.inner h1, main.inner h2, main.inner h3, main.inner h4 {
   color: #365086;
   margin-bottom: 0.5rem; }
 
-main.article p, main.article ul, main.article table, main.news p, main.news ul, main.news table {
+main.inner p, main.inner ul, main.inner table {
   margin-bottom: 1.5rem; }
 
-main.article h1, main.news h1 {
+main.inner h1 {
   line-height: 2rem;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: bold; }
   @media (min-width: 1024px) {
-    main.article h1, main.news h1 {
+    main.inner h1 {
       line-height: 2.5rem;
       font-size: 2.5rem;
       margin-bottom: 2rem; } }
