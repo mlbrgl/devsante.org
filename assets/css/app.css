@@ -383,24 +383,15 @@ main, .container {
 .container.wide {
   max-width: 1320px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 0%;
+  padding-right: 0%; }
   .container.wide:after {
     content: " ";
     display: block;
     clear: both; }
-
-#search .container, #top .container {
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0%;
-  padding-right: 0%; }
-  #search .container:after, #top .container:after {
-    content: " ";
-    display: block;
-    clear: both; }
   @media (min-width: 768px) {
-    #search .container, #top .container {
+    .container.wide {
       padding-left: 30px;
       padding-right: 30px; } }
 
@@ -639,7 +630,7 @@ main.home .derniers-articles.theme {
     main.home .derniers-articles.theme h1.section-title {
       margin-bottom: 0; } }
   main.home .derniers-articles.theme .inner {
-    background-color: #e5e6e7;
+    background-color: #fff7c1;
     padding: 1.5rem; }
     @media (max-width: 767px) {
       main.home .derniers-articles.theme .inner {
@@ -659,7 +650,8 @@ main.home .derniers-articles.theme {
 
 main.home .derniers-articles.standard {
   float: right;
-  margin-right: 0; }
+  margin-right: 0;
+  margin-bottom: 1.5rem; }
   @media (min-width: 768px) {
     main.home .derniers-articles.standard article {
       width: 47.05882%;
@@ -714,6 +706,7 @@ main.home #communication-ponctuelle {
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 1.5rem;
   padding: 1.5rem 0 1.5rem 1.5rem;
   background-color: #e5e6e7; }
   main.home #communication-ponctuelle .text {
@@ -777,3 +770,45 @@ td {
   background-color: #e5e6e7;
   padding: 0.5rem 1rem;
   border: 1px solid #ffffff; }
+
+footer {
+  color: #ffffff;
+  background-color: #1f2021; }
+  footer .copyright {
+    float: left; }
+  footer .footer-to-top {
+    float: right; }
+
+#footer-top {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  background-color: #365086;
+  font-size: 0.8rem; }
+  #footer-top ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0; }
+    #footer-top ul li {
+      display: inline;
+      padding: 0 1rem;
+      border-right: 1px solid #ffffff; }
+      #footer-top ul li a {
+        color: #ffffff; }
+      #footer-top ul li a:hover {
+        color: #0092f8; }
+    #footer-top ul li.last {
+      border: none; }
+
+#footer-bottom {
+  color: #777879;
+  border-top: 1px solid #777879;
+  padding: 1rem 0 3rem 0;
+  font-size: 0.7rem; }
+  #footer-bottom .icon {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem; }
+  #footer-bottom a {
+    color: #777879; }
+  #footer-bottom a:hover {
+    color: #cccfcf; }

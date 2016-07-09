@@ -19,10 +19,6 @@ main.home {
 
   .derniers-articles {
     @include span(full);
-    // Uncomment to restore wide homepage
-    // @include breakpoint ($laptop) {
-    //   @include span(6 of 12);
-    // }
     h1.section-title{
       padding-bottom: 0.5rem;
       border-bottom: 1px solid $dark_blue;
@@ -46,7 +42,7 @@ main.home {
       @include breakpoint($smartphone-only) {
         @include bleed-x($container_padding)
       }
-      background-color: $light_grey;
+      background-color: $light_yellow;
       padding: 1.5rem;
       @include clearfix;
     }
@@ -67,6 +63,7 @@ main.home {
     article.last {
       @include last;
     }
+    margin-bottom: $default_bottom_margin;
   }
 
 
@@ -75,10 +72,6 @@ main.home {
     @include breakpoint ($tablet) {
       @include span (6 of 12);
     }
-    // Uncomment to restore wide homepage
-    // @include breakpoint ($laptop) {
-    //   @include span(3 of 12);
-    // }
     margin-bottom: $default_bottom_margin;
     
     h1.section-title {
@@ -113,35 +106,17 @@ main.home {
   }
 
   #numeros-speciaux, #a-lire {
-    // Replace tablet by tablet_only to restore wide homepage
     @include breakpoint ($tablet) {
       @include last;
     }
   }
 
-  // Uncomment to restore wide homepage
-  // #message {
-  //   @include breakpoint ($laptop) {
-  //     @include break;
-  //   }
-  // }
-  // #a-lire {
-  //   @include breakpoint ($laptop) {
-  //     @include last;
-  //   }
-  // }
 
   #communication-ponctuelle {
     position: relative;
     @include span(full);
-
-    // Uncomment to restore wide homepage
-    // @include breakpoint ($laptop) {
-    //   @include span(6 of 12 break);
-    // }
-    
+    margin-bottom: $default_bottom_margin;
     padding: 1.5rem 0 1.5rem 1.5rem;
-
     @include with-layout(6) {
       .text {
         @include span(5);

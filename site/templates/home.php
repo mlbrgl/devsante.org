@@ -3,7 +3,7 @@
 <main class="home" role="main">
 
     <section class="derniers-articles theme">
-      <h1 class="section-title"><span class="i-quill"></span>Les derniers articles sur <strong>la drépanocytose</strong></h1>
+      <h1 class="section-title"><span class="i-quill"></span>Dernier article sur <strong>la drépanocytose</strong></h1>
       <div class="inner">
         <?php snippet('latest_articles', array('mode'=>'theme')); ?>
       </div>
@@ -16,7 +16,7 @@
     </section>
 
 
-    <section id="message" class="annexes">
+    <?php /* <section id="message" class="annexes">
       <h1 class="section-title"><span class="i-bullhorn"></span>Message</h1>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque commodo lorem consequat ullamcorper. Pellentesque nec placerat turpis.    Vivamus laoreet maximus nulla. Aenean pretium libero vel elit sodales, eget dapibus orci vulputate.
     </section> 
@@ -25,7 +25,7 @@
     <section id="numeros-speciaux" class="annexes">
       <h1 class="section-title"><span class="i-files-empty"></span>Numéros spéciaux</h1>
       Suspendisse. Donec sagittis malesuada quam et lobortis. Pellentesque id ornare sem. Phasellus consectetur dui ligula, quis lobortis nisi place
-    </section>
+    </section> */ ?>
 
     <section id="actualites" class="annexes">
       <h1 class="section-title"><span class="i-newspaper"></span>Actualités</h1>
