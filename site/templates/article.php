@@ -1,10 +1,10 @@
 <?php snippet('top') ?>
 
-  <main class="internal" role="main">
+  <main class="not-home" role="main">
 
     <div class="content">
 
-      <h1><?php echo $page->title()->html() ?></h1>
+      <h1 class="page-title"><?php echo $page->title()->html() ?></h1>
 
       <div class="meta">
         <div class="author"><?php echo $page->author() ?></div>

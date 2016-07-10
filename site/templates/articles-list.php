@@ -1,15 +1,14 @@
 <?php snippet('top') ?>
-
   <main class="not-home" role="main">
-
+    
     <div class="content">
-
+      
       <h1 class="page-title"><?php echo $page->title()->html() ?></h1>
-    
-      <?php echo $page->text()->kirbytext() ?>
-    
-    </div>
 
+      <?php snippet('list') ?>
+
+    </div>
+    
   </main>
 
 <?php snippet('bottom') ?>

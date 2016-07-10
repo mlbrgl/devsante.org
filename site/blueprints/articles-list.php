@@ -10,7 +10,6 @@ pages:
     field: datetime
     format: %Y%m%d%H%I
 options:
-  preview: false
   status: false
   template: false
   url: false

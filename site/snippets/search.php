@@ -12,6 +12,6 @@
 </div>
 
 
-<div class="container" id="search-hits">
+<div class="container list" id="search-hits">
   <div class="content"></div>
 </div>

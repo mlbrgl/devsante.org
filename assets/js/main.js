@@ -26,16 +26,16 @@ search.addWidget(
       item: '<article>' + 
               '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
               '{{#datetime}}' + 
-                '<div class="search-date">{{datetime}}</div>' +
+                '<div class="date">{{datetime}}</div>' +
               '{{/datetime}}' +
               '{{#author}}' + 
-                '<div class="search-author">{{author}}</div>' +
+                '<div class="author">{{author}}</div>' +
               '{{/author}}' +
               '{{#_highlightResult._heading.value}}' +
-                '<div class="search-heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
+                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
               '{{/_highlightResult._heading.value}}'+
               '{{#_snippetResult._content.value}}' +
-                '<div class="search-text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
+                '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
               '{{/_snippetResult._content.value}}' +
             '</article>',
       empty: 'Votre recherche n\' a retourné aucun résultat'

@@ -24,11 +24,11 @@
 
       <div class="container wide">
 
-        <a href="#"> 
+        <a href="/articles"> 
           <span class="i-quill icon"></span>
           <span class="title">ARTICLES</span>
         </a>
-        <a href="#"> 
+        <a href="/actualites"> 
           <span class="i-newspaper icon"></span>
           <span class="title">ACTUALITES</span>
         </a>

@@ -498,6 +498,9 @@ body.home header .logo {
     #baseline .line.last {
       text-align: left; } }
 
+/*
+ * See _list.scss for search hits styling
+ */
 #search {
   background-color: #e5e6e7;
   height: 2.3rem;
@@ -544,57 +547,6 @@ body.home header .logo {
     font-size: 1rem; }
   #search a:hover {
     color: #cccfcf; }
-
-#search-hits article {
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #365086; }
-
-#search-hits h1 {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-  text-transform: uppercase; }
-  @media (min-width: 768px) {
-    #search-hits h1 {
-      width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; } }
-
-#search-hits .search-date {
-  color: #777879;
-  font-size: 0.9rem; }
-  @media (min-width: 768px) {
-    #search-hits .search-date {
-      width: 48.57143%;
-      float: right;
-      margin-right: 0;
-      text-align: right; } }
-
-#search-hits .search-author {
-  clear: both;
-  color: #777879;
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem; }
-
-#search-hits .search-heading {
-  clear: both;
-  font-size: 1rem;
-  margin-bottom: 0.4rem; }
-  #search-hits .search-heading a {
-    font-weight: bold;
-    color: #000000; }
-  #search-hits .search-heading a:hover {
-    color: #777879; }
-
-#search-hits .search-text {
-  clear: both;
-  margin-bottom: 1rem; }
-
-#search-hits em {
-  font-style: normal;
-  background-color: #b1d7fe; }
 
 body.search header,
 body.search footer,
@@ -725,38 +677,88 @@ main.home {
       float: right;
       margin-right: 0; } }
 
-main.internal h1, main.internal h2, main.internal h3, main.internal h4 {
-  color: #365086;
-  margin-bottom: 0.5rem; }
-
-main.internal p, main.internal ul, main.internal table {
-  margin-bottom: 1.5rem; }
-
-main.internal h1 {
+main.not-home h1.page-title {
   line-height: 2rem;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #365086; }
   @media (min-width: 1024px) {
-    main.internal h1 {
+    main.not-home h1.page-title {
       line-height: 2.5rem;
       font-size: 2.5rem;
       margin-bottom: 2rem; } }
 
-table {
+main.not-home h2, main.not-home h3, main.not-home h4 {
+  color: #365086;
+  margin-bottom: 0.5rem; }
+
+main.not-home p, main.not-home ul, main.not-home table {
+  margin-bottom: 1.5rem; }
+
+main.not-home table {
   border-collapse: collapse;
   width: 100%; }
 
-th {
+main.not-home th {
   background-color: #cccfcf;
   padding: 0.5rem 1rem;
   font-weight: normal;
   border: 1px solid #ffffff; }
 
-td {
+main.not-home td {
   background-color: #e5e6e7;
   padding: 0.5rem 1rem;
   border: 1px solid #ffffff; }
+
+.list article {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #365086; }
+
+.list h1 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .list h1 {
+      width: 48.57143%;
+      float: left;
+      margin-right: 2.85714%; } }
+
+.list .date {
+  color: #777879; }
+  @media (min-width: 768px) {
+    .list .date {
+      width: 48.57143%;
+      float: right;
+      margin-right: 0;
+      text-align: right; } }
+
+.list .author {
+  clear: both;
+  color: #777879;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem; }
+
+.list .heading {
+  clear: both;
+  font-size: 1rem;
+  margin-bottom: 0.4rem; }
+  .list .heading a {
+    font-weight: bold;
+    color: #000000; }
+  .list .heading a:hover {
+    color: #777879; }
+
+.list .text {
+  clear: both;
+  margin-bottom: 1rem; }
+
+.list em {
+  font-style: normal;
+  background-color: #b1d7fe; }
 
 footer {
   color: #ffffff;
