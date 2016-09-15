@@ -21,8 +21,11 @@ header {
       display: none;
       @include breakpoint($tablet) {
         display:inline;
-        @include pad($icon_pad)
       }
+    }
+
+    a.main-theme {
+      color: $medium_yellow;
     }
 
     // Facebook icon not output at the moment

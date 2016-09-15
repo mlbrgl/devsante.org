@@ -36,9 +36,9 @@
           <span class="i-menu icon"></span>
           <span class="title">L'ASSOCIATION</span>
         </a>
-        <a href="/?q=drépano"> 
-          <span class="i-menu icon" style="color:yellow;"></span>
-          <span class="title" style="color:yellow;">ARTICLES DRÉPANOCYTOSE</span>
+        <a href="/?q=drépano" class="main-theme"> 
+          <span class="i-quill icon"></span>
+          <span class="title">ARTICLES DRÉPANOCYTOSE</span>
         </a>
         <?php /* <a href="#" class="i-facebook icon"></a> */ ?>
 

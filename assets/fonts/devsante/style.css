@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'devsante';
-    src:    url('fonts/devsante.eot?mfbqsj');
-    src:    url('fonts/devsante.eot?mfbqsj#iefix') format('embedded-opentype'),
-        url('fonts/devsante.ttf?mfbqsj') format('truetype'),
-        url('fonts/devsante.woff?mfbqsj') format('woff'),
-        url('fonts/devsante.svg?mfbqsj#devsante') format('svg');
+    src:    url('fonts/devsante.eot?sgj1j1');
+    src:    url('fonts/devsante.eot?sgj1j1#iefix') format('embedded-opentype'),
+        url('fonts/devsante.ttf?sgj1j1') format('truetype'),
+        url('fonts/devsante.woff?sgj1j1') format('woff'),
+        url('fonts/devsante.svg?sgj1j1#devsante') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,8 +24,11 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.i-facebook:before {
-    content: "\ea90";
+.i-arrow-right:before {
+    content: "\ea34";
+}
+.i-arrow-left:before {
+    content: "\ea38";
 }
 .i-quill:before {
     content: "\e907";
@@ -38,15 +41,6 @@
 }
 .i-newspaper:before {
     content: "\e903";
-}
-.i-bullhorn:before {
-    content: "\e905";
-}
-.i-files-empty:before {
-    content: "\e906";
-}
-.i-menu:before {
-    content: "\e901";
 }
 .i-bookmark:before {
     content: "\e904";

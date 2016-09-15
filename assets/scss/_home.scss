@@ -14,9 +14,10 @@ main.home {
     border-bottom: 1px solid $dark_blue;
   }
 
-  //matches icon prefixed classes
-  [class^="i-"], [class*=" i-"] {
-    margin-right: 0.9rem;  
+  //could matche icon prefixed classes with the following but "icon" more understandable
+  //[class^="i-"], [class*=" i-"] {
+  .icon {
+    padding-left: 0;  
   }
 
 
