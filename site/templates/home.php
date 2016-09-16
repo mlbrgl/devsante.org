@@ -2,6 +2,8 @@
 
 <main class="home" role="main">
 
+  <div class="content">
+  
     <section class="derniers-articles theme">
       <h1 class="section-title"><span class="icon i-quill"></span>Dernier article sur <strong>la drépanocytose</strong></h1>
       <div class="inner">
@@ -40,18 +42,19 @@
       Cras tincidunt purus fringilla mauris vehicula tempor. Vestibulum varius dignissim ligula, et iaculis urna rutrum molestie. Etiam et mollis mauris. tum eu dui nec, lobortis maximus ligula.
     </section>
     
-  <?php /*
-  <section id="communication-ponctuelle">
-    <div class="text">
-      <div class="title">Emplacement ponctuel pour communiquer</div>
-      <div>Cras tincidunt purus fringilla mauris vehicula tempor.</div>
-    </div>
-    <div class="plus">
-      <a href="/"><span>></span></a>
-    </div>
-  </section>
-  */?>
+    <?php /*
+    <section id="communication-ponctuelle">
+      <div class="text">
+        <div class="title">Emplacement ponctuel pour communiquer</div>
+        <div>Cras tincidunt purus fringilla mauris vehicula tempor.</div>
+      </div>
+      <div class="plus">
+        <a href="/"><span>></span></a>
+      </div>
+    </section>
+    */?>
   
+  </div>
 
 </main>
 

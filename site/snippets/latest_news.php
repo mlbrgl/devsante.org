@@ -8,7 +8,7 @@ $latest_news = page('actualites')->children()->last();
     <a href="<?php echo $latest_news->url() ?>">
       <?php echo html($latest_news->title()) ?>
     </a>
-  </h2>
+  </h1>
   
   <div class="meta">
     <?php if(!empty($latest_news->author())) : ?>
@@ -22,4 +22,4 @@ $latest_news = page('actualites')->children()->last();
 
   <div class="date"><time datetime="<?php echo $latest_news->datetime() ?>"> <?php echo html($latest_news->date('%B %Y','datetime')) ?> </time></div>
 
-</div>
+</article>

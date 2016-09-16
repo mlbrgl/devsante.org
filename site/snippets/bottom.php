@@ -1,18 +1,21 @@
-  <footer class="container wide">
+  <footer>
+    <div class="container wide">
 
-    <div id="footer-top">
-      <ul>
-        <li><a href="/l-association/faire-un-don">FAIRE UN DON</a></li>
-        <li class="last"><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
-      </ul>
-    </div>
-
-    <div id="footer-bottom">
-      <div class="copyright">
-        <?php echo $site->copyright()->kirbytext() ?>
+      <div id="footer-top">
+        <ul>
+          <li><a href="/l-association/faire-un-don">FAIRE UN DON</a></li>
+          <li class="last"><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
+        </ul>
       </div>
 
-      <div class="footer-to-top"><a href="#">Haut <span class="i-quill icon"></span></a></div>
+      <div id="footer-bottom">
+        <div class="copyright">
+          <?php echo $site->copyright()->kirbytext() ?>
+        </div>
+
+        <div class="footer-to-top"><a href="#">Haut <span class="icon i-arrow-up"></span></a></div>
+      </div>
+      
     </div>
   </footer>
 

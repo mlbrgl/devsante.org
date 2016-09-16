@@ -1,49 +1,82 @@
-.list {
+main.list {
+  h1.page-title {
+    // Overriding h1-page-title mixin for laptop and up versions
+    @include breakpoint ($tablet) {
+      line-height: 1.5rem;
+      font-size: 1.5rem; 
+      margin-bottom: 0.5rem;
+    }
+  }
+
   article {
     margin-bottom: $default_bottom_margin;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $dark_blue;
-  }
-  h1 {
-    @include breakpoint($tablet) {
-      @include span(6 of 12);
-    }
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-    text-transform: uppercase;
-  }
-  .date {
-    color: $dark_grey;
-    @include breakpoint($tablet) {
-      @include span(6 of 12 last);
-      text-align: right;
-    }
-  }
-  .author {
-    @include break;
-    color: $dark_grey;
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-  }
-  .heading {
-    @include break;
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-    a {
+    
+    h1 {
+      @include breakpoint($tablet) {
+        @include span(6 of 12);
+      }
       font-weight: bold;
-      color: $black;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
     }
-    a:hover {
+    .date {
+      color: $dark_grey;
+      @include breakpoint($tablet) {
+        @include span(6 of 12 last);
+        text-align: right;
+      }
+    }
+    .author {
+      @include break;
+      color: $dark_grey;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .heading {
+      @include break;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      a {
+        font-weight: bold;
+        color: $black;
+      }
+      a:hover {
+        color: $dark_grey;
+      }
+    }
+    .text {
+      @include break;
+      margin-bottom: 1rem;
+    }
+    em {
+      font-style: normal;
+      background-color: $light_cyan;
+    }
+  }
+
+  .pagination {
+    margin-bottom: $default_bottom_margin;
+    @include clearfix;
+    
+    a {
+      @include span(6 of 12);
+      @include breakpoint($tablet) {
+        @include span(4 of 12);
+      }
+      font-size: 0.8rem;
       color: $dark_grey;
     }
-  }
-  .text {
-    @include break;
-    margin-bottom: 1rem;
-  }
-  em {
-    font-style: normal;
-    background-color: $light_cyan;
+    
+    a:hover {
+      color: $hover;
+    }
+    
+    .next {
+      @include last;
+      text-align: right;
+    }
   }
 }

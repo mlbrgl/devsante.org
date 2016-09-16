@@ -10,17 +10,12 @@ $search_box_height: 2.3rem;
   font-size: 0.75rem;
   margin-bottom: 1.5rem;
 
-  .search-box {
-    @include span(full);
-  }
-
   .i-search {
     height: $search_box_height;
     line-height: $search_box_height;
     display: block;
     float: left;
     text-align: center;
-    @include pad($icon_pad);
     background-color: $dark_grey;
     color: #ffffff;
   }
@@ -44,21 +39,21 @@ $search_box_height: 2.3rem;
     display:none;
     float: right;
     color: $dark_grey;
-  }
-  .i-cancel-circle, .search-cancel-text {
-    display: block;
-    float: left;
-    line-height: $search_box_height;
+    
+    span {
+      display: block;
+      float: left;
+      line-height: $search_box_height;
+    }
   }
   .i-cancel-circle{
     // Non-conventional way of adding spacing to remain congruent with the
     // i-search icon
-    width: 2.5rem;
     text-align: center;
     font-size: 1rem;
   }
   a:hover {
-    color: $medium_grey;
+    color: $hover;
   }
 
 }
@@ -68,6 +63,10 @@ body.search {
   footer,
   main {
     display: none;
+  }
+
+  #search .i-search {
+    background-color: $dark_blue;
   }
 
 }

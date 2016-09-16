@@ -1,6 +1,6 @@
 <div id="search">
   <div class="container wide">
-    <div class="search-box">
+    <div class="content">
       <span class="icon i-search"></span>
       <div class="search-input"></div>
       <a href="#" onClick="clear_search(event);" class="search-cancel">

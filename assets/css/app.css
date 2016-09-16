@@ -430,6 +430,10 @@ main img {
   font-size: 0.9rem;
   text-transform: uppercase; }
 
+.icon {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem; }
+
 header {
   color: #ffffff;
   background-color: #365086;
@@ -451,9 +455,9 @@ header {
       display: none; }
       @media (min-width: 768px) {
         header #top .icon {
-          display: inline;
-          padding-left: 0.9rem;
-          padding-right: 0.9rem; } }
+          display: inline; } }
+    header #top a.main-theme {
+      color: #ffe955; }
   header .logo {
     margin: 0 auto;
     text-align: center;
@@ -506,19 +510,12 @@ body.home header .logo {
   height: 2.3rem;
   font-size: 0.75rem;
   margin-bottom: 1.5rem; }
-  #search .search-box {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0; }
   #search .i-search {
     height: 2.3rem;
     line-height: 2.3rem;
     display: block;
     float: left;
     text-align: center;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
     background-color: #777879;
     color: #ffffff; }
   #search .search-input input {
@@ -537,21 +534,23 @@ body.home header .logo {
     display: none;
     float: right;
     color: #777879; }
-  #search .i-cancel-circle, #search .search-cancel-text {
-    display: block;
-    float: left;
-    line-height: 2.3rem; }
+    #search .search-cancel span {
+      display: block;
+      float: left;
+      line-height: 2.3rem; }
   #search .i-cancel-circle {
-    width: 2.5rem;
     text-align: center;
     font-size: 1rem; }
   #search a:hover {
-    color: #cccfcf; }
+    color: #0092f8; }
 
 body.search header,
 body.search footer,
 body.search main {
   display: none; }
+
+body.search #search .i-search {
+  background-color: #365086; }
 
 main.home {
   /*
@@ -609,8 +608,8 @@ main.home {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #365086; }
-  main.home [class^="i-"], main.home [class*=" i-"] {
-    margin-right: 0.9rem; }
+  main.home .icon {
+    padding-left: 0; }
   main.home .derniers-articles article h1 {
     line-height: 2rem;
     font-size: 1.8rem;
@@ -678,12 +677,12 @@ main.home {
       margin-right: 0; } }
 
 main.not-home h1.page-title {
-  line-height: 2rem;
-  font-size: 1.8rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   color: #365086; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     main.not-home h1.page-title {
       line-height: 2.5rem;
       font-size: 2.5rem;
@@ -711,54 +710,78 @@ main.not-home td {
   padding: 0.5rem 1rem;
   border: 1px solid #ffffff; }
 
-.list article {
+@media (min-width: 768px) {
+  main.list h1.page-title {
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; } }
+
+main.list article {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #365086; }
-
-.list h1 {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-  text-transform: uppercase; }
-  @media (min-width: 768px) {
-    .list h1 {
-      width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; } }
-
-.list .date {
-  color: #777879; }
-  @media (min-width: 768px) {
-    .list .date {
-      width: 48.57143%;
-      float: right;
-      margin-right: 0;
-      text-align: right; } }
-
-.list .author {
-  clear: both;
-  color: #777879;
-  font-size: 0.9rem;
-  margin-bottom: 0.4rem; }
-
-.list .heading {
-  clear: both;
-  font-size: 1rem;
-  margin-bottom: 0.4rem; }
-  .list .heading a {
+  main.list article h1 {
     font-weight: bold;
-    color: #000000; }
-  .list .heading a:hover {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      main.list article h1 {
+        width: 48.57143%;
+        float: left;
+        margin-right: 2.85714%; } }
+  main.list article .date {
     color: #777879; }
+    @media (min-width: 768px) {
+      main.list article .date {
+        width: 48.57143%;
+        float: right;
+        margin-right: 0;
+        text-align: right; } }
+  main.list article .author {
+    clear: both;
+    color: #777879;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem; }
+  main.list article .heading {
+    clear: both;
+    font-size: 1rem;
+    margin-bottom: 0.4rem; }
+    main.list article .heading a {
+      font-weight: bold;
+      color: #000000; }
+    main.list article .heading a:hover {
+      color: #777879; }
+  main.list article .text {
+    clear: both;
+    margin-bottom: 1rem; }
+  main.list article em {
+    font-style: normal;
+    background-color: #b1d7fe; }
 
-.list .text {
-  clear: both;
-  margin-bottom: 1rem; }
-
-.list em {
-  font-style: normal;
-  background-color: #b1d7fe; }
+main.list .pagination {
+  margin-bottom: 1.5rem; }
+  main.list .pagination:after {
+    content: "";
+    display: table;
+    clear: both; }
+  main.list .pagination a {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    font-size: 0.8rem;
+    color: #777879; }
+    @media (min-width: 768px) {
+      main.list .pagination a {
+        width: 31.42857%;
+        float: left;
+        margin-right: 2.85714%; } }
+  main.list .pagination a:hover {
+    color: #0092f8; }
+  main.list .pagination .next {
+    float: right;
+    margin-right: 0;
+    text-align: right; }
 
 footer {
   color: #ffffff;
