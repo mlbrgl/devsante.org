@@ -33,7 +33,7 @@
           <span class="title">ACTUALITES</span>
         </a>
         <a href="/l-association"> 
-          <span class="i-menu icon"></span>
+          <span class="i-users icon"></span>
           <span class="title">L'ASSOCIATION</span>
         </a>
         <a href="/?q=drépano" class="main-theme"> 
