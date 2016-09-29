@@ -40,7 +40,7 @@ c::set('timezone','Europe/Paris');
 //Kirby Algolia
 c::set('kirby-algolia', array(
   'algolia' => array(
-    'application_id' => 'BY1JXTA0MV',
+    'application_id' => 'SHEMC4VFOH',
     'index' => 'devsante', // PROD
     'api_key' => '***REMOVED***' 
   ),

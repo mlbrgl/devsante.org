@@ -1,6 +1,6 @@
 var search = instantsearch({
-  appId: 'BY1JXTA0MV',
-  apiKey: '3a6b04066a48eed19634129870e8e8f1',
+  appId: 'SHEMC4VFOH',
+  apiKey: '64bcff507de4b92b2e55267b9a336f1c',
   indexName: 'devsante',
   urlSync: true,
   searchFunction: search
