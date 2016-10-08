@@ -711,74 +711,74 @@ main.not-home td {
   border: 1px solid #ffffff; }
 
 @media (min-width: 768px) {
-  main.list h1.page-title {
+  .list h1.page-title {
     line-height: 1.5rem;
     font-size: 1.5rem;
     margin-bottom: 0.5rem; } }
 
-main.list article {
+.list article {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #365086; }
-  main.list article h1 {
+  .list article h1 {
     font-weight: bold;
     font-size: 1rem;
     margin-bottom: 0.2rem;
     text-transform: uppercase; }
     @media (min-width: 768px) {
-      main.list article h1 {
-        width: 48.57143%;
+      .list article h1 {
+        width: 74.28571%;
         float: left;
         margin-right: 2.85714%; } }
-  main.list article .date {
+  .list article .date {
     color: #777879; }
     @media (min-width: 768px) {
-      main.list article .date {
-        width: 48.57143%;
+      .list article .date {
+        width: 22.85714%;
         float: right;
         margin-right: 0;
         text-align: right; } }
-  main.list article .author {
+  .list article .author {
     clear: both;
     color: #777879;
     font-size: 0.9rem;
     margin-bottom: 0.4rem; }
-  main.list article .heading {
+  .list article .heading {
     clear: both;
     font-size: 1rem;
     margin-bottom: 0.4rem; }
-    main.list article .heading a {
+    .list article .heading a {
       font-weight: bold;
       color: #000000; }
-    main.list article .heading a:hover {
+    .list article .heading a:hover {
       color: #777879; }
-  main.list article .text {
+  .list article .text {
     clear: both;
     margin-bottom: 1rem; }
-  main.list article em {
+  .list article em {
     font-style: normal;
     background-color: #b1d7fe; }
 
-main.list .pagination {
+.list .pagination {
   margin-bottom: 1.5rem; }
-  main.list .pagination:after {
+  .list .pagination:after {
     content: "";
     display: table;
     clear: both; }
-  main.list .pagination a {
+  .list .pagination a {
     width: 48.57143%;
     float: left;
     margin-right: 2.85714%;
     font-size: 0.8rem;
     color: #777879; }
     @media (min-width: 768px) {
-      main.list .pagination a {
+      .list .pagination a {
         width: 31.42857%;
         float: left;
         margin-right: 2.85714%; } }
-  main.list .pagination a:hover {
+  .list .pagination a:hover {
     color: #0092f8; }
-  main.list .pagination .next {
+  .list .pagination .next {
     float: right;
     margin-right: 0;
     text-align: right; }

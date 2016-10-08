@@ -1,4 +1,4 @@
-main.list {
+.list {
   h1.page-title {
     // Overriding h1-page-title mixin for laptop and up versions
     @include breakpoint ($tablet) {
@@ -15,7 +15,7 @@ main.list {
     
     h1 {
       @include breakpoint($tablet) {
-        @include span(6 of 12);
+        @include span(9 of 12);
       }
       font-weight: bold;
       font-size: 1rem;
@@ -25,7 +25,7 @@ main.list {
     .date {
       color: $dark_grey;
       @include breakpoint($tablet) {
-        @include span(6 of 12 last);
+        @include span(3 of 12 last);
         text-align: right;
       }
     }
