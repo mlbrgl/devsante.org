@@ -439,7 +439,6 @@ header {
   background-color: #365086;
   font-size: 0.8rem; }
   header #top {
-    padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem;
     /*
@@ -447,8 +446,22 @@ header {
       float: right;
     }
     */ }
+    @media (max-width: 767px) {
+      header #top .content {
+        text-align: center; } }
+    header #top .line {
+      padding: 0.6rem 0; }
+      @media (min-width: 768px) {
+        header #top .line {
+          display: inline-block; } }
+    @media (max-width: 767px) {
+      header #top .line:first-child {
+        border-bottom: 1px solid #6177a1; } }
     header #top a {
       color: #ffffff; }
+      @media (max-width: 767px) {
+        header #top a {
+          padding: 0 0.6rem; } }
     header #top a:hover {
       color: #0092f8; }
     header #top .icon {

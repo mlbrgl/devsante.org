@@ -24,22 +24,29 @@
 
       <div class="container wide">
 
-        <a href="/articles"> 
-          <span class="i-quill icon"></span>
-          <span class="title">ARTICLES</span>
-        </a>
-        <a href="/actualites"> 
-          <span class="i-newspaper icon"></span>
-          <span class="title">ACTUALITES</span>
-        </a>
-        <a href="/l-association"> 
-          <span class="i-briefcase icon"></span>
-          <span class="title">L'ASSOCIATION</span>
-        </a>
-        <a href="/?q=drépano" class="main-theme"> 
-          <span class="i-quill icon"></span>
-          <span class="title">ARTICLES DRÉPANOCYTOSE</span>
-        </a>
+        <div class="content">
+          <div class="line">
+            <a href="/articles"> 
+              <span class="i-quill icon"></span>
+              <span class="title">ARTICLES</span>
+            </a>
+            <a href="/actualites"> 
+              <span class="i-newspaper icon"></span>
+              <span class="title">ACTUALITES</span>
+            </a>
+            <a href="/l-association"> 
+              <span class="i-briefcase icon"></span>
+              <span class="title">L'ASSOCIATION</span>
+            </a>
+          </div>
+          <div class="line">
+            <a href="/?q=drépano" class="main-theme"> 
+              <span class="i-quill icon"></span>
+              <span class="title">ARTICLES DRÉPANOCYTOSE</span>
+            </a>
+          </div>
+        </div>
+
         <?php /* <a href="#" class="i-facebook icon"></a> */ ?>
 
       </div>

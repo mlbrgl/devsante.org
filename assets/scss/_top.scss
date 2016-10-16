@@ -5,11 +5,32 @@ header {
   font-size: 0.8rem;
 
   #top {
-    padding: 0.6rem 0;
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem;
 
+    .content {
+      @include breakpoint ($smartphone_only) {
+        text-align: center;
+      }
+    }
+
+    .line {
+      padding: 0.6rem 0;
+      @include breakpoint($tablet) {
+        display: inline-block;
+      }
+    }
+
+    .line:first-child {
+      @include breakpoint ($smartphone_only) {
+        border-bottom: 1px solid $grey_blue;
+      }
+    }
+
     a {
+      @include breakpoint ($smartphone_only) {
+        padding: 0 0.6rem;
+      }
       color: $white;
     }
 
