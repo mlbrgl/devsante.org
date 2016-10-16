@@ -39,8 +39,16 @@ search.addWidget(
               '{{/_snippetResult._content.value}}' +
             '</article>',
       empty: 'Votre recherche n\' a retourné aucun résultat'
-    }
-    // hitsPerPage: 2,
+    },
+    hitsPerPage: 5
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#search-pagination',
+    maxPages: 20,
+    showFirstLast: false,
   })
 );
 

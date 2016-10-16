@@ -14,4 +14,5 @@
 
 <div class="container list" id="search-hits">
   <div class="content"></div>
+  <div id="search-pagination"></div>  
 </div>

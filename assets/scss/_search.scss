@@ -58,6 +58,14 @@ $search_box_height: 2.3rem;
 
 }
 
+#search-pagination {
+  ul {
+    text-align: center;
+    margin: 0 0 1.5rem;
+    padding: 0;
+  }
+}
+
 body.search {
   header,
   footer,

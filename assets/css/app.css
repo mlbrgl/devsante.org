@@ -557,6 +557,11 @@ body.home header .logo {
   #search a:hover {
     color: #0092f8; }
 
+#search-pagination ul {
+  text-align: center;
+  margin: 0 0 1.5rem;
+  padding: 0; }
+
 body.search header,
 body.search footer,
 body.search main {
