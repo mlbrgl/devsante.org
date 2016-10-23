@@ -41,8 +41,9 @@ c::set('timezone','Europe/Paris');
 c::set('kirby-algolia', array(
   'algolia' => array(
     'application_id' => 'SHEMC4VFOH',
-    'index' => 'devsante', // PROD
-    'api_key' => '***REMOVED***' 
+    'index' => 'devsante_dev',
+    'api_key' => '***REMOVED***',
+    'api_key_search_only' => '***REMOVED***' 
   ),
   'blueprints' => array(
     'article' => array(

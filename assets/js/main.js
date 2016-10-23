@@ -1,15 +1,15 @@
 var search = instantsearch({
-  appId: 'SHEMC4VFOH',
-  apiKey: '64bcff507de4b92b2e55267b9a336f1c',
-  indexName: 'devsante',
+  appId: algolia_appId,
+  apiKey: algolia_apiKey,
+  indexName: algolia_indexName,
   urlSync: true,
-  searchFunction: search
+  searchFunction: _.debounce(search_func, 200)
 });
 
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search .search-input',
-    placeholder: 'votre recherche'
+    placeholder: 'votre recherche',
   })
 );
 
@@ -19,12 +19,22 @@ search.addWidget(
     transformData: {
       item: function(item) {
         item.datetime = get_locale_date_string_fallback(item.datetime * 1000);
+        
+        // Removing metadata for subsequent paragraphs in the search
+        if(item._distinctSeqID !== 0) {
+          delete item._highlightResult.title;
+          delete item.author;
+          delete item.datetime;
+        }
+
         return item;
       }
     },
     templates: {
       item: '<article>' + 
-              '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
+              '{{#_highlightResult.title}}' + 
+                '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
+              '{{/_highlightResult.title}}' + 
               '{{#datetime}}' + 
                 '<div class="date">{{datetime}}</div>' +
               '{{/datetime}}' +
@@ -35,7 +45,7 @@ search.addWidget(
                 '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
               '{{/_highlightResult._heading.value}}'+
               '{{#_snippetResult._content.value}}' +
-                '<div class="text">[...] {{{_snippetResult._content.value}}} [...]</div>' +
+                '<div class="text"><a href="/{{_id}}">[...] {{{_snippetResult._content.value}}} [...] </a></div>' +
               '{{/_snippetResult._content.value}}' +
             '</article>',
       empty: 'Votre recherche n\' a retourné aucun résultat'
@@ -52,34 +62,11 @@ search.addWidget(
   })
 );
 
-
-/**
- * Returns a formatted representation of the timestamp.
- * 
- * Provides also a fallback for IE
- *
- * @param      string         $timestamp  The timestamp
- * @return     Date|string    The formatted date (currently dd/mm/yyyy)
- */
-function get_locale_date_string_fallback(timestamp) {
-  if (typeof timestamp !== 'undefined') {
-    var curr_date = new Date(timestamp);
-    date_string = curr_date.toLocaleDateString();
-
-    // TODO test fallback for older IE
-    if(!date_string) {
-      var curr_day = curr_date.getDate();
-      var curr_month = curr_date.getMonth() + 1 ;
-      var curr_year = curr_date.getFullYear();
-      date_string = curr_day + '/' + curr_month + '/' +  curr_year;
-    }    
-  } else {
-    date_string = '';
+search.addWidget({
+  init: function(args) {
+    args.helper.setQueryParameter('distinct', 2);
   }
-
-return date_string;
-}
-
+});
 
 search.start();
 
@@ -89,14 +76,15 @@ search.start();
  *
  * @param      {string}  helper  The helper
  */
-function search(helper) {  
+function search_func(helper) {  
   if(helper.state.query !== '') {
-    //helper.search({hitsPerPage: 5});
-    helper.search();
     search_mode('on');
+    helper.search();
+    
     // TODO change style of search bar (blue, bigger)
   }
 }
+
 
 /**
  * Show / hide search elements 
@@ -139,4 +127,32 @@ function clear_search(event) {
   search_input.value = '';
 
   search_mode('off');
+}
+
+
+/**
+ * Returns a formatted representation of the timestamp.
+ * 
+ * Provides also a fallback for IE
+ *
+ * @param      string         $timestamp  The timestamp
+ * @return     Date|string    The formatted date (currently dd/mm/yyyy)
+ */
+function get_locale_date_string_fallback(timestamp) {
+  if (typeof timestamp !== 'undefined') {
+    var curr_date = new Date(timestamp);
+    date_string = curr_date.toLocaleDateString();
+
+    // TODO test fallback for older IE
+    if(!date_string) {
+      var curr_day = curr_date.getDate();
+      var curr_month = curr_date.getMonth() + 1 ;
+      var curr_year = curr_date.getFullYear();
+      date_string = curr_day + '/' + curr_month + '/' +  curr_year;
+    }    
+  } else {
+    date_string = '';
+  }
+
+return date_string;
 }

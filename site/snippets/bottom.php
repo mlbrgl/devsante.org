@@ -19,9 +19,18 @@
     </div>
   </footer>
 
+  <script type="text/javascript">
+    <?php
+      echo 'algolia_appId = "' . c::get('kirby-algolia')['algolia']['application_id'] . '"' . PHP_EOL;
+      echo 'algolia_apiKey = "' . c::get('kirby-algolia')['algolia']['api_key_search_only'] . '"' . PHP_EOL;
+      echo 'algolia_indexName = "' . c::get('kirby-algolia')['algolia']['index'] . '"' . PHP_EOL;
+    ?>
+  </script>
+
   <?php
-    echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js');
+    echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js');
     echo js('assets/js/classList.min.js');
+    echo js('assets/js/lodash.custom.min.js');
     echo js('assets/js/main.js');
   ?>
 

@@ -515,9 +515,6 @@ body.home header .logo {
     #baseline .line.last {
       text-align: left; } }
 
-/*
- * See _list.scss for search hits styling
- */
 #search {
   background-color: #e5e6e7;
   height: 2.3rem;
@@ -562,13 +559,32 @@ body.home header .logo {
   margin: 0 0 1.5rem;
   padding: 0; }
 
-body.search header,
-body.search footer,
-body.search main {
-  display: none; }
-
-body.search #search .i-search {
-  background-color: #365086; }
+/* see main.js for search mode activation */
+body.search {
+  /*
+   * See _list.scss for search generic hits styling.
+   * Below are overrides for grouped paragraph search
+   */ }
+  body.search header,
+  body.search footer,
+  body.search main {
+    display: none; }
+  body.search #search .i-search {
+    background-color: #365086; }
+  body.search .list article {
+    margin: 1rem 0 0;
+    padding-bottom: 0;
+    border-bottom: none; }
+    body.search .list article:after {
+      content: "";
+      display: table;
+      clear: both; }
+  body.search .list .heading, body.search .list .text {
+    width: 91.42857%;
+    float: right;
+    margin-right: 0; }
+  body.search .list .text {
+    margin-bottom: 1rem; }
 
 main.home {
   /*
