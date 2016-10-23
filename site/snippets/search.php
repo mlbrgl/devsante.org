@@ -4,7 +4,7 @@
       <span class="icon i-search"></span>
       <div class="search-input"></div>
       <a href="#" onClick="clear_search(event);" class="search-cancel">
-        <span class="search-cancel-text">annuler</span>
+        <span class="search-cancel-text">retour</span>
         <span class="icon i-cancel-circle"></span>
       </a>
     </div>
