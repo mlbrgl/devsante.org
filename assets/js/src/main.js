@@ -10,6 +10,7 @@ search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search .search-input',
     placeholder: 'votre recherche',
+
   })
 );
 
@@ -54,14 +55,17 @@ search.addWidget(
   })
 );
 
+// Pagination widget
 search.addWidget(
   instantsearch.widgets.pagination({
     container: '#search-pagination',
     maxPages: 20,
     showFirstLast: false,
+    padding: 2
   })
 );
 
+// Configuration widget
 search.addWidget({
   init: function(args) {
     args.helper.setQueryParameter('distinct', 2);

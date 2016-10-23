@@ -55,11 +55,32 @@ $search_box_height: 2.3rem;
 }
 
 #search-pagination {
+  margin-top: 1rem;
   ul {
     text-align: center;
     margin: 0 0 1.5rem;
     padding: 0;
   }
+  a {
+    display: block;
+    padding: 0.5rem $icon_pad;
+    margin: 0 0.1rem;
+    background-color: $light_grey;
+  }
+  a:hover {
+    background-color: $medium_grey;
+  }
+}
+
+#search-algolia{
+  display: none;
+  margin-bottom: 1rem;
+  text-align: center;
+  
+  img {
+    width: 5rem;
+  }
+
 }
 
 /* see main.js for search mode activation */
@@ -95,6 +116,10 @@ body.search {
     .text {
       margin-bottom: 1rem;
     }
+  }
+
+  #search-algolia {
+    display: block;
   }
 
 }

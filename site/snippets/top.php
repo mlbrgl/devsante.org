@@ -10,8 +10,6 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/app.css') ?>
-  <?php echo css('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700') ?>
-  <?php echo css('assets/fonts/devsante/style.css'); ?>
   <?php echo css('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css'); ?>
 
 

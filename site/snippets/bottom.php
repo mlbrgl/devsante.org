@@ -29,9 +29,7 @@
 
   <?php
     echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js');
-    echo js('assets/js/classList.min.js');
-    echo js('assets/js/lodash.custom.min.js');
-    echo js('assets/js/main.js');
+    echo js('assets/js/app.js');
   ?>
 
   <script type="text/javascript">

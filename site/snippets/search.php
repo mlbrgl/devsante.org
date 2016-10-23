@@ -15,4 +15,9 @@
 <div class="container list" id="search-hits">
   <div class="content"></div>
   <div id="search-pagination"></div>  
+  <div id="search-algolia">
+    <a href="https://www.algolia.com">
+      <img src="/assets/img/algolia.svg" />
+    </a>
+  </div>  
 </div>
