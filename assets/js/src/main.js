@@ -3,7 +3,10 @@ var search = instantsearch({
   apiKey: algolia_apiKey,
   indexName: algolia_indexName,
   urlSync: true,
-  searchFunction: _.debounce(search_func, 200)
+  searchFunction: _.debounce(search_func, 200),
+  searchParameters: {
+    distinct: 2
+  }
 });
 
 search.addWidget(
@@ -65,12 +68,13 @@ search.addWidget(
   })
 );
 
-// Configuration widget
-search.addWidget({
-  init: function(args) {
-    args.helper.setQueryParameter('distinct', 2);
-  }
-});
+// Configuration widget replaced with searchParameters as per 
+// https://github.com/algolia/instantsearch.js/issues/1463
+// search.addWidget({
+//   init: function(args) {
+//     args.helper.setQueryParameter('distinct', 2);
+//   }
+// });
 
 search.start();
 
