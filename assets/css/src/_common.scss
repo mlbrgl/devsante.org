@@ -30,6 +30,7 @@ h1, h2, h3, h4, p, ul{
 a {
   text-decoration: none;
   color: $dark_blue;
+  transition: all 0.15s linear;
 }
 
 a:hover {
