@@ -67,8 +67,23 @@ c::set('kirby-algolia', array(
 //Latest articles
 c::set('latest-content', array(
   'search_phrase' => "drépanocy",
-  'limit' => 2,
+  'length' => 1,
   'blueprint' => 'article',
   'cache_filename' => 'latest_content.txt'
 ));
 
+//Redirects
+c::set('redirects', array(
+  'redirects_src_filename' => 'redirects_src.txt',
+  'redirects_filename' => 'redirects.csv'
+));
+
+// Custom routes. Only needed once to generate the redirects from Algolia search results
+// c::set('routes', array(
+//   array(
+//     'pattern' => 'redirects/generate',
+//     'action'  => function() {
+//       redirects_generate_csv();
+//     }
+//   )
+// ));
