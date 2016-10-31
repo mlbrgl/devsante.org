@@ -7,14 +7,14 @@
     <section class="derniers-articles theme">
       <h1 class="section-title"><span class="icon i-quill"></span>Dernier article sur <strong>la drépanocytose</strong></h1>
       <div class="inner">
-        <?php snippet('latest_articles', array('mode'=>'theme')); ?>
+        <?php snippet('home_latest_articles', array('mode'=>'theme')); ?>
       </div>
     </section>
 
     
     <section class="derniers-articles standard">
       <h1 class="section-title"><span class="icon i-pushpin"></span>Derniers articles</h1>
-      <?php snippet('latest_articles', array('mode'=>'standard')); ?>
+      <?php snippet('home_latest_articles', array('mode'=>'standard')); ?>
     </section>
 
 
@@ -33,13 +33,13 @@
 
     <section id="actualites" class="annexes">
       <h1 class="section-title"><span class="icon i-newspaper"></span>Actualités</h1>
-      <?php snippet('latest_news'); ?>
+      <?php snippet('home_annex', array('annexuri' => page('actualites')->children()->visible()->last()->uri())); ?>
     </section>
 
 
     <section id="a-lire" class="annexes">
       <h1 class="section-title"><span class="icon i-bookmark"></span>A lire</h1>
-      Cras tincidunt purus fringilla mauris vehicula tempor. Vestibulum varius dignissim ligula, et iaculis urna rutrum molestie. Etiam et mollis mauris. tum eu dui nec, lobortis maximus ligula.
+      <?php snippet('home_annex', array('annexuri' => $page->annexuri())); ?>
     </section>
     
     <?php /*

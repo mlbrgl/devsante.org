@@ -6,7 +6,6 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type:  textarea
-    size:  large
+  annexuri:
+    label: A lire 
+    type: page
