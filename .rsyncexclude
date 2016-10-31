@@ -1,0 +1,12 @@
+.DS_Store
+/devsante-kirby.sublime*
+/.git
+/.rsyncexclude
+/thumbs
+/.htaccess
+/.htpasswd
+/site/config/config.php
+/scripts
+/content
+/site/accounts
+/site/plugins/latest-content/latest_content.txt
