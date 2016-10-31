@@ -67,13 +67,14 @@ function _latest_content_update($settings) {
 
   // Init Algolia
   $algolia_settings = c::get('kirby-algolia')['algolia'];
-  $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key']);
+  $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key_search_only']);
   $index = $client->initIndex($algolia_settings['index']);
 
   // Run search
   $query_params = ['attributesToRetrieve' => '_id', 
-                   'hitsPerPage' => $settings['limit'], 
-                   'distinct' => 1,
+                   'length' => $settings['length'],
+                   'offset' => 0, // without 'offset', 'length' is not considered
+                   'distinct' => 1, //making sure to return only one record for each article
                    'facetFilters' => '_blueprint:' . $settings['blueprint']];
                    
   $res = $index->search($settings['search_phrase'], $query_params);
@@ -86,7 +87,7 @@ function _latest_content_update($settings) {
   // Writing the hits ids in the cache file
   if(!empty($res['hits'][0])) {
     foreach($res['hits'] as $hit) {
-      f::write($cache_filepath, $hit['_id'], true);
+      f::write($cache_filepath, $hit['_id'] . PHP_EOL, true);
     }
   }
 }
@@ -118,4 +119,3 @@ function latest_content_get_pages() {
 
   return $pages;
 }
-?>
