@@ -14,7 +14,7 @@
 
 
 </head>
-<body<?php ecco(isset($context), ' class="' . $context . '"');?>>
+<body<?php echo isset($context) ? ' class="' . $context . '"' : '';?>>
   
   <header class="header cf" role="banner">
     
