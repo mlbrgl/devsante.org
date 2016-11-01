@@ -3,7 +3,6 @@ main.not-home{
   @include h1-page-title;
   
   h2, h3, h4 {
-    color: $dark_blue;
     margin-bottom: 0.5rem;
   }
 
@@ -27,6 +26,10 @@ main.not-home{
     background-color: $light_grey;
     padding: 0.5rem 1rem;
     border: 1px solid $white;
+  }
+
+  .text {
+    margin-bottom: 3rem;
   }
 
 }

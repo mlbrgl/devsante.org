@@ -1,0 +1,46 @@
+nav.excerpts {
+  @include clearfix;
+}
+
+.excerpt {
+  @include span(full);
+  @include breakpoint ($tablet) {
+    @include span (6 of 12);
+  }
+  margin-bottom: $default_bottom_margin;
+
+  @include h1-section-title;
+
+  article {
+    h1 {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: normal;
+      margin-bottom: $home_bottom_margin;
+      a {
+        color: $black;
+      }
+      a:hover {
+        color: $hover;
+      }
+    }
+  }
+  .date {
+    font-style: italic;
+  }
+}
+
+#a-lire, .excerpt.next {
+  @include breakpoint ($tablet) {
+    @include last;
+  }
+}
+
+.excerpt.next h1.section-title {
+  text-align: right;
+
+  .icon {
+    padding-right: 0;
+    padding-left: $icon_pad;
+  }
+}

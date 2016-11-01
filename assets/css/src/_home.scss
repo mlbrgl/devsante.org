@@ -1,31 +1,13 @@
 main.home {
 
-  h1, h2 {
-    color: $dark_blue;
-    font-weight: normal;
-  }
-
-  h1.section-title{
-    font-size: 0.9rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: $default_bottom_margin;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid $dark_blue;
-  }
-
-  //could matche icon prefixed classes with the following but "icon" more understandable
-  //[class^="i-"], [class*=" i-"] {
-  .icon {
-    padding-left: 0;  
-  }
-
-
+  @include h1-section-title;
+  
   .derniers-articles {
     article {
       h1 {
         line-height: 2rem;
         font-size: 1.8rem;
+        font-weight: normal;
         margin-bottom: $home_bottom_margin;
       }
     }
@@ -52,7 +34,7 @@ main.home {
   }
 
   .derniers-articles.standard {
-    @include last;
+    @include clearfix;
     article {
       @include breakpoint($tablet) {
         @include span (3 of 6)
@@ -63,42 +45,12 @@ main.home {
     }
     margin-bottom: $default_bottom_margin;
   }
-
-
-  .annexes {
-    @include span(full);
-    @include breakpoint ($tablet) {
-      @include span (6 of 12);
-    }
-    margin-bottom: $default_bottom_margin;
-    
-    article {
-      h1 {
-        font-size: 1.5rem;
-        font-style: italic;
-        line-height: normal;
-        margin-bottom: $home_bottom_margin;
-        a {
-          color: $black;
-        }
-        a:hover {
-          color: $hover;
-        }
-      }
-    }
-    .date {
-      font-style: italic;
-    }
-  }
   
-  // Numeros speciaux not output at the moment
-  #numeros-speciaux, #a-lire {
-    @include breakpoint ($tablet) {
-      @include last;
-    }
-  }
 
-  // Communication ponctuelle not output at the moment
+  /* See _excerpt.css for styles related to the bottom home blocks */
+
+
+  // Communication ponctuelle not printed at the moment
   /*
   #communication-ponctuelle {
     position: relative;

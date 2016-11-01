@@ -12,13 +12,33 @@ h1, h2, h3, h4, p, ul{
   margin-top: 0;
 }
 
+h1, h2, h3, h4 {
+  color: $dark_blue;
+}
+
+@mixin h1-section-title {
+  h1.section-title{
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: $default_bottom_margin;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $dark_blue;
+
+    //could match icon prefixed classes with the following but "icon" more understandable
+    //[class^="i-"], [class*=" i-"] {
+    .icon {
+      padding-left: 0;  
+    }
+  }
+}
+
 @mixin h1-page-title {
   h1.page-title {
     line-height: 1.5rem;
     font-size: 1.5rem; 
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: $dark_blue;
     @include breakpoint ($tablet) {
       line-height: 2.5rem;
       font-size: 2.5rem;
