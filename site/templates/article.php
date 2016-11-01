@@ -18,18 +18,20 @@
       <div class="text">
         <?php echo $page->text()->kirbytext() ?>
       </div>
-      
-      <div class="related-articles">
-        <div>article 1</div>
-        <div>article 2</div>
-      </div>
 
-      <nav class="nextprev cf" role="navigation">
+      <nav class="excerpts" role="navigation">
+        
         <?php if($prev = $page->prevVisible()): ?>
-        <a class="prev" href="<?php echo $prev->url() ?>">&larr; previous</a>
+          <section class="excerpt previous">
+            <h1 class="section-title"><a href="<?php echo $prev->url(); ?>"><span class="icon i-arrow-left"></span>Article précédent</a></h1>
+            <?php snippet('excerpt', array('excerpt' => $prev)); ?>
+          </section>
         <?php endif ?>
         <?php if($next = $page->nextVisible()): ?>
-        <a class="next" href="<?php echo $next->url() ?>">next &rarr;</a>
+          <div class="excerpt next">
+            <h1 class="section-title"><a href="<?php echo $next->url(); ?>">Article suivant<span class="icon i-arrow-right"></span></a></h1>
+            <?php snippet('excerpt', array('excerpt' => $next)); ?>
+          </div>
         <?php endif ?>
       </nav>
 
