@@ -79,7 +79,7 @@ function _latest_content_update($settings) {
                    
   // Dirty fix to prevent race condition with kirby-algolia plugin when updating articles
   // Order wanted: delete fragments, index new fragments, update latest_content article
-  sleep(3);
+  sleep(5);
   $res = $index->search($settings['search_phrase'], $query_params);
   
   // We remove the cache file before writing the new set of hits ids.
