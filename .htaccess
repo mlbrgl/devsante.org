@@ -14,7 +14,7 @@ RewriteEngine on
 # If your homepage is http://yourdomain.com/mysite
 # Set the RewriteBase to:
 #
-# RewriteBase /mysite
+RewriteBase /
 
 # MB 15/11/2016 - Rewrite www to non wwww
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
