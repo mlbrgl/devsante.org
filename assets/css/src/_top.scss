@@ -8,10 +8,14 @@ header {
     border-bottom: 1px solid #ffffff;
     margin-bottom: 1.2rem;
 
+    .container {
+      // Removing padding to have the separation line between menu items
+      // level 1 and 2 going right to the edge.
+      @include pad(0);
+    }
+
     .content {
-      @include breakpoint ($smartphone_only) {
-        text-align: center;
-      }
+      text-align: center;
     }
 
     .line {
@@ -60,7 +64,6 @@ header {
   
   .logo {
     margin: 0 auto;
-    text-align: center;
     padding-bottom: 1.4rem;
     width: 9rem;
   }
@@ -82,31 +85,15 @@ body.home header .logo {
 
 
 #baseline {
+  width: 12rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 2rem;
+  
   @include breakpoint($tablet) {
+    width: 100%;
     font-size: 1.1rem;
     padding-bottom: 2.8rem;
-  }
-
-  .line {
-    @include span(full);
-    @include breakpoint($tablet) {
-      @include span(50%);
-      @include squish(0);
-    }
-  }
-
-  .line.first{
-    @include breakpoint($tablet) {
-      text-align: right;
-    }
-  }
-
-  .line.last{
-    @include breakpoint($tablet) {
-      text-align: left;
-    }
   }
 }

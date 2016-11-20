@@ -20,7 +20,7 @@
     
     <div id="top">
 
-      <div class="container wide">
+      <div class="container">
 
         <div class="content">
           <div class="line">
@@ -58,9 +58,8 @@
     </div>
 
     <?php if(isset($context) && $context == 'home'): ?>
-      <div id="baseline" class="container wide">
-        <div class="line first">Information permanente&nbsp;</div>
-        <div class="line last">des acteurs de la santé</div>
+      <div id="baseline">
+        Information permanente des acteurs de la santé
       </div>
     <?php endif; ?> 
 
