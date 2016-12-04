@@ -35,6 +35,9 @@ header {
       @include breakpoint ($smartphone_only) {
         border-bottom: 1px solid $grey_blue;
       }
+      @include breakpoint($tablet) {
+        margin-right: 1rem;
+      }
     }
 
     a {
