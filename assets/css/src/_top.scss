@@ -1,42 +1,43 @@
+$menu_item_spacing_mobile: 0.9rem;
+$menu_item_spacing_tablet: 2rem;
+
 header {
 
   color: #ffffff;
   background-color: $dark_blue;
 
-  #top {
+  #menu {
     border-bottom: 1px solid #ffffff;
-    margin-bottom: 1.2rem;
-
-    .container {
-      // Removing padding to have the separation line between menu items
-      // level 1 and 2 going right to the edge.
-      @include pad(0);
+    margin-bottom: 0.8rem;
+    @include breakpoint($tablet) {
+      margin-bottom: 1.2rem;
     }
+    text-align: center;
 
-    .content {
-      text-align: center;
-    }
-
-    .menu-line {
+    .menu-row {
       padding: 0.6rem 0;
+      font-size: 0.9rem;
       @include breakpoint($tablet) {
         display: inline-block;
       }
       li {
         display: inline-block;
-        margin-right: 1rem;
+        margin-right: $menu_item_spacing_mobile;
+        @include breakpoint($tablet) {
+          margin-right: $menu_item_spacing_tablet;
+        }
       }
       li.last {
         margin-right: 0;
       }
     }
 
-    .menu-line:first-child {
+    .menu-row:first-child {
       @include breakpoint ($smartphone_only) {
         border-bottom: 1px solid $grey_blue;
       }
       @include breakpoint($tablet) {
-        margin-right: 1rem;
+        margin-right: $menu_item_spacing_tablet;
       }
     }
 
@@ -70,20 +71,24 @@ header {
   
   .logo {
     margin: 0 auto;
-    padding-bottom: 1.4rem;
-    width: 9rem;
+    padding-bottom: 0.6rem;
+    width: 6rem;
+    @include breakpoint($tablet) {
+      width: 9rem;
+      padding-bottom: 1.4rem;
+    }
   }
 
 }
 
-body.home header #top {
-  @include breakpoint($tablet){
+body.home header #menu {
+  margin-bottom: 1rem;
+  @include breakpoint($tablet) {
     margin-bottom: 2rem;
   }
 }
 body.home header .logo {
-  width: 11rem;
-  padding-bottom: 1rem;
+  width: 8rem;
   @include breakpoint($tablet) {
     width: 14.3rem;
   }
@@ -91,11 +96,12 @@ body.home header .logo {
 
 
 #baseline {
-  width: 12rem;
+  width: 14rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
   text-align: center;
+  font-size: 0.8rem;
   
   @include breakpoint($tablet) {
     width: 100%;

@@ -18,44 +18,38 @@
   
   <header class="header cf" role="banner">
     
-    <div id="top">
+    <div id="menu">
 
-      <div class="container">
-
-        <div class="content">
-          <ul class="menu-line">
-            <li>
-              <a href="/articles"> 
-                <span class="i-quill icon"></span>
-                <span class="title">ARTICLES</span>
-              </a>
-            </li>
-            <li>
-              <a href="/actualites"> 
-                <span class="i-newspaper icon"></span>
-                <span class="title">ACTUALITES</span>
-              </a>
-            </li>
-            <li>
-              <a href="/l-association"> 
-                <span class="i-briefcase icon"></span>
-                <span class="title">L'ASSOCIATION</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="menu-line">
-            <li class="last">
-              <a href="/?q=drépano" class="main-theme"> 
-                <span class="i-quill icon"></span>
-                <span class="title">ARTICLES DRÉPANOCYTOSE</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <ul class="menu-row">
+        <li>
+          <a href="/articles"> 
+            <span class="i-quill icon"></span>
+            <span class="title">ARTICLES</span>
+          </a>
+        </li>
+        <li>
+          <a href="/actualites"> 
+            <span class="i-newspaper icon"></span>
+            <span class="title">ACTUALITES</span>
+          </a>
+        </li>
+        <li class="last">
+          <a href="/l-association"> 
+            <span class="i-briefcase icon"></span>
+            <span class="title">ASSOCIATION</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu-row">
+        <li class="last">
+          <a href="/?q=drépano" class="main-theme"> 
+            <span class="i-quill icon"></span>
+            <span class="title">ARTICLES DRÉPANOCYTOSE</span>
+          </a>
+        </li>
+      </ul>
 
         <?php /* <a href="#" class="i-facebook icon"></a> */ ?>
-
-      </div>
     
     </div>
 
