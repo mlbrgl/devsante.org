@@ -23,26 +23,34 @@
       <div class="container">
 
         <div class="content">
-          <div class="line">
-            <a href="/articles"> 
-              <span class="i-quill icon"></span>
-              <span class="title">ARTICLES</span>
-            </a>
-            <a href="/actualites"> 
-              <span class="i-newspaper icon"></span>
-              <span class="title">ACTUALITES</span>
-            </a>
-            <a href="/l-association"> 
-              <span class="i-briefcase icon"></span>
-              <span class="title">L'ASSOCIATION</span>
-            </a>
-          </div>
-          <div class="line">
-            <a href="/?q=drépano" class="main-theme"> 
-              <span class="i-quill icon"></span>
-              <span class="title">ARTICLES DRÉPANOCYTOSE</span>
-            </a>
-          </div>
+          <ul class="menu-line">
+            <li>
+              <a href="/articles"> 
+                <span class="i-quill icon"></span>
+                <span class="title">ARTICLES</span>
+              </a>
+            </li>
+            <li>
+              <a href="/actualites"> 
+                <span class="i-newspaper icon"></span>
+                <span class="title">ACTUALITES</span>
+              </a>
+            </li>
+            <li>
+              <a href="/l-association"> 
+                <span class="i-briefcase icon"></span>
+                <span class="title">L'ASSOCIATION</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu-line">
+            <li class="last">
+              <a href="/?q=drépano" class="main-theme"> 
+                <span class="i-quill icon"></span>
+                <span class="title">ARTICLES DRÉPANOCYTOSE</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <?php /* <a href="#" class="i-facebook icon"></a> */ ?>

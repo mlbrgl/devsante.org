@@ -2,7 +2,6 @@ header {
 
   color: #ffffff;
   background-color: $dark_blue;
-  font-size: 0.8rem;
 
   #top {
     border-bottom: 1px solid #ffffff;
@@ -18,23 +17,27 @@ header {
       text-align: center;
     }
 
-    .line {
+    .menu-line {
       padding: 0.6rem 0;
       @include breakpoint($tablet) {
         display: inline-block;
       }
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+      li.last {
+        margin-right: 0;
+      }
     }
 
-    .line:first-child {
+    .menu-line:first-child {
       @include breakpoint ($smartphone_only) {
         border-bottom: 1px solid $grey_blue;
       }
     }
 
     a {
-      @include breakpoint ($smartphone_only) {
-        padding: 0 0.6rem;
-      }
       color: $white;
     }
 
