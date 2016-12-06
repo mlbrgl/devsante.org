@@ -96,12 +96,12 @@ body.home header .logo {
 
 
 #baseline {
-  width: 12rem;
+  width: 10rem;
   margin: 0 auto;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   
   @include breakpoint($tablet) {
     width: 100%;

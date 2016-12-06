@@ -43,10 +43,7 @@ $search_box_height: 2.5rem;
     }
   }
   .i-cancel-circle{
-    // Non-conventional way of adding spacing to remain congruent with the
-    // i-search icon
-    text-align: center;
-    font-size: 1rem;
+    margin-left: $icon_pad;
   }
   a:hover {
     color: $hover;
