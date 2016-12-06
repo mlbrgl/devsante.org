@@ -24,14 +24,14 @@
       "properties": {
         "ligatures": "briefcase, portfolio",
         "name": "briefcase",
-        "id": 174,
+        "id": 0,
         "order": 30,
         "prevSize": 32,
         "code": 59822
       },
       "setIdx": 0,
-      "setId": 2,
-      "iconIdx": 174
+      "setId": 3,
+      "iconIdx": 0
     },
     {
       "icon": {
@@ -54,14 +54,14 @@
       "properties": {
         "ligatures": "arrow-up, up",
         "name": "arrow-up",
-        "id": 306,
+        "id": 1,
         "order": 25,
         "prevSize": 32,
         "code": 59954
       },
       "setIdx": 0,
-      "setId": 2,
-      "iconIdx": 306
+      "setId": 3,
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -83,14 +83,14 @@
       "properties": {
         "ligatures": "arrow-right, right3",
         "name": "arrow-right",
-        "id": 308,
+        "id": 2,
         "order": 24,
         "prevSize": 32,
         "code": 59956
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 0
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -112,14 +112,14 @@
       "properties": {
         "ligatures": "arrow-left, left3",
         "name": "arrow-left",
-        "id": 312,
+        "id": 3,
         "order": 23,
         "prevSize": 32,
         "code": 59960
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 1
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -128,6 +128,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "quill",
           "feather",
@@ -141,41 +142,14 @@
       "properties": {
         "ligatures": "quill, feather",
         "name": "quill",
-        "id": 7,
+        "id": 4,
         "order": 15,
         "prevSize": 32,
         "code": 59655
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 2
-    },
-    {
-      "icon": {
-        "paths": [
-          "M544 0l-96 96 96 96-224 256h-224l176 176-272 360.616v39.384h39.384l360.616-272 176 176v-224l256-224 96 96 96-96-480-480zM448 544l-64-64 224-224 64 64-224 224z"
-        ],
-        "attrs": [],
-        "isMulticolor": false,
-        "tags": [
-          "pushpin",
-          "pin"
-        ],
-        "defaultCode": 59718,
-        "grid": 16
-      },
-      "attrs": [],
-      "properties": {
-        "ligatures": "pushpin, pin",
-        "name": "pushpin",
-        "id": 70,
-        "order": 16,
-        "prevSize": 32,
-        "code": 59718
-      },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 3
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -185,6 +159,7 @@
         ],
         "attrs": [],
         "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "cancel-circle",
           "close",
@@ -198,14 +173,14 @@
       "properties": {
         "ligatures": "cancel-circle, close",
         "name": "cancel-circle",
-        "id": 269,
+        "id": 6,
         "order": 22,
         "prevSize": 32,
         "code": 59917
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 4
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -213,6 +188,8 @@
           "M896 256v-128h-896v704c0 35.346 28.654 64 64 64h864c53.022 0 96-42.978 96-96v-544h-128zM832 832h-768v-640h768v640zM128 320h640v64h-640zM512 448h256v64h-256zM512 576h256v64h-256zM512 704h192v64h-192zM128 448h320v320h-320z"
         ],
         "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "newspaper",
           "news",
@@ -223,15 +200,15 @@
       "attrs": [],
       "properties": {
         "order": 6,
-        "id": 1624,
+        "id": 7,
         "prevSize": 32,
         "ligatures": "newspaper, news",
         "name": "newspaper",
         "code": 59651
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 5
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -239,6 +216,8 @@
           "M192 0v1024l320-320 320 320v-1024z"
         ],
         "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "bookmark",
           "ribbon"
@@ -247,16 +226,16 @@
       },
       "attrs": [],
       "properties": {
-        "id": 833,
+        "id": 8,
         "order": 7,
         "prevSize": 32,
         "ligatures": "bookmark, ribbon",
         "name": "bookmark",
         "code": 59652
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 6
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -264,6 +243,8 @@
           "M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"
         ],
         "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
         "tags": [
           "search",
           "magnifier",
@@ -275,16 +256,16 @@
       },
       "attrs": [],
       "properties": {
-        "id": 532,
+        "id": 9,
         "order": 5,
         "prevSize": 32,
         "ligatures": "search, magnifier",
         "name": "search",
         "code": 59650
       },
-      "setIdx": 1,
-      "setId": 1,
-      "iconIdx": 7
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 9
     }
   ],
   "height": 1024,

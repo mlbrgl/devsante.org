@@ -13,7 +13,7 @@
 
     
     <section class="derniers-articles standard">
-      <h1 class="section-title"><span class="icon i-pushpin"></span>Derniers articles</h1>
+      <h1 class="section-title"><span class="icon i-quill"></span>Derniers articles</h1>
       <?php snippet('home-latest-articles', array('mode'=>'standard')); ?>
     </section>
 
