@@ -22,9 +22,9 @@
 
       <ul class="menu-row">
         <li>
-          <a href="/articles"> 
-            <span class="i-quill icon"></span>
-            <span class="title">ARTICLES</span>
+          <a href="/l-association"> 
+            <span class="i-briefcase icon"></span>
+            <span class="title">ASSOCIATION</span>
           </a>
         </li>
         <li>
@@ -34,9 +34,9 @@
           </a>
         </li>
         <li class="last">
-          <a href="/l-association"> 
-            <span class="i-briefcase icon"></span>
-            <span class="title">ASSOCIATION</span>
+          <a href="/articles"> 
+            <span class="i-quill icon"></span>
+            <span class="title">ARTICLES</span>
           </a>
         </li>
       </ul>
