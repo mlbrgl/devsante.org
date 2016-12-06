@@ -3,7 +3,10 @@ var search = instantsearch({
   apiKey: algolia_apiKey,
   indexName: algolia_indexName,
   urlSync: true,
-  searchFunction: _.debounce(search_func, 200),
+  // Replace with following line to debounce search and add lodash (custom 
+  // package with debounce only) back in src folder
+  // searchFunction: _.debounce(search_func, 200),
+  searchFunction: search_func,
   searchParameters: {
     distinct: 2
   }
