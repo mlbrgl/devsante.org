@@ -16,7 +16,7 @@
   <div class="content"></div>
   <div id="search-pagination"></div>  
   <div id="search-algolia">
-    <a href="https://www.algolia.com">
+    <a href="https://www.algolia.com" target="_blank">
       <img src="/assets/img/algolia.svg" />
     </a>
   </div>  
