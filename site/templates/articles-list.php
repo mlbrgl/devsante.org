@@ -1,5 +1,5 @@
 <?php snippet('top') ?>
-  <main class="not-home list" role="main">
+  <main class="not-home list">
     
     <div class="content">
       

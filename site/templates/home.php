@@ -1,6 +1,6 @@
 <?php snippet('top', array('context' => 'home')) ?>
 
-<main class="home" role="main">
+<main class="home">
 
   <div class="content">
   

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 
   <meta charset="utf-8" />
@@ -16,7 +16,7 @@
 </head>
 <body<?php echo isset($context) ? ' class="' . $context . '"' : '';?>>
   
-  <header class="header cf" role="banner">
+  <header class="header cf">
     
     <div id="menu">
 
@@ -53,7 +53,7 @@
     
     </div>
 
-    <div class="logo"><a href="/">
+    <div class="logo">
       <a href="<?php echo url() ?>">
         <img src="<?php echo url('assets/img/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
       </a>
