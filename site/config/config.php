@@ -3,23 +3,6 @@
 /*
 
 ---------------------------------------
-License Setup
----------------------------------------
-
-Please add your license key, which you've received
-via email after purchasing Kirby on http://getkirby.com/buy
-
-It is not permitted to run a public website without a
-valid license key. Please read the End User License Agreement
-for more information: http://getkirby.com/license
-
-*/
-
-c::set('license', 'put your license key here');
-
-/*
-
----------------------------------------
 Kirby Configuration
 ---------------------------------------
 
@@ -39,12 +22,6 @@ c::set('timezone','Europe/Paris');
 
 //Kirby Algolia
 c::set('kirby-algolia', array(
-  'algolia' => array(
-    'application_id' => 'SHEMC4VFOH',
-    'index' => 'devsante_dev',
-    'api_key' => '***REMOVED***',
-    'api_key_search_only' => '***REMOVED***' 
-  ),
   'blueprints' => array(
     'article' => array(
       'fields' => array(
@@ -66,24 +43,28 @@ c::set('kirby-algolia', array(
 
 //Latest articles
 c::set('latest-content', array(
-  'search_phrase' => "drépanocy",
+  'search_phrase' => "drepanocy",
   'length' => 1,
   'blueprint' => 'article',
   'cache_filename' => 'latest_content.txt'
 ));
 
-//Redirects
+// Redirects
 c::set('redirects', array(
-  'redirects_src_filename' => 'redirects_src.txt',
   'redirects_filename' => 'redirects.csv'
 ));
 
-// Custom routes. Only needed once to generate the redirects from Algolia search results
-// c::set('routes', array(
-//   array(
-//     'pattern' => 'redirects/generate',
-//     'action'  => function() {
-//       redirects_generate_csv();
-//     }
-//   )
-// ));
+// Server push headers (filename are fingerprinted during deployment)
+c::set('headers', array(
+  'home' => function($page) {
+    header('Link: </assets/css/app.css>; rel=preload; as=style, 
+                  </assets/js/app.js>; rel=preload; as=script'
+          );
+  }
+));
+
+// Include a local config file if it exists
+$local_config = __DIR__ . '/local.config.php';
+if (file_exists($local_config)) {
+  include $local_config;
+}

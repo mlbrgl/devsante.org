@@ -36,17 +36,6 @@ gulp.task('connect-sync', function() {
 
 });
 
-/*gulp.task('serve', ['sass'], function() {
-
-    browserSync.init({
-        server: "./app"
-    });
-
-    gulp.watch(src.scss, ['sass']);
-    gulp.watch(src.php).on('change', browserSync.reload);
-});
-*/
-
 gulp.task('css', function () {
   return gulp.src(src.css)
     .pipe(sass().on('error', sass.logError))
@@ -66,17 +55,16 @@ gulp.task('js', function () {
 
 gulp.task('cachebust-css', function(){
   return gulp.src(min.css)
-    .pipe(md5(10,'site/snippets/*.php'))
+    .pipe(md5(10,['site/snippets/*.php','site/config/config.php']))
     .pipe(gulp.dest(dist.css))
 });
 
 
 gulp.task('cachebust-js', function(){
   return gulp.src(min.js)
-    .pipe(md5(10,'site/snippets/*.php'))
+    .pipe(md5(10,['site/snippets/*.php','site/config/config.php']))
     .pipe(gulp.dest(dist.js))
 });
-
 
 
 gulp.task('default', ['css', 'js', 'connect-sync']);
