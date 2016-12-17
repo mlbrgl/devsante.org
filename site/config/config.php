@@ -57,9 +57,7 @@ c::set('redirects', array(
 // Server push headers (filename are fingerprinted during deployment)
 c::set('headers', array(
   'home' => function($page) {
-    header('Link: </assets/css/app.css>; rel=preload; as=style, 
-                  </assets/js/app.js>; rel=preload; as=script'
-          );
+    header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
   }
 ));
 
