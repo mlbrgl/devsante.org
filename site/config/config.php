@@ -14,7 +14,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 // Switch date handler for translated months and days
 c::set('date.handler', 'strftime'); 
-c::set('locale', 'fr_FR');
+c::set('locale', 'fr_FR.utf8');
 //c::set('markdown.extra', true);
 
 // Timezone setting
