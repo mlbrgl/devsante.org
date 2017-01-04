@@ -54,11 +54,9 @@ c::set('redirects', array(
 ));
 
 // Server push headers (filename are fingerprinted during deployment)
-c::set('headers', array(
-  'home' => function($page) {
-    header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
-  }
-));
+if(!class_exists('Panel')){
+  header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
+}
 
 // Include a local config file if it exists
 $local_config = __DIR__ . '/local.config.php';
