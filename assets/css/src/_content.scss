@@ -32,4 +32,30 @@ main.not-home{
     margin-bottom: 3rem;
   }
 
+  figure {
+    background-color: $light_grey;
+    margin: 1rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .gallery {
+    @include clearfix;
+    
+    figure {
+      float: left; 
+      width: 45%;
+      margin: 0 2.5% 0;
+      @include breakpoint($tablet) {
+        width: 22%;
+        margin: 0 1.5% 0;
+      }
+    }
+
+  }
+
 }
