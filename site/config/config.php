@@ -37,8 +37,7 @@ c::set('kirby-algolia', array(
         'main' => array('text')
       )
     )
-  ),
-  //'debug' => array('dry_run')
+  )
 ));
 
 //Latest articles

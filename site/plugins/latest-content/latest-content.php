@@ -63,34 +63,36 @@ kirby()->hook('panel.page.update', function($page) {
  * @param      integer  $limit          The limit
  */
 function _latest_content_update($settings) {
-  $cache_filepath = __DIR__ . '/' . c::get('latest-content')['cache_filename'];
+  if(empty($settings['debug']) || !in_array('dry_run', $settings['debug'])) {
+    $cache_filepath = __DIR__ . '/' . c::get('latest-content')['cache_filename'];
 
-  // Init Algolia
-  $algolia_settings = c::get('kirby-algolia')['algolia'];
-  $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key_search_only']);
-  $index = $client->initIndex($algolia_settings['index']);
+    // Init Algolia
+    $algolia_settings = c::get('kirby-algolia')['algolia'];
+    $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key_search_only']);
+    $index = $client->initIndex($algolia_settings['index']);
 
-  // Run search
-  $query_params = ['attributesToRetrieve' => '_id', 
-                   'length' => $settings['length'],
-                   'offset' => 0, // without 'offset', 'length' is not considered
-                   'distinct' => 1, //making sure to return only one record for each article
-                   'facetFilters' => '_blueprint:' . $settings['blueprint']];
-                   
-  // Dirty fix to prevent race condition with kirby-algolia plugin when updating articles
-  // Order wanted: delete fragments, index new fragments, update latest_content article
-  sleep(5);
-  $res = $index->search($settings['search_phrase'], $query_params);
-  
-  // We remove the cache file before writing the new set of hits ids.
-  // Technically, a home page could be generated when the file does not exist,
-  // which would result in an empty block. Chances are near impossible though.
-  f::remove($cache_filepath);
-  
-  // Writing the hits ids in the cache file
-  if(!empty($res['hits'][0])) {
-    foreach($res['hits'] as $hit) {
-      f::write($cache_filepath, $hit['_id'] . PHP_EOL, true);
+    // Run search
+    $query_params = ['attributesToRetrieve' => '_id', 
+                     'length' => $settings['length'],
+                     'offset' => 0, // without 'offset', 'length' is not considered
+                     'distinct' => 1, //making sure to return only one record for each article
+                     'facetFilters' => '_blueprint:' . $settings['blueprint']];
+                     
+    // Dirty fix to prevent race condition with kirby-algolia plugin when updating articles
+    // Order wanted: delete fragments, index new fragments, update latest_content article
+    sleep(5);
+    $res = $index->search($settings['search_phrase'], $query_params);
+    
+    // We remove the cache file before writing the new set of hits ids.
+    // Technically, a home page could be generated when the file does not exist,
+    // which would result in an empty block. Chances are near impossible though.
+    f::remove($cache_filepath);
+    
+    // Writing the hits ids in the cache file
+    if(!empty($res['hits'][0])) {
+      foreach($res['hits'] as $hit) {
+        f::write($cache_filepath, $hit['_id'] . PHP_EOL, true);
+      }
     }
   }
 }
