@@ -4,7 +4,8 @@
       <div id="footer-top">
         <ul>
           <li><a href="/l-association/faire-un-don">FAIRE UN DON</a></li>
-          <li class="last"><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
+          <li><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
+          <li class="last"><a href="mailto:contact@devsante.org"><span class="i-envelop"></span><span class="contact">CONTACT</span></a></li>
         </ul>
       </div>
 

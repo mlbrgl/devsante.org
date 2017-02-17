@@ -1,5 +1,9 @@
-Title: Home
+Title: Accueil
 
 ----
 
 Text: 
+
+----
+
+Annexuri: actualites/la-drepanocytose-une-priorite
