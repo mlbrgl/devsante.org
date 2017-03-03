@@ -1,3 +1,4 @@
+// Algolia variables are set in bottom.php
 var search = instantsearch({
   appId: algolia_appId,
   apiKey: algolia_apiKey,
