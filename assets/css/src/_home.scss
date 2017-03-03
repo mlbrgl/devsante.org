@@ -1,5 +1,6 @@
 main.home {
 
+
   @include h1-section-title;
   
   .derniers-articles {
@@ -9,6 +10,12 @@ main.home {
         font-size: 1.8rem;
         font-weight: normal;
         margin-bottom: $home_bottom_margin;
+      }
+      a {
+        color: $black;
+      }
+      a:hover {
+        color: $hover;
       }
     }
   }
