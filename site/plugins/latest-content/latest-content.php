@@ -68,7 +68,8 @@ function _latest_content_update($settings) {
 
     // Init Algolia
     $algolia_settings = c::get('kirby-algolia')['algolia'];
-    $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key_search_only']);
+    // Do not use api_key_search_only as the request would be blocked for lack of a valid referrer 
+    $client = new \AlgoliaSearch\Client($algolia_settings['application_id'], $algolia_settings['api_key']);
     $index = $client->initIndex($algolia_settings['index']);
 
     // Run search
