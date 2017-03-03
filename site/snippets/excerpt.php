@@ -17,7 +17,7 @@ if(isset($excerpt) || isset($excerpturi) && $excerpt = page($excerpturi)):
     </div>
 
     <div class="teaser">
-      <p><?php echo html($excerpt->text()->excerpt(300)) ?></p>
+      <p><?php echo $excerpt->text()->excerpt(300) ?></p>
     </div>
 
     <div class="date"><time datetime="<?php echo $excerpt->datetime() ?>"> <?php echo html($excerpt->date('%B %Y','datetime')) ?> </time></div>
