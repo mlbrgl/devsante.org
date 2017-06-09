@@ -55,7 +55,7 @@ c::set('redirects', array(
 
 // Server push headers (filename are fingerprinted during deployment)
 if(!class_exists('Panel')){
-  header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
+  header('Link: </assets/css/app_150732eb74.css>; rel=preload; as=style, </assets/js/app_746288c76c.js>; rel=preload; as=script');
 }
 
 // Include a local config file if it exists

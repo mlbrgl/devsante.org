@@ -43,11 +43,12 @@ header {
 
     a {
       color: $white;
+      
+      &:hover, &.active {
+        color: $hover;
+      }
     }
 
-    a:hover {
-      color: $hover;
-    }
 
     .icon {
       display: none;

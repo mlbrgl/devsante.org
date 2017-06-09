@@ -9,7 +9,7 @@
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
-  <?php echo css('assets/css/app.css') ?>
+  <?php echo css('assets/css/app_150732eb74.css') ?>
   <?php echo css('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css'); ?>
 
 
@@ -22,19 +22,19 @@
 
       <ul class="menu-row">
         <li>
-          <a href="/l-association"> 
+          <a href="/l-association"<?= $page->uid() === 'l-association' ? ' class="active"' : '' ?>> 
             <span class="i-briefcase icon"></span>
             <span class="title">ASSOCIATION</span>
           </a>
         </li>
         <li>
-          <a href="/actualites"> 
+          <a href="/actualites"<?= $page->uid() === 'actualites' ? ' class="active"' : '' ?>> 
             <span class="i-newspaper icon"></span>
             <span class="title">ACTUALITES</span>
           </a>
         </li>
         <li class="last">
-          <a href="/articles"> 
+          <a href="/articles"<?= $page->uid() === 'articles' ? ' class="active"' : '' ?>> 
             <span class="i-quill icon"></span>
             <span class="title">ARTICLES</span>
           </a>

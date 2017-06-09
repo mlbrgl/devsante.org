@@ -30,7 +30,7 @@
 
   <?php
     echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js');
-    echo js('assets/js/app.js');
+    echo js('assets/js/app_746288c76c.js');
   ?>
 
   <script type="text/javascript">
