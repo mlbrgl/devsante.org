@@ -13,7 +13,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 // Switch date handler for translated months and days
-c::set('date.handler', 'strftime'); 
+c::set('date.handler', 'strftime');
 c::set('locale', 'fr_FR.utf8');
 //c::set('markdown.extra', true);
 
@@ -46,11 +46,6 @@ c::set('latest-content', array(
   'length' => 1,
   'blueprint' => 'article',
   'cache_filename' => 'latest_content.txt'
-));
-
-// Redirects
-c::set('redirects', array(
-  'redirects_filename' => 'redirects.csv'
 ));
 
 // Server push headers (filename are fingerprinted during deployment)
