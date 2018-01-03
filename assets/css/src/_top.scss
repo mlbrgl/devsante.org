@@ -2,10 +2,10 @@ $header_vertical_spacing: 0.8rem;
 
 $header_menu_height: 2.5rem;
 
-$header_logo_height_smartphone: 2rem;
+$header_logo_height_smartphone: 1.4rem;
 $header_logo_height_tablet_desktop: 2.8rem;
 
-$header_height_smartphone: $header_logo_height_smartphone + 2 * $header_vertical_spacing;
+$header_height_smartphone: $header_logo_height_smartphone + 7/4 * $header_vertical_spacing; // cf. vertical margins for .logo
 $header_height_tablet_desktop: $header_menu_height + $header_logo_height_tablet_desktop + 2 * $header_vertical_spacing * 1.5;
 
 $search_box_height: $header_menu_height;
@@ -68,13 +68,17 @@ header {
   }
 
   .logo {
-    text-align: center;
-    margin: $header_vertical_spacing 0;
+    margin: $header_vertical_spacing * 3/4 0 $header_vertical_spacing;
     height: $header_logo_height_smartphone;
+
+    @include breakpoint ($smartphone_only) {
+      margin-left: $container_padding;
+    }
 
     @include breakpoint($tablet) {
       margin: $header_vertical_spacing * 1.5 0;
       height: $header_logo_height_tablet_desktop;
+      text-align: center;
     }
 
     a, img {
@@ -86,7 +90,7 @@ header {
 @include breakpoint($tablet) {
   body.home header .logo {
     margin: 2rem 0 1.5rem;
-    height: 4.5rem;
+    // height: 4.5rem;
   }
 }
 
