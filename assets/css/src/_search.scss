@@ -1,9 +1,15 @@
-$search_box_height: 2.5rem;
+@include breakpoint ($tablet) {
+  .headroom--unpinned #search {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+}
 
 #search {
   background-color: $light_grey;
   height: $search_box_height;
-  margin-bottom: 1.5rem;
+  margin-bottom: $default_bottom_margin;
+  transition: 0.5s;
+  transform-origin: top;
 
   .i-search {
     height: $search_box_height;
@@ -35,7 +41,7 @@ $search_box_height: 2.5rem;
     display:none;
     float: right;
     color: $dark_grey;
-    
+
     span {
       display: block;
       float: left;
@@ -73,7 +79,7 @@ $search_box_height: 2.5rem;
   display: none;
   margin-bottom: 1rem;
   text-align: center;
-  
+
   img {
     width: 5rem;
   }

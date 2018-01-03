@@ -16,9 +16,13 @@
 
         <div class="footer-to-top"><a href="#">Haut <span class="icon i-arrow-up"></span></a></div>
       </div>
-      
+
     </div>
+
+    <?php pattern("cookie-bar") ?>
+    
   </footer>
+
 
   <script type="text/javascript">
     <?php
@@ -30,7 +34,7 @@
 
   <?php
     echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js');
-    echo js('assets/js/app_746288c76c.js');
+    echo js('assets/js/app.js');
   ?>
 
   <script type="text/javascript">
@@ -44,9 +48,9 @@
       wf.async = 'true';
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wf, s);
-    })(); 
+    })();
   </script>
-  
+
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

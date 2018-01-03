@@ -1,8 +1,9 @@
 main.home {
 
+  // TODO margin-top: $top_height_smartphone + $default_bottom_margin;
 
   @include h1-section-title;
-  
+
   .derniers-articles {
     article {
       h1 {
@@ -53,14 +54,14 @@ main.home {
     article {
       @include breakpoint($tablet) {
         @include span (3 of 6)
-      }     
+      }
     }
     article.last {
       @include last;
     }
     margin-bottom: $default_bottom_margin;
   }
-  
+
 
   /* See _excerpt.css for styles related to the bottom home blocks */
 
@@ -111,4 +112,4 @@ main.home {
     background-color: $light_grey;
   }
   */
-}  
+}

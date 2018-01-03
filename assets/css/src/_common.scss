@@ -2,20 +2,6 @@ $default_bottom_margin: 1.5rem;
 $home_bottom_margin: 0.8rem;
 $icon_pad: 0.5rem;
 
-body{
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-}
-
-/* Bottom margins only for consistency */
-h1, h2, h3, h4, p, ul{
-  margin-top: 0;
-}
-
-h1, h2, h3, h4 {
-  color: $dark_blue;
-}
-
 @mixin h1-section-title {
   h1.section-title{
     font-size: 0.9rem;
@@ -28,7 +14,7 @@ h1, h2, h3, h4 {
     //could match icon prefixed classes with the following but "icon" more understandable
     //[class^="i-"], [class*=" i-"] {
     .icon {
-      padding-left: 0;  
+      padding-left: 0;
     }
   }
 }
@@ -36,7 +22,7 @@ h1, h2, h3, h4 {
 @mixin h1-page-title {
   h1.page-title {
     line-height: 1.5rem;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
     @include breakpoint ($tablet) {
@@ -45,6 +31,25 @@ h1, h2, h3, h4 {
       margin-bottom: 2rem;
     }
   }
+}
+
+@mixin visible($opacity) {
+  opacity: $opacity;
+  visibility: visible;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+/* Bottom margins only for consistency */
+h1, h2, h3, h4, p, ul{
+  margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+  color: $dark_blue;
 }
 
 ul {

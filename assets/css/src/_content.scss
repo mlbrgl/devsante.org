@@ -1,7 +1,13 @@
 main.not-home{
 
+  margin-top: $top_height_smartphone + $default_bottom_margin;
+
+  @include breakpoint($tablet) {
+    margin-top: $top_height_tablet_desktop + $default_bottom_margin;
+  }
+
   @include h1-page-title;
-  
+
   h2, h3, h4 {
     margin-bottom: 0.5rem;
   }
@@ -45,9 +51,9 @@ main.not-home{
 
   .gallery {
     @include clearfix;
-    
+
     figure {
-      float: left; 
+      float: left;
       width: 45%;
       margin: 0 2.5% 0;
       @include breakpoint($tablet) {

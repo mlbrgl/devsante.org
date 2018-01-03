@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
+var gulpif = require('gulp-if');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect-php');
 var md5 = require("gulp-md5-plus");
@@ -9,13 +10,17 @@ var browserSync = require('browser-sync').create();
 
 var src = {
   css: ['assets/css/src/app.scss', 'assets/fonts/devsante/style.css'],
-  js: 'assets/js/src/**/*.js',
+  js: [
+        'node_modules/headroom.js/dist/headroom.min.js',
+        'node_modules/js-cookie/src/js.cookie.js',
+        'assets/js/src/**/*.js'
+      ],
   php: 'site/**/*.php',
 };
 
 var dist = {
   css: 'assets/css',
-  js: 'assets/js'  
+  js: 'assets/js'
 }
 
 var min = {
@@ -30,8 +35,8 @@ gulp.task('connect-sync', function() {
     });
   });
 
-  gulp.watch("assets/css/src/*.scss", ['css']);
-  gulp.watch(src.js, ['js']);
+  gulp.watch(["assets/css/src/*.scss",'site/patterns/**/*.scss'], ['css']);
+  gulp.watch('assets/js/src/**/*.js', ['js']);
   gulp.watch(src.php).on('change', browserSync.reload);
 
 });
@@ -47,8 +52,8 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
   return gulp.src(src.js)
+    .pipe(gulpif('!**/*.min.js', uglify())) // only uglify() files that have not been minified yet.
     .pipe(concat('app.js'))
-    .pipe(uglify())
     .pipe(gulp.dest(dist.js))
     .pipe(browserSync.stream());
 });
@@ -69,4 +74,3 @@ gulp.task('cachebust-js', function(){
 
 gulp.task('default', ['css', 'js', 'connect-sync']);
 gulp.task('prod', ['cachebust-css', 'cachebust-js']);
-

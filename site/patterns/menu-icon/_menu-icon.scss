@@ -1,0 +1,41 @@
+.menu-icon {
+  position: absolute;
+  z-index: 3; // cf. .menu_overlay
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: $header_height_smartphone;
+  margin-right: $container_padding;
+
+  @include breakpoint($tablet) {
+    display: none;
+  }
+
+  .wrapper {
+    width: 20px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  span {
+    height: 2px;
+    background-color: $white;
+    transition: 0.5s;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      transform: translateY(-5px) rotate(-45deg);
+    }
+    span {
+       background-color: $white;
+    }
+  }
+}

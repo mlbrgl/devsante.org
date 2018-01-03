@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'devsante';
-  src:  url('fonts/devsante.eot?quth7a');
-  src:  url('fonts/devsante.eot?quth7a#iefix') format('embedded-opentype'),
-    url('fonts/devsante.ttf?quth7a') format('truetype'),
-    url('fonts/devsante.woff?quth7a') format('woff'),
-    url('fonts/devsante.svg?quth7a#devsante') format('svg');
+  src:  url('fonts/devsante.eot?vkzq1q');
+  src:  url('fonts/devsante.eot?vkzq1q#iefix') format('embedded-opentype'),
+    url('fonts/devsante.ttf?vkzq1q') format('truetype'),
+    url('fonts/devsante.woff?vkzq1q') format('woff'),
+    url('fonts/devsante.svg?vkzq1q#devsante') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,9 +26,6 @@
 
 .i-envelop:before {
   content: "\e945";
-}
-.i-briefcase:before {
-  content: "\e9ae";
 }
 .i-arrow-up:before {
   content: "\ea32";
@@ -54,4 +51,3 @@
 .i-search:before {
   content: "\e902";
 }
-

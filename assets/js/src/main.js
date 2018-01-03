@@ -4,7 +4,7 @@ var search = instantsearch({
   apiKey: algolia_apiKey,
   indexName: algolia_indexName,
   urlSync: true,
-  // Replace with following line to debounce search and add lodash (custom 
+  // Replace with following line to debounce search and add lodash (custom
   // package with debounce only) back in src folder
   // searchFunction: _.debounce(search_func, 200),
   searchFunction: search_func,
@@ -27,7 +27,7 @@ search.addWidget(
     transformData: {
       item: function(item) {
         item.datetime = get_locale_date_string_fallback(item.datetime * 1000);
-        
+
         // Removing metadata for subsequent paragraphs in the search
         if(item._distinctSeqID !== 0) {
           delete item._highlightResult.title;
@@ -39,18 +39,18 @@ search.addWidget(
       }
     },
     templates: {
-      item: '<article>' + 
-              '{{#_highlightResult.title}}' + 
+      item: '<article>' +
+              '{{#_highlightResult.title}}' +
                 '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
-              '{{/_highlightResult.title}}' + 
-              '{{#datetime}}' + 
+              '{{/_highlightResult.title}}' +
+              '{{#datetime}}' +
                 '<div class="date">{{datetime}}</div>' +
               '{{/datetime}}' +
-              '{{#author}}' + 
+              '{{#author}}' +
                 '<div class="author">{{author}}</div>' +
               '{{/author}}' +
               '{{#_highlightResult._heading.value}}' +
-                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' + 
+                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' +
               '{{/_highlightResult._heading.value}}'+
               '{{#_snippetResult._content.value}}' +
                 '<div class="text"><a href="/{{_id}}">[...] {{{_snippetResult._content.value}}} [...] </a></div>' +
@@ -72,7 +72,7 @@ search.addWidget(
   })
 );
 
-// Configuration widget replaced with searchParameters as per 
+// Configuration widget replaced with searchParameters as per
 // https://github.com/algolia/instantsearch.js/issues/1463
 // search.addWidget({
 //   init: function(args) {
@@ -88,18 +88,18 @@ search.start();
  *
  * @param      {string}  helper  The helper
  */
-function search_func(helper) {  
+function search_func(helper) {
   if(helper.state.query !== '') {
     search_mode('on');
     helper.search();
-    
+
     // TODO change style of search bar (blue, bigger)
   }
 }
 
 
 /**
- * Show / hide search elements 
+ * Show / hide search elements
  *
  * @param      on|off  search_is  Search status
  */
@@ -144,7 +144,7 @@ function clear_search(event) {
 
 /**
  * Returns a formatted representation of the timestamp.
- * 
+ *
  * Provides also a fallback for IE
  *
  * @param      string         $timestamp  The timestamp
@@ -161,10 +161,62 @@ function get_locale_date_string_fallback(timestamp) {
       var curr_month = curr_date.getMonth() + 1 ;
       var curr_year = curr_date.getFullYear();
       date_string = curr_day + '/' + curr_month + '/' +  curr_year;
-    }    
+    }
   } else {
     date_string = '';
   }
 
 return date_string;
+}
+
+/**
+ * Animate mobile menu
+ */
+
+var menu_icon = document.querySelector('.menu-icon');
+var menu_overlay = document.querySelector('.menu-overlay');
+
+function toggle_menu() {
+  // Toggle open mode
+  menu_icon.classList.toggle('open');
+  document.querySelector('nav#menu').classList.toggle('open');
+  document.querySelector('header').classList.toggle('open');
+
+  // Prevent background body scrolling
+  document.querySelector('body').classList.toggle('navigation-open');
+  document.querySelector('html').classList.toggle('navigation-open');
+
+  // Toggle overlay
+  menu_overlay.classList.toggle('visible');
+}
+
+menu_icon.addEventListener('click', toggle_menu);
+menu_overlay.addEventListener('click', toggle_menu);
+
+/**
+ * Hide header on scroll
+ */
+
+var header = document.querySelector('.header-search');
+
+var headroom  = new Headroom(header
+  //, {
+  // Headroom config options
+  // }
+);
+headroom.init();
+
+/**
+ * Handle cookie bar
+ */
+
+var cookie_bar = document.querySelector('#cookie-bar');
+var cookie_bar_cta = cookie_bar.getElementsByClassName('cta')[0];
+
+if (!Cookies.get('cookie-consent')) {
+  cookie_bar.classList.add('show');
+  cookie_bar_cta.addEventListener('click', function() {
+    cookie_bar.classList.remove('show');
+    Cookies.set('cookie-consent', true);
+  })
 }

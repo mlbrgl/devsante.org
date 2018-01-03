@@ -3,9 +3,11 @@
 @import "colors";
 @import "common";
 @import "top";
-@import "search";
 @import "home";
 @import "content";
 @import "excerpt";
 @import "list";
 @import "bottom";
+
+// Pattern
+@import "../../../site/patterns/cookie-bar/cookie-bar"

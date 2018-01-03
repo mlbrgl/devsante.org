@@ -4,6 +4,7 @@ $light_grey: #e5e6e7;
 $medium_grey: #cccfcf;
 $dark_grey: #777879;
 $charcoal: #1f2021;
+$cyan: #0092f8;
 $light_cyan: #b1d7fe;
 $white: #ffffff;
 $black: #000000;
@@ -11,4 +12,4 @@ $light_yellow: #fff7c1;
 $medium_yellow: #ffe955;
 
 // State
-$hover: #0092f8;
+$hover: $cyan;
