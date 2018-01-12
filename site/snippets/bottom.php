@@ -10,17 +10,22 @@
       </div>
 
       <div id="footer-bottom">
-        <div class="copyright">
-          <?php echo $site->copyright()->kirbytext() ?>
+
+        <div id="honcode">
+          <p><a href="https://www.healthonnet.org/HONcode/Conduct_f.html?HONConduct228684" onclick="window.open(this.href); return false;" > <img src="https://www.honcode.ch/HONcode/Seal/French/HONConduct228684_s2.gif" style="border:0px; width: 69px; height: 31px; float: left; margin: 2px;" title="Ce site respecte les principes de la charte HONcode de HON" alt="Ce site respecte les principes de la charte HONcode de HON" /></a> Ce site respecte les <a href="http://www.healthonnet.org/HONcode/Conduct_f.html" onclick="window.open(this.href); return false;"> principes de la charte HONcode</a>. <br /><a href="https://www.healthonnet.org/HONcode/Conduct_f.html?HONConduct228684" onclick="window.open(this.href); return false;">V&eacute;rifiez ici.</a> </p>
         </div>
 
-        <div class="footer-to-top"><a href="#">Haut <span class="icon i-arrow-up"></span></a></div>
+        <div id="copyright">
+          <?php echo $site->copyright()->kirbytext() ?>
+        </div>
+        
       </div>
-
     </div>
 
+    <div class="footer-to-top"><a href="#"><span class="icon i-arrow-up"></span></a></div>
+
     <?php pattern("cookie-bar") ?>
-    
+
   </footer>
 
 

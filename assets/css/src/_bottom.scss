@@ -1,14 +1,6 @@
 footer {
   color: $white;
   background-color: $charcoal;
-  
-  .copyright {
-    float: left;
-  }
-
-  .footer-to-top {
-    float: right;
-  }
 }
 
 #footer-top {
@@ -54,11 +46,11 @@ footer {
 #footer-bottom {
   color: $dark_grey;
   border-top: 1px solid $dark_grey;
-  padding: 1rem 0 3rem 0;
+  padding: 1rem $container_padding;
   font-size: 0.7rem;
 
-  .icon {
-    @include pad($icon_pad)
+  @include breakpoint($tablet) {
+    @include pad(0);
   }
 
   a {
@@ -66,5 +58,34 @@ footer {
   }
   a:hover {
     color: $medium_grey;
+  }
+}
+
+#honcode {
+  margin-bottom: $default_bottom_margin;
+  img {
+    box-sizing: content-box;
+    padding-right: $icon_pad;
+  }
+}
+
+.footer-to-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  a {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  .icon {
+    padding: 0;
   }
 }
