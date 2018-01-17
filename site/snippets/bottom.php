@@ -18,7 +18,7 @@
         <div id="copyright">
           <?php echo $site->copyright()->kirbytext() ?>
         </div>
-        
+
       </div>
     </div>
 

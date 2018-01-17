@@ -2,14 +2,14 @@
   position: fixed;
   z-index: 4; //cf .menu_overlay
   width: 100%;
-  padding: $header_vertical_spacing 0;
   font-size: 0.8rem;
-  background-color: blue;
+  background-color: $charcoal;
   transition: 0.5s;
   opacity: 0;
 
   @include breakpoint ($smartphone_only) {
     bottom: 0;
+    padding: $header_vertical_spacing 0;
     transform: translate3d(0, 100%, 0);
   }
   @include breakpoint ($tablet) {
@@ -26,6 +26,7 @@
   .container {
     display: flex;
     align-items: center;
+    height: inherit;
   }
 
   .text {
@@ -34,8 +35,10 @@
 
   .cta {
     @include span(3 of 12 last);
-    color: black;
-    background-color: yellow;
-    cursor: pointer;
+    color: $white;
+
+    &:hover {
+      color: $medium_grey;
+    }
   }
 }

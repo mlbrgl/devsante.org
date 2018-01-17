@@ -1,8 +1,8 @@
-$header_vertical_spacing: 0.8rem;
+$header_vertical_spacing: 1rem;
 
 $header_menu_height: 2.5rem;
 
-$header_logo_height_smartphone: 1.4rem;
+$header_logo_height_smartphone: 1.2rem;
 $header_logo_height_tablet_desktop: 2.8rem;
 
 $header_height_smartphone: $header_logo_height_smartphone + 7/4 * $header_vertical_spacing; // cf. vertical margins for .logo

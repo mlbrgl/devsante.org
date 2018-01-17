@@ -215,7 +215,8 @@ var cookie_bar_cta = cookie_bar.getElementsByClassName('cta')[0];
 
 if (!Cookies.get('cookie-consent')) {
   cookie_bar.classList.add('show');
-  cookie_bar_cta.addEventListener('click', function() {
+  cookie_bar_cta.addEventListener('click', function(e) {
+    e.preventDefault();
     cookie_bar.classList.remove('show');
     Cookies.set('cookie-consent', true);
   })
