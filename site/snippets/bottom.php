@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="footer-to-top"><a href="#"><span class="icon i-arrow-up"></span></a></div>
+    <div class="back-to-top"><a href="#"><span class="icon i-arrow-up"></span></a></div>
 
     <?php pattern("cookie-bar") ?>
 

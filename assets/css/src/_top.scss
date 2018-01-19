@@ -71,7 +71,7 @@ header {
     margin: $header_vertical_spacing * 3/4 0 $header_vertical_spacing;
     height: $header_logo_height_smartphone;
 
-    @include breakpoint ($smartphone_only) {
+    @include breakpoint (max-width 359px) {
       margin-left: $container_padding;
     }
 
@@ -82,6 +82,10 @@ header {
     }
 
     a, img {
+      @include breakpoint(360px) {
+        display: block;
+        margin: 0 auto;
+      }
       height: inherit;
     }
   }
