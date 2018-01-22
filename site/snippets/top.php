@@ -20,8 +20,6 @@
 
     <header class="header cf">
 
-      <div class="menu-overlay"></div>
-
       <?php pattern('menu-icon'); ?>
 
       <?php pattern('menu'); ?>
@@ -34,7 +32,7 @@
 
       <?php if(isset($context) && $context == 'home'): ?>
         <div id="baseline">
-          Information permanente des acteurs de la santé
+          Information permanente <br/>des acteurs de la santé
         </div>
       <?php endif; ?>
 

@@ -1,6 +1,10 @@
 main.home {
 
-  // TODO margin-top: $top_height_smartphone + $default_bottom_margin;
+  margin-top: $top_height_home_smartphone + $default_bottom_margin;
+
+  @include breakpoint($tablet) {
+    margin-top: $top_height_home_tablet_desktop + $default_bottom_margin;
+  }
 
   @include h1-section-title;
 

@@ -1,0 +1,30 @@
+#pop-in {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -20vw;
+  margin-left: -35vw;
+  padding: $container_padding;
+  height: 40vw;
+  width: 70vw;
+  background-color: $dark_grey;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    top:-2rem;
+    right:0;
+    font-size: 1.5rem;
+
+    a {
+      color: $dark_grey;
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
+<div id="menu-overlay" class="overlay"></div>
+
 <nav id="menu">
   <ul>
     <li>
       <a href="/"<?= $page->isHomePage() ? ' class="active"' : '' ?>>
-        ACCUEIL
+        <span class="icon-no-margin i-home3"></span>
+        <span class="text">ACCUEIL</span>
       </a>
     </li>
     <li>

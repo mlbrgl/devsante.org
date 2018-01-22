@@ -1,6 +1,6 @@
 #cookie-bar {
   position: fixed;
-  z-index: 4; //cf .menu_overlay
+  z-index: 4; //cf #menu-overlay
   width: 100%;
   font-size: 0.8rem;
   background-color: $charcoal;
@@ -18,7 +18,7 @@
     transform: translate3d(0, -100%, 0);
   }
 
-  &.show {
+  &.visible {
     transform: none;
     opacity: 1;
   }

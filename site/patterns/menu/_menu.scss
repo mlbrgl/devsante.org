@@ -1,3 +1,8 @@
+// See generic overlay style in _common.scss
+#menu-overlay {
+  z-index: 1; // fix Algolia input going over the overlay
+}
+
 nav#menu {
 
   ul {
@@ -6,13 +11,12 @@ nav#menu {
 
   @include breakpoint($smartphone_only) {
     position: fixed;
-    z-index: 2; // cf. .menu_overlay
+    z-index: 2; // cf. #menu-overlay
     width: 100%;
     height: 100%;
     @include pad(3rem);
     top: 0;
     left: 100%;
-    opacity: 0;
     background-color: inherit;
     transition: 0.5s;
     font-size: 1.2rem;
@@ -20,7 +24,6 @@ nav#menu {
 
     &.open {
       transform: translate3d(-100%, 0, 0);
-      opacity: 1;
       overflow: scroll;
     }
 
@@ -34,6 +37,10 @@ nav#menu {
         border-bottom: 1px solid $hover;
         text-align: center;
         font-size: 1.5rem;
+
+        &:first-child .icon-no-margin {
+          display: none;
+        }
       }
     }
   }
@@ -51,15 +58,13 @@ nav#menu {
 
       li {
         margin-right: 0.9rem;
-        @include breakpoint($tablet) {
-          display: inline-block;
-          margin-right: 2rem;
-          &:first-child {
-            display: none;
-          }
-          &:last-child {
-            margin-right: 0;
-          }
+        display: inline-block;
+        margin-right: 2rem;
+        &:first-child .text {
+          display: none; 
+        }
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
