@@ -26,7 +26,7 @@
 
       <div class="logo">
         <a href="<?php echo url() ?>">
-          <img src="<?php echo url('assets/img/logo.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
+          <img src="<?php echo url('assets/img/logo-201802201229.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
         </a>
       </div>
 
