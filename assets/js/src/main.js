@@ -212,31 +212,36 @@ headroom.init();
 var cookie_bar = document.querySelector('#cookie-bar');
 var cookie_bar_cta = cookie_bar.getElementsByClassName('cta')[0];
 
-if (!Cookies.get('hide-cookie-consent')) {
+if (!Cookies.get('hide-cookie-consent-until') || Date.now() > Cookies.get('hide-cookie-consent-until')) {
   cookie_bar.classList.add('visible');
   cookie_bar_cta.addEventListener('click', function(e) {
     e.preventDefault();
     cookie_bar.classList.remove('visible');
-    Cookies.set('hide-cookie-consent', true, {expires: 365});
+    Cookies.set('hide-cookie-consent-until', Date.now() + 365 * 24 * 3600 * 1000, {expire: 365});
   })
 }
 
 /**
- * Handle pop-in
+ * Handle survey
  */
 
-var pop_in_overlay = document.querySelector('#pop-in-overlay');
-var pop_in = document.querySelector('#pop-in');
-var pop_in_close = pop_in.getElementsByClassName('close')[0];
+var survey = document.querySelector('#survey');
+var survey_ok = survey.getElementsByClassName('ok')[0];
+var survey_later = survey.getElementsByClassName('later')[0];
 
-if (!Cookies.get('hide-survey')) {
-  pop_in.classList.add('visible');
-  pop_in_overlay.classList.add('visible');
+function hide_survey(status) {
+  survey.classList.remove('visible');
+  var timestamp_show_next = (status === 'answered') ? Date.now() + 365 * 24 * 3600 * 1000 : Date.now() + 1 * 24 * 3600 * 1000
+  Cookies.set('hide-survey-until', timestamp_show_next, {expires: 365});
+}
 
-  pop_in_close.addEventListener('click', function(e) {
+if (!Cookies.get('hide-survey-until') || Date.now() > Cookies.get('hide-survey-until')) {
+  survey.classList.add('visible');
+  survey_ok.addEventListener('click', function(e) {
+    hide_survey('answered');
+  })
+  survey_later.addEventListener('click', function(e) {
     e.preventDefault();
-    pop_in.classList.remove('visible');
-    pop_in_overlay.classList.remove('visible');
-    Cookies.set('hide-survey', true, {expires: 365});
+    hide_survey('postponed');
   })
 }

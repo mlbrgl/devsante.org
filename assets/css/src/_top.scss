@@ -68,6 +68,9 @@ header {
     @include breakpoint (max-width 359px) {
       margin-left: $container_padding;
     }
+    @include breakpoint(360px) {
+      text-align: center;
+    }
 
     @include breakpoint($tablet) {
       margin: $header_vertical_spacing * 1.5 0 $header_vertical_spacing * 2;
@@ -76,10 +79,6 @@ header {
     }
 
     a, img {
-      @include breakpoint(360px) {
-        display: block;
-        margin: 0 auto;
-      }
       height: inherit;
     }
   }

@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   height: $header_height_smartphone;
-  margin-right: $container_padding;
+  padding: 0 $container_padding;
+  cursor: pointer;
 
   @include breakpoint($tablet) {
     display: none;
@@ -18,7 +19,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
   }
 
   span {

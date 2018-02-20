@@ -61,6 +61,47 @@ footer {
   }
 }
 
+#notifications {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  & > div {
+    padding: $header_vertical_spacing 0;
+    transition: 0.5s;
+    opacity: 0;
+
+    &.visible {
+      transform: none;
+      opacity: 1;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      @include gutter;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      
+      a {
+        color: $white;
+        &:hover {
+          color: $medium_grey;
+        }
+      }
+
+    }
+
+  }
+}
+
 #honcode {
   margin-bottom: $default_bottom_margin;
   img {

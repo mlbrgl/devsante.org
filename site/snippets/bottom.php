@@ -24,9 +24,10 @@
 
     <div class="back-to-top"><a href="#"><span class="icon i-back-to-top"></span></a></div>
 
-    <?php pattern("cookie-bar") ?>
-    
-    <?php pattern("pop-in") ?>
+    <div id="notifications">
+      <?php pattern("survey") ?>
+      <?php pattern("cookie-bar") ?>
+    </div>
 
   </footer>
 
