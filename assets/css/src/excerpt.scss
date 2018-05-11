@@ -1,44 +1,75 @@
+.excerpt {
+  @include breakpoint($tablet) {
+    @include span (6 of 12)
+  }
+  &:nth-child(even) {
+    @include last;
+  }
+  margin-bottom: $default_bottom_margin;
+
+  .subhead {
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: $default_bottom_margin;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $dark_blue;
+    color: $dark_blue;
+    a {
+      color: $dark_blue;
+    }
+
+    //could match icon prefixed classes with the following but "icon" more understandable
+    //[class^="i-"], [class*=" i-"] {
+    .icon {
+      padding-left: 0;
+    }
+  }
+
+  h1 {
+    font-weight: normal;
+    margin-bottom: $home_bottom_margin;
+  }
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+
+  .article {
+    h1 {
+      line-height: 2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  .news {
+    h1 {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: normal;
+      color: $black;
+    }
+    .date {
+      font-style: italic;
+    }
+  }
+}
+
 nav.excerpts {
   @include clearfix;
 }
 
-.excerpt {
-  @include span(full);
-  @include breakpoint ($tablet) {
-    @include span (6 of 12);
-  }
-  margin-bottom: $default_bottom_margin;
-
-  @include h1-section-title;
-
-  article {
-    h1 {
-      font-size: 1.5rem;
-      font-style: italic;
-      font-weight: normal;
-      line-height: normal;
-      margin-bottom: $home_bottom_margin;
-      color: $black;
-    }
-    a{
-       color: $black;
-    }
-    a:hover {
-      color: $hover;
-    }
-  }
-  .date {
-    font-style: italic;
-  }
-}
-
-#a-lire, .excerpt.next {
+.excerpt.next {
   @include breakpoint ($tablet) {
     @include last;
   }
 }
 
-.excerpt.next h1.section-title {
+.excerpt.next .subhead{
   text-align: right;
 
   .icon {

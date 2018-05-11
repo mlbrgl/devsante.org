@@ -6,6 +6,3 @@ fields:
   title:
     label: Title
     type:  text
-  annexuri:
-    label: A lire 
-    type: page

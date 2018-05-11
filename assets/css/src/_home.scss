@@ -6,69 +6,7 @@ main.home {
     margin-top: $top_height_home_tablet_desktop + $default_bottom_margin;
   }
 
-  @include h1-section-title;
-
-  .derniers-articles {
-    article {
-      h1 {
-        line-height: 2rem;
-        font-size: 1.8rem;
-        font-weight: normal;
-        margin-bottom: $home_bottom_margin;
-      }
-      a {
-        color: $black;
-      }
-      a:hover {
-        color: $hover;
-      }
-    }
-  }
-
-  .derniers-articles.theme{
-    h1.section-title {
-      @include breakpoint ($tablet) {
-        margin-bottom: 0;
-      }
-    }
-    .inner {
-      @include breakpoint($smartphone-only) {
-        @include bleed-x($container_padding)
-      }
-      background-color: $light_yellow;
-      padding: 1.5rem;
-      @include clearfix;
-    }
-    @include breakpoint($tablet) {
-      article {
-        h1 {
-          font-size: 2.4rem;
-          line-height: 2.4rem;
-        }
-      }
-    }
-    .teaser {
-      margin-bottom: $default_bottom_margin;
-    }
-    margin-bottom: $default_bottom_margin;
-  }
-
-  .derniers-articles.standard {
-    @include clearfix;
-    article {
-      @include breakpoint($tablet) {
-        @include span (3 of 6)
-      }
-    }
-    article.last {
-      @include last;
-    }
-    margin-bottom: $default_bottom_margin;
-  }
-
-
-  /* See _excerpt.css for styles related to the bottom home blocks */
-
+  /* See _excerpt.css for styles related to the content blocks */
 
   // Communication ponctuelle not printed at the moment
   /*
