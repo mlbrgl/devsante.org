@@ -13,6 +13,7 @@ var src = {
   js: [
         'node_modules/headroom.js/dist/headroom.min.js',
         'node_modules/js-cookie/src/js.cookie.js',
+        'node_modules/masonry-layout/dist/masonry.pkgd.js',
         'assets/js/src/**/*.js'
       ],
   php: 'site/**/*.php',

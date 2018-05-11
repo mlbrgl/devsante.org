@@ -6,6 +6,13 @@ main.home {
     margin-top: $top_height_home_tablet_desktop + $default_bottom_margin;
   }
 
+  .latest-content {
+    z-index: -1; // cf. #menu-overlay
+    .gutter-sizer {
+      width: gutter();
+    }
+  }
+
   /* See _excerpt.css for styles related to the content blocks */
 
   // Communication ponctuelle not printed at the moment

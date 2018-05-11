@@ -245,3 +245,18 @@ if (!Cookies.get('hide-survey-until') || Date.now() > Cookies.get('hide-survey-u
     hide_survey('postponed');
   })
 }
+
+/**
+ * Masonry homepage
+ */
+
+var grid = document.querySelector('.latest-content');
+if (grid !== null) {
+  var msnry = new Masonry(grid, {
+    itemSelector: '.excerpt',
+    columnWidth: '.excerpt',
+    gutter: '.gutter-sizer',
+    percentPosition: true,
+    transitionDuration: 0,
+  });
+}
