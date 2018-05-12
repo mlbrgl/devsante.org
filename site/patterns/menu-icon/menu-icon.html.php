@@ -1,6 +1,10 @@
 <div class="menu-icon">
   <div class="wrapper">
-    <span></span>
-    <span></span>
+    <div class="bars">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="legend">MENU</div>
   </div>
 </div>

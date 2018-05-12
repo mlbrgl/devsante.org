@@ -1,24 +1,24 @@
 .menu-icon {
   position: absolute;
   z-index: 3; // cf. #menu-overlay
-  top: 0;
-  right: 0;
+  top: $header_vertical_spacing * 3/4; // cf. vertical margins for .logo
+  right: $header_vertical_spacing * 3/4;
   display: flex;
   align-items: center;
-  height: $header_height_smartphone;
-  padding: 0 $container_padding;
   cursor: pointer;
 
   @include breakpoint($tablet) {
-    display: none;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 
-  .wrapper {
-    width: 20px;
-    height: 12px;
+  .bars {
+    width: 24px;
+    height: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 4px;
   }
 
   span {
@@ -27,15 +27,23 @@
     transition: 0.5s;
   }
 
+  .legend {
+    font-size: 0.5rem;
+    transition: 0.5s;
+  }
+
   &.open {
     span:nth-child(1) {
-      transform: translateY(5px) rotate(45deg);
+      transform: translateY(6px) rotate(45deg);
     }
     span:nth-child(2) {
-      transform: translateY(-5px) rotate(-45deg);
+      opacity: 0;
     }
-    span {
-       background-color: $white;
+    span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    .legend {
+      opacity: 0
     }
   }
 }

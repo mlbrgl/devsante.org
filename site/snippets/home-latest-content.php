@@ -4,6 +4,7 @@
   $latest_content = new Pages(array($latest_articles, $latest_news));
   $latest_content = $latest_content->sortBy('datetime', 'desc')->limit(10);
 ?>
+
 <div class="gutter-sizer"></div>
 <?php foreach($latest_content as $content): ?>
   <div class="excerpt">
