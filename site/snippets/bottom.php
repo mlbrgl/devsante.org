@@ -41,7 +41,7 @@
   </script>
 
   <?php
-    echo js('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch-preact.min.js');
+    echo js('//cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch-preact.min.js');
     echo js('assets/js/app.js');
   ?>
 

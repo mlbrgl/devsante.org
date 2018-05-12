@@ -10,8 +10,6 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <?php echo css('assets/css/app.css') ?>
-  <?php echo css('//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css'); ?>
-
 
 </head>
 <body<?php echo isset($context) ? ' class="' . $context . '"' : '';?>>
@@ -20,9 +18,9 @@
 
     <header class="header cf">
 
-      <?php pattern('menu-icon'); ?>
-
       <?php pattern('menu'); ?>
+
+      <?php pattern('menu-icon'); ?>
 
       <div class="logo">
         <a href="<?php echo url() ?>">

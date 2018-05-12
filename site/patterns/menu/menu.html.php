@@ -1,21 +1,15 @@
-<div id="menu-overlay" class="overlay"></div>
+<div id="menu-overlay"></div>
 
 <nav id="menu">
   <ul>
     <li>
       <a href="/"<?= $page->isHomePage() ? ' class="active"' : '' ?>>
-        <span class="icon-no-margin i-home3"></span>
         <span class="text">ACCUEIL</span>
       </a>
     </li>
     <li>
-      <a href="/l-association"<?= $page->uid() === 'l-association' ? ' class="active"' : '' ?>>
-        ASSOCIATION
-      </a>
-    </li>
-    <li>
       <a href="/actualites"<?= $page->uid() === 'actualites' ? ' class="active"' : '' ?>>
-        ACTUALITES
+        ACTUALITÉS
       </a>
     </li>
     <li>
@@ -23,9 +17,19 @@
         ARTICLES
       </a>
     </li>
-    <li class="last">
-      <a href="/?q=drépano" class="main-theme">
-        ARTICLES DRÉPANOCYTOSE
+    <li>
+      <a href="/les-quiz"<?= $page->uid() === 'les-quiz' ? ' class="active"' : '' ?>>
+        LES QUIZ
+      </a>
+    </li>
+    <li>
+      <a href="/l-association"<?= $page->uid() === 'l-association' ? ' class="active"' : '' ?>>
+        L'ASSOCIATION
+      </a>
+    </li>
+    <li>
+      <a href="/nos-partenaires"<?= $page->uid() === 'nos-partenaires' ? ' class="active"' : '' ?>>
+        NOS PARTENAIRES
       </a>
     </li>
   </ul>

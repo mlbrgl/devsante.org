@@ -1,6 +1,6 @@
 .menu-icon {
   position: absolute;
-  z-index: 3; // cf. #menu-overlay
+  z-index: 1; // cf. nav#menu
   top: $header_vertical_spacing * 3/4; // cf. vertical margins for .logo
   right: $header_vertical_spacing * 3/4;
   display: flex;

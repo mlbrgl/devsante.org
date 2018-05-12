@@ -1,5 +1,6 @@
 main.home {
-
+  position: relative;
+  z-index: -1; // cf. body
   margin-top: $top_height_home_smartphone + $default_bottom_margin;
 
   @include breakpoint($tablet) {
@@ -7,7 +8,6 @@ main.home {
   }
 
   .latest-content {
-    z-index: -1; // cf. #menu-overlay
     .gutter-sizer {
       width: gutter();
     }
