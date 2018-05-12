@@ -27,36 +27,8 @@
         "code": 59648
       },
       "setIdx": 0,
-      "setId": 3,
+      "setId": 1,
       "iconIdx": 0
-    },
-    {
-      "icon": {
-        "paths": [
-          "M1024 608l-192-192v-288h-128v160l-192-192-512 512v32h128v320h320v-192h128v192h320v-320h128z"
-        ],
-        "attrs": [],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "tags": [
-          "home",
-          "house"
-        ],
-        "defaultCode": 59650,
-        "grid": 16
-      },
-      "attrs": [],
-      "properties": {
-        "ligatures": "home3, house3",
-        "name": "home3",
-        "id": 2,
-        "order": 45,
-        "prevSize": 32,
-        "code": 59653
-      },
-      "setIdx": 1,
-      "setId": 2,
-      "iconIdx": 2
     },
     {
       "icon": {
@@ -85,9 +57,9 @@
         "prevSize": 32,
         "code": 59717
       },
-      "setIdx": 1,
-      "setId": 2,
-      "iconIdx": 69
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -114,9 +86,9 @@
         "prevSize": 32,
         "code": 59956
       },
-      "setIdx": 2,
+      "setIdx": 0,
       "setId": 1,
-      "iconIdx": 2
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -143,37 +115,7 @@
         "prevSize": 32,
         "code": 59960
       },
-      "setIdx": 2,
-      "setId": 1,
-      "iconIdx": 3
-    },
-    {
-      "icon": {
-        "paths": [
-          "M0 1024c128-384 463-1024 1024-1024-263 211-384 704-576 704s-192 0-192 0l-192 320h-64z"
-        ],
-        "attrs": [],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "tags": [
-          "quill",
-          "feather",
-          "write",
-          "edit"
-        ],
-        "defaultCode": 59655,
-        "grid": 16
-      },
-      "attrs": [],
-      "properties": {
-        "ligatures": "quill, feather",
-        "name": "quill",
-        "id": 4,
-        "order": 37,
-        "prevSize": 32,
-        "code": 59655
-      },
-      "setIdx": 2,
+      "setIdx": 0,
       "setId": 1,
       "iconIdx": 4
     },
@@ -204,64 +146,9 @@
         "prevSize": 32,
         "code": 59917
       },
-      "setIdx": 2,
-      "setId": 1,
-      "iconIdx": 5
-    },
-    {
-      "icon": {
-        "paths": [
-          "M896 256v-128h-896v704c0 35.346 28.654 64 64 64h864c53.022 0 96-42.978 96-96v-544h-128zM832 832h-768v-640h768v640zM128 320h640v64h-640zM512 448h256v64h-256zM512 576h256v64h-256zM512 704h192v64h-192zM128 448h320v320h-320z"
-        ],
-        "attrs": [],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "tags": [
-          "newspaper",
-          "news",
-          "paper"
-        ],
-        "grid": 16
-      },
-      "attrs": [],
-      "properties": {
-        "order": 39,
-        "id": 7,
-        "prevSize": 32,
-        "ligatures": "newspaper, news",
-        "name": "newspaper",
-        "code": 59651
-      },
-      "setIdx": 2,
+      "setIdx": 0,
       "setId": 1,
       "iconIdx": 6
-    },
-    {
-      "icon": {
-        "paths": [
-          "M192 0v1024l320-320 320 320v-1024z"
-        ],
-        "attrs": [],
-        "isMulticolor": false,
-        "isMulticolor2": false,
-        "tags": [
-          "bookmark",
-          "ribbon"
-        ],
-        "grid": 16
-      },
-      "attrs": [],
-      "properties": {
-        "id": 8,
-        "order": 40,
-        "prevSize": 32,
-        "ligatures": "bookmark, ribbon",
-        "name": "bookmark",
-        "code": 59652
-      },
-      "setIdx": 2,
-      "setId": 1,
-      "iconIdx": 7
     },
     {
       "icon": {
@@ -289,9 +176,9 @@
         "name": "search",
         "code": 59650
       },
-      "setIdx": 2,
+      "setIdx": 0,
       "setId": 1,
-      "iconIdx": 8
+      "iconIdx": 9
     }
   ],
   "height": 1024,
