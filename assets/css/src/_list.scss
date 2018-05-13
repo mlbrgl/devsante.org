@@ -3,7 +3,7 @@
     // Overriding h1-page-title mixin for laptop and up versions
     @include breakpoint ($tablet) {
       line-height: 1.5rem;
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
   }
@@ -12,7 +12,7 @@
     margin-bottom: $default_bottom_margin;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $dark_blue;
-    
+
     h1 {
       @include breakpoint($tablet) {
         @include span(9 of 12);
@@ -60,7 +60,7 @@
   .pagination {
     margin-bottom: $default_bottom_margin;
     @include clearfix;
-    
+
     a {
       @include span(6 of 12);
       @include breakpoint($tablet) {
@@ -69,14 +69,19 @@
       font-size: 0.8rem;
       color: $dark_grey;
     }
-    
+
     a:hover {
       color: $hover;
     }
-    
+
     .next {
       @include last;
       text-align: right;
+      
+      span.icon {
+        padding-right: 0;
+        padding-left: $icon_pad;
+      }
     }
   }
 }
