@@ -1,9 +1,6 @@
 .excerpt {
   @include breakpoint($tablet) {
-    @include span (6 of 12)
-  }
-  &:nth-child(even) {
-    @include last;
+    width: span(6 of 12)
   }
   margin-bottom: $default_bottom_margin;
 

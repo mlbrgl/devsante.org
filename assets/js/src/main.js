@@ -1,3 +1,9 @@
+// Webfont load
+WebFont.load({
+  google: { families: [ 'Lato:400,700,400italic:latin' ] },
+  active: renderMasonry
+});
+
 // Algolia variables are set in bottom.php
 var search = instantsearch({
   appId: algolia_appId,
@@ -249,14 +255,15 @@ if (!Cookies.get('hide-survey-until') || Date.now() > Cookies.get('hide-survey-u
 /**
  * Masonry homepage
  */
-
-var grid = document.querySelector('.latest-content');
-if (grid !== null) {
-  var msnry = new Masonry(grid, {
+function renderMasonry() {
+  var grid = document.querySelector('.latest-content');
+  if (grid !== null) {
+    var msnry = new Masonry(grid, {
     itemSelector: '.excerpt',
     columnWidth: '.excerpt',
     gutter: '.gutter-sizer',
     percentPosition: true,
     transitionDuration: 0,
-  });
+    });
+  }
 }
