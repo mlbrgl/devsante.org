@@ -22,17 +22,15 @@
 
       <?php pattern('menu-icon'); ?>
 
+      <div id="baseline">
+        Formation permanente
+      </div>
+
       <div class="logo">
         <a href="<?php echo url() ?>">
           <img src="<?php echo url('assets/img/logo-201802201229.svg') ?>" alt="<?php echo $site->title()->html() ?>" />
         </a>
       </div>
-
-      <?php if(isset($context) && $context == 'home'): ?>
-        <div id="baseline">
-          Information permanente <br/>des acteurs de la santé
-        </div>
-      <?php endif; ?>
 
     </header>
 

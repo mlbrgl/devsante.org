@@ -1,23 +1,20 @@
 $header_vertical_spacing: 1rem;
 
+$header_baseline_height_smartphone: 0.7rem;
+$header_baseline_height_tablet_desktop: 1.3rem;
+
 $header_logo_height_smartphone: 1.2rem;
+$header_logo_margin_bottom_smartphone: 1.2rem;
 $header_logo_height_tablet_desktop: 2.8rem;
+$header_logo_margin_bottom_tablet_desktop: 2.5rem;
 
-$header_baseline_height: 1.7rem;
-$header_baseline_margin_bottom_smartphone: 1.2rem;
-$header_baseline_margin_bottom_tablet_desktop: 2rem;
-
-$header_height_smartphone: $header_logo_height_smartphone + 7/4 * $header_vertical_spacing; // cf. vertical margins for .logo
-$header_height_tablet_desktop: $header_logo_height_tablet_desktop + 3.5 * $header_vertical_spacing; // cf. vertical margins for .logo
-$header_height_home_smartphone: $header_height_smartphone + $header_baseline_height + $header_baseline_margin_bottom_smartphone;
-$header_height_home_tablet_desktop: $header_height_tablet_desktop + $header_baseline_height + $header_baseline_margin_bottom_tablet_desktop;
+$header_height_smartphone: $header_baseline_height_smartphone + 7/4 * $header_vertical_spacing + $header_logo_height_smartphone + $header_logo_margin_bottom_smartphone; //cf. vertical margins for .baseline
+$header_height_tablet_desktop: $header_baseline_height_tablet_desktop + 2.5 * $header_vertical_spacing + $header_logo_height_tablet_desktop  + $header_logo_margin_bottom_tablet_desktop; //cf. vertical margins for .baseline
 
 $search_box_height: 2.5rem;
 
 $top_height_smartphone: $header_height_smartphone + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
 $top_height_tablet_desktop: $header_height_tablet_desktop + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
-$top_height_home_smartphone: $header_height_home_smartphone + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
-$top_height_home_tablet_desktop: $header_height_home_tablet_desktop + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
 
 
 @import "../../../site/patterns/menu-icon/menu-icon";
@@ -29,6 +26,14 @@ body, html {
     overflow: hidden;
     // Fix iOS
     // position: fixed; // causes page to scroll back up
+  }
+}
+
+main {
+  margin-top: $top_height_smartphone + $default_bottom_margin;
+
+  @include breakpoint($tablet) {
+    margin-top: $top_height_tablet_desktop + $default_bottom_margin;
   }
 }
 
@@ -45,12 +50,6 @@ body, html {
   }
 }
 
-@include breakpoint ($smartphone_only) {
-  body.home .header-search.headroom--unpinned {
-    transform: translate3d(0, - $top_height_home_smartphone, 0);
-  }
-}
-
 header {
 
   color: #ffffff;
@@ -58,8 +57,8 @@ header {
   overflow: hidden; //prevent collapsing margin between child and parent
 
   .logo {
-    margin: $header_vertical_spacing * 3/4 0 $header_vertical_spacing;
     height: $header_logo_height_smartphone;
+    margin-bottom: $header_logo_margin_bottom_smartphone;
 
     @include breakpoint (max-width 359px) {
       margin-left: $container_padding;
@@ -69,8 +68,8 @@ header {
     }
 
     @include breakpoint($tablet) {
-      margin: $header_vertical_spacing * 1.5 0 $header_vertical_spacing * 2;
       height: $header_logo_height_tablet_desktop;
+      margin-bottom: $header_logo_margin_bottom_tablet_desktop;
       text-align: center;
     }
 
@@ -80,23 +79,17 @@ header {
   }
 }
 
-@include breakpoint($tablet) {
-  body.home header .logo {
-    margin: $header_vertical_spacing * 2 0 $header_vertical_spacing * 1.5;
-  }
-}
-
 #baseline {
-  height: $header_baseline_height;
-  margin: 0 auto;
-  margin-bottom: $header_baseline_margin_bottom_smartphone;
+  height: $header_baseline_height_smartphone;
+  margin: $header_vertical_spacing auto $header_vertical_spacing * 3/4;
   text-transform: uppercase;
   text-align: center;
   font-size: 0.7rem;
 
   @include breakpoint($tablet) {
     font-size: 1.1rem;
-    margin-bottom: $header_baseline_margin_bottom_tablet_desktop;
+    height: $header_baseline_height_tablet_desktop;
+    margin: $header_vertical_spacing * 2 0 $header_vertical_spacing * 0.5;
 
     br {
       display: none;
