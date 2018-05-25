@@ -18,8 +18,8 @@
       </a>
     </li>
     <li>
-      <a href="/les-quiz"<?= $page->uid() === 'les-quiz' ? ' class="active"' : '' ?>>
-        LES QUIZ
+      <a href="/quiz"<?= $page->uid() === 'quiz' ? ' class="active"' : '' ?>>
+        QUIZ
       </a>
     </li>
     <li>
