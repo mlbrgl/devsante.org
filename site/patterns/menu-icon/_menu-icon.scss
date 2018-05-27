@@ -19,28 +19,50 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 4px;
+
+    @include breakpoint($tablet) {
+      width: 29px;
+      height: 21px;
+      margin-bottom: 6px;
+    }
   }
 
   span {
     height: 2px;
     background-color: $white;
     transition: 0.5s;
+
+    @include breakpoint($tablet) {
+      height: 3px;
+    }
   }
 
   .legend {
     font-size: 0.5rem;
     transition: 0.5s;
+
+    @include breakpoint($tablet) {
+      font-size: 0.6rem;
+    }
   }
 
   &.open {
     span:nth-child(1) {
       transform: translateY(6px) rotate(45deg);
+
+      @include breakpoint($tablet) {
+        transform: translateY(9px) rotate(45deg);
+      }
     }
     span:nth-child(2) {
       opacity: 0;
     }
     span:nth-child(3) {
       transform: translateY(-6px) rotate(-45deg);
+
+      @include breakpoint($tablet) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
     }
     .legend {
       opacity: 0
