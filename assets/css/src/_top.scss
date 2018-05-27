@@ -39,6 +39,7 @@ main {
 
 .header-search {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   transition: 0.4s;
