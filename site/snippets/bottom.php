@@ -5,7 +5,8 @@
         <ul>
           <li><a href="/l-association/faire-un-don">FAIRE UN DON</a></li>
           <li><a href="/l-association/mentions-legales">MENTION LÉGALES</a></li>
-          <li class="last"><a href="mailto:contact@devsante.org"><span class="i-envelop"></span><span class="contact">CONTACT</span></a></li>
+          <li><a href="mailto:contact@devsante.org"><span class="i-envelop"></span><span class="contact">CONTACT</span></a></li>
+          <li class="last"><a href="https://www.facebook.com/devsante.org" target="_blank" class="i-facebook2"></a></li>
         </ul>
       </div>
 

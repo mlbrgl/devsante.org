@@ -32,6 +32,8 @@
         NOS PARTENAIRES
       </a>
     </li>
+    <li>
+      <a href="https://www.facebook.com/devsante.org" target="_blank" class="i-facebook2"></a>
+    </li>
   </ul>
-    <?php /* <a href="#" class="i-facebook icon"></a> */ ?>
 </nav>
