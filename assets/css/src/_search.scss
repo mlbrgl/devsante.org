@@ -31,11 +31,18 @@
       height: $search_box_height;
       line-height: $search_box_height;
       color: $dark_grey;
-      background-color: inherit;
+      background-color: $light_grey;
       border: none;
-    }
-    input:focus {
-      outline: none;
+
+      &::-ms-clear {
+        display: none;
+        width:0;
+        height:0;
+      }
+      
+      &:focus {
+        outline: none;
+      }
     }
   }
 
