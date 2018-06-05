@@ -223,7 +223,7 @@ if (!Cookies.get('hide-cookie-consent-until') || Date.now() > Cookies.get('hide-
   cookie_bar_cta.addEventListener('click', function(e) {
     e.preventDefault();
     cookie_bar.classList.remove('visible');
-    Cookies.set('hide-cookie-consent-until', Date.now() + 365 * 24 * 3600 * 1000, {expire: 365});
+    Cookies.set('hide-cookie-consent-until', Date.now() + 365 * 24 * 3600 * 1000, {expires: 365});
   })
 }
 
