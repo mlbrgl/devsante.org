@@ -231,26 +231,26 @@ if (!Cookies.get('hide-cookie-consent-until') || Date.now() > Cookies.get('hide-
  * Handle survey
  */
 
-var survey = document.querySelector('#survey');
-var survey_ok = survey.getElementsByClassName('ok')[0];
-var survey_later = survey.getElementsByClassName('later')[0];
-
-function hide_survey(status) {
-  survey.classList.remove('visible');
-  var timestamp_show_next = (status === 'answered') ? Date.now() + 365 * 24 * 3600 * 1000 : Date.now() + 1 * 24 * 3600 * 1000
-  Cookies.set('hide-survey-until', timestamp_show_next, {expires: 365});
-}
-
-if (!Cookies.get('hide-survey-until') || Date.now() > Cookies.get('hide-survey-until')) {
-  survey.classList.add('visible');
-  survey_ok.addEventListener('click', function(e) {
-    hide_survey('answered');
-  })
-  survey_later.addEventListener('click', function(e) {
-    e.preventDefault();
-    hide_survey('postponed');
-  })
-}
+// var survey = document.querySelector('#survey');
+// var survey_ok = survey.getElementsByClassName('ok')[0];
+// var survey_later = survey.getElementsByClassName('later')[0];
+//
+// function hide_survey(status) {
+//   survey.classList.remove('visible');
+//   var timestamp_show_next = (status === 'answered') ? Date.now() + 365 * 24 * 3600 * 1000 : Date.now() + 1 * 24 * 3600 * 1000
+//   Cookies.set('hide-survey-until', timestamp_show_next, {expires: 365});
+// }
+//
+// if (!Cookies.get('hide-survey-until') || Date.now() > Cookies.get('hide-survey-until')) {
+//   survey.classList.add('visible');
+//   survey_ok.addEventListener('click', function(e) {
+//     hide_survey('answered');
+//   })
+//   survey_later.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     hide_survey('postponed');
+//   })
+// }
 
 /**
  * Masonry homepage
