@@ -1,6 +1,5 @@
 <?php
-// TODO check visible / invisible
-if(isset($excerpt) || isset($excerpturi) && $excerpt = page($excerpturi)):
+if(isset($excerpt)):
 ?>
 
   <article class="article">

@@ -36,6 +36,13 @@ c::set('kirby-algolia', array(
         'boost' => array('teaser'),
         'main' => array('text')
       )
+    ),
+    'quiz' => array(
+      'fields' => array(
+        'meta' => array('title', 'datetime', 'author'),
+        'boost' => array('teaser'),
+        'main' => array('text')
+      )
     )
   )
 ));
