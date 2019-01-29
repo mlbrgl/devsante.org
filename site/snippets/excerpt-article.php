@@ -12,7 +12,7 @@ if(isset($excerpt)):
       </div>
 
       <div class="teaser">
-        <p><?php echo html($excerpt->teaser()->excerpt(300)) ?></p>
+        <p><?php echo $excerpt->teaser()->excerpt(300) ?></p>
       </div>
 
     </a>

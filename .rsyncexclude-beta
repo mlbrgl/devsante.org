@@ -1,9 +1,11 @@
+/.htaccess
+/.htpasswd
+
 .DS_Store
 /devsante-kirby.sublime*
 /npm-debug.log
 /node_modules
 
-/content
 /site/accounts
 /site/cache
 /site/config/local.config.php

@@ -12,10 +12,11 @@ fields:
     label: Auteur
     type: text
     width: 1/2
+    required: true
   datetime:
-    label: Mis à jour le 
+    label: Mis à jour le
     type: datetime
-    date: 
+    date:
       format: DD/MM/YYYY
     required: true
     default: now
@@ -23,6 +24,8 @@ fields:
   teaser:
     label: Accroche
     type: textarea
+    required: true
   text:
     label: Texte
     type: textarea
+    required: true

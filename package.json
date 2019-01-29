@@ -29,8 +29,9 @@
     "susy": "^2.2.12"
   },
   "scripts": {
-    "dev": "unset PREFIX; source $HOME/.nvm/nvm.sh; nvm use; gulp",
+    "develop": "gulp",
     "serve": "php -S localhost:9000",
-    "build": "gulp prod"
+    "build": "gulp prod",
+    "deploy:beta": "rsync -avz --delete --exclude-from=.rsyncexclude-beta . devsante.org:beta.devsante.org"
   }
 }

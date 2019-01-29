@@ -26,3 +26,4 @@ fields:
   text:
     label: Texte
     type: textarea
+    required: true

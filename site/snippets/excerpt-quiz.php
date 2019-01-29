@@ -1,5 +1,6 @@
 <?php
 if(isset($excerpt)):
+  $excerpt_text = $excerpt->teaser()->isNotEmpty() ? $excerpt->teaser() : $excerpt->text()
 ?>
 
   <article class="quiz">
@@ -7,14 +8,14 @@ if(isset($excerpt)):
       <h1><?php echo html($excerpt->title()) ?></h1>
 
       <div class="meta">
-        <?php if(!empty($excerpt->author())) : ?>
-          <div class="auteur"><?php echo html($excerpt->author()) ?></div>
+        <?php if($excerpt->author()->isNotEmpty()) : ?>
+          <div class="author"><?php echo html($excerpt->author()) ?></div>
         <?php endif; ?>
-        <div class="date"><time datetime="<?php echo $excerpt->datetime() ?>"> <?php echo html($excerpt->date('%B %Y','datetime')) ?> </time></div>
+        <div class="date"><time datetime="<?php echo $excerpt->datetime() ?>"> <?php echo html($excerpt->date('%d %B %Y','datetime')) ?> </time></div>
       </div>
 
       <div class="teaser">
-        <p><?php echo $excerpt->text()->excerpt(300) ?></p>
+        <p><?php echo $excerpt_text->excerpt(300) ?></p>
       </div>
 
     </a>
