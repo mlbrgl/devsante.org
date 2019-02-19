@@ -1,6 +1,6 @@
 # devsante.org
 
-This is the home of http://devsante.org.
+This is the home of https://devsante.org.
 
 ## Stack
 - A whole lot of Kirby, including some custom plugins ([kirby-algolia](https://github.com/mlbrgl/kirby-algolia), ~~latest-content~~)
