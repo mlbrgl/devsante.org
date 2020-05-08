@@ -2,6 +2,7 @@
 /devsante-kirby.sublime*
 /npm-debug.log
 /node_modules
+/.nvmrc
 
 /content
 /site/accounts
@@ -16,4 +17,4 @@
 /yarn.lock
 /gulpfile.js
 
-/site/plugins/latest-content/latest_content.txt
+/readme.md
