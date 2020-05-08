@@ -41,8 +41,10 @@
     ?>
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+
   <?php
-    echo js('//cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch-preact.min.js');
     echo js('//cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js');
     echo js('assets/js/app.js');
   ?>

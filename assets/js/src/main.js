@@ -6,10 +6,9 @@ WebFont.load({
 
 // Algolia variables are set in bottom.php
 var search = instantsearch({
-  appId: algolia_appId,
-  apiKey: algolia_apiKey,
+  searchClient: algoliasearch(algolia_appId, algolia_apiKey),
   indexName: algolia_indexName,
-  urlSync: true,
+  routing: true,
   // Replace with following line to debounce search and add lodash (custom
   // package with debounce only) back in src folder
   // searchFunction: _.debounce(search_func, 200),
@@ -19,64 +18,62 @@ var search = instantsearch({
   }
 });
 
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#search .search-input',
-    placeholder: 'votre recherche',
+var searchBox = instantsearch.widgets.searchBox({
+  container: '#search .search-input',
+  placeholder: 'votre recherche',
+  showSubmit: false,
+  showReset: false,
+});
 
-  })
-);
-
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '#search-hits .content',
-    transformData: {
-      item: function(item) {
-        item.datetime = get_locale_date_string_fallback(item.datetime * 1000);
-
-        // Removing metadata for subsequent paragraphs in the search
-        if(item._distinctSeqID !== 0) {
-          delete item._highlightResult.title;
-          delete item.author;
-          delete item.datetime;
-        }
-
-        return item;
+var hits = instantsearch.widgets.hits({
+  container: '#search-hits .content',
+  transformItems: function(items) {
+    return items.map(function (item) {
+      const updatedItem = Object.assign({}, item);
+      
+      // Removing metadata for subsequent paragraphs in the search
+      if(item._distinctSeqID !== 0) {
+        delete updatedItem._highlightResult.title;
+        delete updatedItem.author;
+        delete updatedItem.datetime;
+      } else {
+        updatedItem.datetime = get_locale_date_string_fallback(item.datetime * 1000);
       }
-    },
-    templates: {
-      item: '<article>' +
-              '{{#_highlightResult.title}}' +
-                '<h1><a href="/{{_id}}">{{{_highlightResult.title.value}}}</a></h1>' +
-              '{{/_highlightResult.title}}' +
-              '{{#datetime}}' +
-                '<div class="date">{{datetime}}</div>' +
-              '{{/datetime}}' +
-              '{{#author}}' +
-                '<div class="author">{{author}}</div>' +
-              '{{/author}}' +
-              '{{#_highlightResult._heading.value}}' +
-                '<div class="heading"><a href="/{{_id}}">{{{_highlightResult._heading.value}}}</a></div>' +
-              '{{/_highlightResult._heading.value}}'+
-              '{{#_snippetResult._content.value}}' +
-                '<div class="text"><a href="/{{_id}}">[...] {{{_snippetResult._content.value}}} [...] </a></div>' +
-              '{{/_snippetResult._content.value}}' +
-            '</article>',
-      empty: 'Votre recherche n\' a retourné aucun résultat'
-    },
-    hitsPerPage: 5
-  })
-);
+
+      return updatedItem;
+    })
+  },
+  templates: {
+    item: '<article>' +
+            '{{#title}}' + 
+              '<h1><a href="/{{_id}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h1>' +
+            '{{/title}}' + 
+            '{{#datetime}}' +
+              '<div class="date">{{datetime}}</div>' +
+            '{{/datetime}}' +
+            '{{#author}}' +
+              '<div class="author">{{author}}</div>' +
+            '{{/author}}' +
+            '{{#heading}}' +
+              '<div class="heading"><a href="/{{_id}}">{{#helpers.highlight}}{ "attribute": "heading" }{{/helpers.highlight}}</a></div>' +
+            '{{/heading}}'+
+            '{{#_content}}' +
+              '<div class="text"><a href="/{{_id}}">[...] {{#helpers.snippet}}{ "attribute": "_content" }{{/helpers.snippet}} [...] </a></div>' +
+            '{{/_content}}' +
+          '</article>',
+    empty: 'Votre recherche n\' a retourné aucun résultat'
+  }
+});
 
 // Pagination widget
-search.addWidget(
-  instantsearch.widgets.pagination({
-    container: '#search-pagination',
-    maxPages: 20,
-    showFirstLast: false,
-    padding: 2
-  })
-);
+var pagination = instantsearch.widgets.pagination({
+  container: '#search-pagination',
+  maxPages: 20,
+  showFirstLast: false,
+  padding: 2
+});
+
+search.addWidgets([searchBox, hits, pagination]);
 
 // Configuration widget replaced with searchParameters as per
 // https://github.com/algolia/instantsearch.js/issues/1463
@@ -141,8 +138,15 @@ function search_mode(search_is) {
 function clear_search(event) {
   event.preventDefault();
 
-  var search_input = document.querySelectorAll('#search .ais-search-box--input')[0];
+  var search_input = document.querySelectorAll('#search .ais-SearchBox-input')[0];
   search_input.value = '';
+  baseUrl = window.location.href.split("?")[0];
+  window.history.pushState('', '', baseUrl);
+
+  // Seems overkill
+  // search.dispose()
+  // search.addWidgets([searchBox, hits, pagination]);
+  // search.start()
 
   search_mode('off');
 }

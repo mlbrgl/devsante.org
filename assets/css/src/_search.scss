@@ -124,6 +124,10 @@ body.search {
    * Below are overrides for grouped paragraph search
    */
 
+   ol {
+     list-style-type: none;
+   }
+
   .list {
     article {
       @include clearfix;
@@ -132,11 +136,8 @@ body.search {
       border-bottom: none;
     }
 
-    .heading, .text {
-      @include span(11 of 12 last);
-    }
-
     .text {
+      @include span(11 of 12 last);
       margin-bottom: 1rem;
     }
   }
