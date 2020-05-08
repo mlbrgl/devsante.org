@@ -76,8 +76,12 @@
   li {
     display: inline-block;
     margin: 0.2rem;
-    &.ais-pagination--item__disabled {
-      visibility: hidden;
+    &.ais-Pagination-item--disabled {
+      display: none;
+    }
+    &.ais-Pagination-item--selected a {
+      color: $white;
+      background-color: $dark_grey;
     }
   }
   a {
