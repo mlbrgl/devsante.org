@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
@@ -36,8 +36,8 @@ gulp.task('connect-sync', function() {
     });
   });
 
-  gulp.watch(["assets/css/src/*.scss",'site/patterns/**/*.scss'], ['css']);
-  gulp.watch('assets/js/src/**/*.js', ['js']);
+  gulp.watch(["assets/css/src/*.scss",'site/patterns/**/*.scss'], gulp.series('css'));
+  gulp.watch('assets/js/src/**/*.js', gulp.series('js'));
   gulp.watch(src.php).on('change', browserSync.reload);
 
 });
@@ -73,5 +73,5 @@ gulp.task('cachebust-js', function(){
 });
 
 
-gulp.task('default', ['css', 'js', 'connect-sync']);
-gulp.task('prod', ['cachebust-css', 'cachebust-js']);
+gulp.task("default", gulp.series("css", "js", "connect-sync"));
+gulp.task("prod", gulp.series("cachebust-css", "cachebust-js"));
