@@ -23,7 +23,8 @@
   }
 
   .search-input {
-    @include span(50%);
+    // TODO
+    // @include span(50%);
 
     input {
       padding: 0 0 0 0.8rem;
@@ -141,7 +142,8 @@ body.search {
     }
 
     .text {
-      @include span(11 of 12 last);
+      // TODO
+      // @include span(11 of 12 last);
       margin-bottom: 1rem;
     }
   }

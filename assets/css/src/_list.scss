@@ -15,7 +15,8 @@
 
     h1 {
       @include breakpoint($tablet) {
-        @include span(9 of 12);
+        // TODO
+        // @include span(9 of 12);
       }
       font-weight: bold;
       font-size: 1rem;
@@ -25,18 +26,21 @@
     .date {
       color: $dark_grey;
       @include breakpoint($tablet) {
-        @include span(3 of 12 last);
+        // TODO
+        // @include span(3 of 12 last);
         text-align: right;
       }
     }
     .author {
-      @include break;
+      // TODO
+      // @include break;
       color: $dark_grey;
       font-size: 0.9rem;
       margin-bottom: 0.4rem;
     }
     .heading {
-      @include break;
+      // TODO
+      // @include break;
       font-size: 1rem;
       margin-bottom: 0.4rem;
       a {
@@ -48,7 +52,8 @@
       }
     }
     .text {
-      @include break;
+      // TODO
+      // @include break;
       margin-bottom: 1rem;
     }
     em {
@@ -62,10 +67,11 @@
     @include clearfix;
 
     a {
-      @include span(6 of 12);
-      @include breakpoint($tablet) {
-        @include span(4 of 12);
-      }
+      // TODO
+      // @include span(6 of 12);
+      // @include breakpoint($tablet) {
+      //   @include span(4 of 12);
+      // }
       font-size: 0.8rem;
       color: $dark_grey;
     }
@@ -75,7 +81,8 @@
     }
 
     .next {
-      @include last;
+      // TODO
+      // @include last;
       text-align: right;
       
       span.icon {

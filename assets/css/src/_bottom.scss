@@ -32,7 +32,8 @@ footer {
     }
     @include breakpoint($tablet) {
       .i-envelop {
-        @include suffix($icon_pad)
+        // TODO
+        // @include suffix($icon_pad)
       }
     }
     @include breakpoint($smartphone-only) {
@@ -50,7 +51,8 @@ footer {
   font-size: 0.7rem;
 
   @include breakpoint($tablet) {
-    @include pad(0);
+    // TODO
+    // @include pad(0);
   }
 
   a {
@@ -80,7 +82,8 @@ footer {
     }
 
     .text {
-      @include gutter;
+      // TODO
+      // @include gutter;
     }
 
     .cta {

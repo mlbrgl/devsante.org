@@ -1,6 +1,7 @@
 .excerpt {
   @include breakpoint($tablet) {
-    width: span(6 of 12)
+    // TODO
+    // width: span(6 of 12)
   }
   margin-bottom: $default_bottom_margin;
 
@@ -62,7 +63,8 @@ nav.excerpts {
 
 .excerpt.next {
   @include breakpoint ($tablet) {
-    @include last;
+    // TODO
+    // @include last;
   }
 }
 

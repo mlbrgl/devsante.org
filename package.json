@@ -23,7 +23,6 @@
     "js-cookie": "^2.2.0",
     "masonry-layout": "^4.2.1",
     "normalize.css": "^4.1.1",
-    "susy": "^2.2.12"
   },
   "scripts": {
     "develop": "gulp",
