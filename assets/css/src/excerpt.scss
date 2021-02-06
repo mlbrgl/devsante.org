@@ -1,7 +1,6 @@
 .excerpt {
-  @include breakpoint($tablet) {
-    // TODO
-    // width: span(6 of 12)
+  @include tablet-up {
+    width: 48%;
   }
   margin-bottom: $default_bottom_margin;
 

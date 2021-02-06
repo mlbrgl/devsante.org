@@ -33,27 +33,32 @@ $tablet_only: $tablet $laptop - 1;
 // $tablet_layout_home: ();
 // $laptop_layout_home: ();
 // $desktop_layout_home: ();
+@mixin smartphone-only {
+  @media (max-width: $tablet - 1) {
+    @content;
+  }
+}
 
-$container_padding: 30px;
+@mixin tablet-up {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
 
-main, .container{
-  // TODO
-  // @include container();
-  // @include pad($container_padding);
+$container_padding: 2rem;
+
+main,
+.container {
+  margin: 0 auto;
+  max-width: $tablet;
+  padding: 0 $container_padding;
 }
 
 .container.wide {
-  // TODO
-  // @include container(1320px);
-  // @include pad(0);
-  // @include breakpoint($tablet) {
-  //   @include pad($container_padding);
-  // }
-}
-
-main .content {
-  // TODO
-  // @include span(full);
+  max-width: 1320px;
+  @include smartphone-only {
+    padding: 0;
+  }
 }
 
 @mixin clearfix {

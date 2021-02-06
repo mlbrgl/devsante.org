@@ -1,4 +1,11 @@
 @import "node_modules/normalize.css/normalize";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 @import "grid";
 @import "colors";
 @import "common";
@@ -11,4 +18,4 @@
 
 // Pattern
 @import "../../../site/patterns/cookie-bar/cookie-bar";
-@import "../../../site/patterns/survey/survey"
+@import "../../../site/patterns/survey/survey";
