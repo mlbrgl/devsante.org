@@ -57,13 +57,9 @@
 }
 
 nav.excerpts {
-  @include clearfix;
-}
-
-.excerpt.next {
-  @include breakpoint ($tablet) {
-    // TODO
-    // @include last;
+  @include tablet-up {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
