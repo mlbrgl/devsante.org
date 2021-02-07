@@ -1,4 +1,4 @@
-@include breakpoint ($tablet) {
+@include tablet-up {
   .headroom--unpinned #search {
     transform: rotate3d(1, 0, 0, -90deg);
   }
@@ -6,39 +6,46 @@
 
 #search {
   background-color: $light_grey;
-  height: $search_box_height;
   margin-bottom: $default_bottom_margin;
-  transition: 0.5s;
-  transform-origin: top;
+  height: $search_box_height;
+  line-height: $search_box_height;
+  
+  .container {
+    @include smartphone-only {
+      padding: 0;
+    }
+  }
 
+  .content {
+    display: flex;
+  }
+  
   .i-search {
-    height: $search_box_height;
-    line-height: $search_box_height;
     padding: 0 0.9rem;
-    display: block;
-    float: left;
-    text-align: center;
+    line-height: inherit;
     background-color: $dark_grey;
     color: #ffffff;
   }
 
   .search-input {
-    // TODO
-    // @include span(50%);
+    flex: 1;
 
     input {
-      padding: 0 0 0 0.8rem;
+      padding: 0 0 0 0.9rem;
+      line-height: inherit;
       width: 100%;
-      height: $search_box_height;
-      line-height: $search_box_height;
       color: $dark_grey;
-      background-color: $light_grey;
+      background-color:inherit;
       border: none;
 
       &::-ms-clear {
         display: none;
         width:0;
         height:0;
+      }
+
+      &::-webkit-search-cancel-button {
+        display:none;
       }
       
       &:focus {
