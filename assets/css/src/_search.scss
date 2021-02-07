@@ -1,6 +1,6 @@
 @include tablet-up {
   .headroom--unpinned #search {
-    transform: rotate3d(1, 0, 0, -90deg);
+    transform: translate3d(0, -$search_box_height, 0);
   }
 }
 
@@ -9,6 +9,7 @@
   margin-bottom: $default_bottom_margin;
   height: $search_box_height;
   line-height: $search_box_height;
+  transition: 0.5s;
   
   .container {
     @include smartphone-only {

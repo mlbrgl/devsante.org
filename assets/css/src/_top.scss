@@ -16,6 +16,7 @@ $search_box_height: 2.5rem;
 $top_height_smartphone: $header_height_smartphone + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
 $top_height_tablet_desktop: $header_height_tablet_desktop + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
 
+$z_index_header_search: 1;
 
 @import "../../../site/patterns/menu-icon/menu-icon";
 @import "../../../site/patterns/menu/menu";
@@ -39,11 +40,11 @@ main {
 
 .header-search {
   position: fixed;
-  z-index: 1;
+  z-index: $z_index_header_search;
   top: 0;
   width: 100%;
-  transition: 0.4s;
-
+  transition: 0.5s;
+  
   @include breakpoint ($smartphone_only) {
     &.headroom--unpinned {
       transform: translate3d(0, - $top_height_smartphone, 0);
@@ -52,7 +53,8 @@ main {
 }
 
 header {
-
+  position: relative;
+  z-index: $z_index_header_search;
   color: #ffffff;
   background-color: $dark_blue;
   overflow: hidden; //prevent collapsing margin between child and parent
