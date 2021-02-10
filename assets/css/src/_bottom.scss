@@ -16,7 +16,7 @@ footer {
     li {
       display: inline;
       padding: 0 0.5rem;
-      @include breakpoint($tablet) {
+      @include tablet-up {
         padding: 0 1rem;
       }
       border-right: 1px solid $white;
@@ -30,13 +30,12 @@ footer {
     li.last {
       border: none;
     }
-    @include breakpoint($tablet) {
+    @include tablet-up {
       .i-envelop {
-        // TODO
-        // @include suffix($icon_pad)
+        margin-right: $icon_pad;
       }
     }
-    @include breakpoint($smartphone-only) {
+    @include smartphone-only {
       .contact {
         display: none;
       }
@@ -50,9 +49,9 @@ footer {
   padding: 1rem $container_padding;
   font-size: 0.7rem;
 
-  @include breakpoint($tablet) {
-    // TODO
-    // @include pad(0);
+  @include tablet-up {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   a {
@@ -78,12 +77,11 @@ footer {
 
     .container {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
     }
 
     .text {
-      // TODO
-      // @include gutter;
+      margin-right: 1rem;
     }
 
     .cta {
