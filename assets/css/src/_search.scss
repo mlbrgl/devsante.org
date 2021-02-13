@@ -143,15 +143,14 @@ body.search {
 
   .list {
     article {
-      @include clearfix;
       margin: 1rem 0 0;
       padding-bottom: 0;
       border-bottom: none;
     }
 
     .text {
-      // TODO
-      // @include span(11 of 12 last);
+      width: 95%;
+      margin-left: 5%;
       margin-bottom: 1rem;
     }
   }
