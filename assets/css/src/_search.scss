@@ -57,17 +57,12 @@
 
   .search-cancel {
     display:none;
-    float: right;
     color: $dark_grey;
-
-    span {
-      display: block;
-      float: left;
-      line-height: $search_box_height;
-    }
+    line-height: $search_box_height;
   }
   .i-cancel-circle{
     margin-left: $icon_pad;
+    vertical-align: text-bottom;
   }
   a:hover {
     color: $hover;
