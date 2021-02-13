@@ -33,7 +33,7 @@ body, html {
 main {
   margin-top: $top_height_smartphone + $default_bottom_margin;
 
-  @include breakpoint($tablet) {
+  @include tablet-up {
     margin-top: $top_height_tablet_desktop + $default_bottom_margin;
   }
 }
@@ -45,7 +45,7 @@ main {
   width: 100%;
   transition: 0.5s;
   
-  @include breakpoint ($smartphone_only) {
+  @include smartphone-only {
     &.headroom--unpinned {
       transform: translate3d(0, - $top_height_smartphone, 0);
     }
@@ -62,18 +62,11 @@ header {
   .logo {
     height: $header_logo_height_smartphone;
     margin-bottom: $header_logo_margin_bottom_smartphone;
+    text-align: center;
 
-    @include breakpoint (max-width 359px) {
-      margin-left: $container_padding;
-    }
-    @include breakpoint(360px) {
-      text-align: center;
-    }
-
-    @include breakpoint($tablet) {
+    @include tablet-up {
       height: $header_logo_height_tablet_desktop;
       margin-bottom: $header_logo_margin_bottom_tablet_desktop;
-      text-align: center;
     }
 
     a, img {
@@ -89,7 +82,7 @@ header {
   text-align: center;
   font-size: 0.7rem;
 
-  @include breakpoint($tablet) {
+  @include tablet-up {
     font-size: 1.1rem;
     height: $header_baseline_height_tablet_desktop;
     margin: $header_vertical_spacing * 2 0 $header_vertical_spacing * 0.5;

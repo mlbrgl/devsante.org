@@ -2,7 +2,7 @@ main.not-home{
 
   margin-top: $top_height_smartphone + $default_bottom_margin;
 
-  @include breakpoint($tablet) {
+  @include tablet-up {
     margin-top: $top_height_tablet_desktop + $default_bottom_margin;
   }
 

@@ -1,7 +1,7 @@
 .list {
   h1.page-title {
     // Overriding h1-page-title mixin for laptop and up versions
-    @include breakpoint ($tablet) {
+    @include tablet-up {
       line-height: 1.5rem;
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
