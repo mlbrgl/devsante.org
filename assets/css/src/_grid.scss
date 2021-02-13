@@ -28,11 +28,6 @@ $desktop: 1366px;
 $smartphone_only: max-width $tablet - 1;
 $tablet_only: $tablet $laptop - 1;
 
-// TODO
-// //define layouts
-// $tablet_layout_home: ();
-// $laptop_layout_home: ();
-// $desktop_layout_home: ();
 @mixin smartphone-only {
   @media (max-width: $tablet - 1) {
     @content;
@@ -58,13 +53,5 @@ main,
   max-width: 1320px;
   @include smartphone-only {
     padding: 0;
-  }
-}
-
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 }
