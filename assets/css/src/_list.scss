@@ -60,14 +60,9 @@
 
   .pagination {
     margin-bottom: $default_bottom_margin;
-    @include clearfix;
+    display: flex;
 
     a {
-      // TODO
-      // @include span(6 of 12);
-      // @include breakpoint($tablet) {
-      //   @include span(4 of 12);
-      // }
       font-size: 0.8rem;
       color: $dark_grey;
     }
@@ -77,13 +72,13 @@
     }
 
     .next {
-      // TODO
-      // @include last;
       text-align: right;
+      margin-left: auto;
       
       span.icon {
         padding-right: 0;
         padding-left: $icon_pad;
+        vertical-align: middle;
       }
     }
   }

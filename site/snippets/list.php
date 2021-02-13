@@ -14,15 +14,15 @@
 <?php if($articles->pagination()->hasPages()): ?>
 <nav class="pagination">
 
-  <?php if($articles->pagination()->hasNextPage()): ?>
-  <a class="prev" href="<?php echo $articles->pagination()->nextPageURL() ?>">
+  <?php if($articles->pagination()->hasPrevPage()): ?>
+  <a class="prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">
     <span class="i-arrow-left icon"></span>
     <span>Précédents<span>
   </a>
   <?php endif ?>
 
-  <?php if($articles->pagination()->hasPrevPage()): ?>
-  <a class="next" href="<?php echo $articles->pagination()->prevPageURL() ?>">
+  <?php if($articles->pagination()->hasNextPage()): ?>
+  <a class="next" href="<?php echo $articles->pagination()->nextPageURL() ?>">
     <span>Suivants<span>
     <span class="i-arrow-right icon"></span>
   </a>
