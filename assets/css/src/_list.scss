@@ -13,11 +13,18 @@
     padding-bottom: 0.5rem;
     border-bottom: 1px solid $dark_blue;
 
-    h1 {
-      @include breakpoint($tablet) {
-        // TODO
-        // @include span(9 of 12);
+    @include tablet-up {
+    .title-date {
+        display: flex;
+        justify-content: space-between;
+        .date {
+          margin-left: 1rem;
+          flex: 0 0 auto;
+        }
       }
+    }
+
+    h1 {
       font-weight: bold;
       font-size: 1rem;
       margin-bottom: 0.2rem;
@@ -25,22 +32,13 @@
     }
     .date {
       color: $dark_grey;
-      @include breakpoint($tablet) {
-        // TODO
-        // @include span(3 of 12 last);
-        text-align: right;
-      }
     }
     .author {
-      // TODO
-      // @include break;
       color: $dark_grey;
       font-size: 0.9rem;
       margin-bottom: 0.4rem;
     }
     .heading {
-      // TODO
-      // @include break;
       font-size: 1rem;
       margin-bottom: 0.4rem;
       a {
@@ -52,8 +50,6 @@
       }
     }
     .text {
-      // TODO
-      // @include break;
       margin-bottom: 1rem;
     }
     em {
