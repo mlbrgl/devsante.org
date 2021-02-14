@@ -9,7 +9,7 @@
   margin-bottom: $default_bottom_margin;
   height: $search_box_height;
   line-height: $search_box_height;
-  transition: 0.5s;
+  transition: 0.2s;
   
   .container {
     @include smartphone-only {
