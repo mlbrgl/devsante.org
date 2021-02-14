@@ -78,6 +78,7 @@ footer {
     .container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     .text {
@@ -87,12 +88,17 @@ footer {
     .cta {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      flex: 0 0 auto;
+      color: white;
 
-      a {
-        color: $white;
+      .ok {
+        display: block;
+        padding: 0.5rem;
+        color: inherit;
+        background-color: $cyan;
         &:hover {
-          color: $medium_grey;
+          background-color: $light_cyan;
+          color: $dark_blue;
         }
       }
 

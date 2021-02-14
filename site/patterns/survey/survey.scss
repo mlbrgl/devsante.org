@@ -1,22 +1,11 @@
 #survey {
   background-color: $dark_grey;
 
-  .text {
-    width: span(7 of 12);
-  }
-
-  .cta {
-    width: span(5 of 12);
-  }
-
-  .ok {
-    // TODO
-    // @include gutter(5);
-    background-color: $cyan;
-
-    a {
-      display: block;
-      padding: 0.5rem;
+  .later {
+    margin-right: 1rem;
+    color: inherit;
+    &:hover {
+      color: $medium_grey;
     }
   }
 }
