@@ -20,15 +20,6 @@
 <div class="gutter-sizer"></div>
 <?php foreach($latest_content as $content): ?>
   <div class="excerpt">
-    <?php if($content->intendedTemplate() === 'news'): ?>
-      <div class="subhead">Actualité</div>
-      <?php snippet('excerpt-news', array('excerpt' => $content)); ?>
-    <?php elseif($content->intendedTemplate() === 'article'): ?>
-      <div class="subhead">Article</div>
-      <?php snippet('excerpt-article', array('excerpt' => $content)); ?>
-    <?php elseif($content->intendedTemplate() === 'quiz'): ?>
-      <div class="subhead">Quiz</div>
-      <?php snippet('excerpt-quiz', array('excerpt' => $content)); ?>
-    <?php endif; ?>
+    <?php snippet('excerpt', array('excerpt' => $content)); ?>
   </div>
 <?php endforeach ?>

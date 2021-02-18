@@ -1,73 +1,85 @@
+.excerpts {
+  @include tablet-up {
+    display: flex;
+  }
+}
+
 .excerpt {
+  position: relative;
   @include tablet-up {
     width: 48%;
   }
   margin-bottom: $default_bottom_margin;
 
+  article {
+    padding: 1.5rem;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    transition: box-shadow 0.2s;
+  }
+
+  .nav {
+    a {
+      display: block;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: $dark_blue;
+    }
+  }
+
   .subhead {
     font-size: 0.9rem;
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: $default_bottom_margin;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid $dark_blue;
-    color: $dark_blue;
-    a {
-      color: $dark_blue;
-    }
-
-    //could match icon prefixed classes with the following but "icon" more understandable
-    //[class^="i-"], [class*=" i-"] {
-    .icon {
-      padding-left: 0;
-    }
+    margin-bottom: 0.5rem;
+    color: $dark_grey;
   }
 
   h1 {
-    font-weight: normal;
     margin-bottom: $home_bottom_margin;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: 1.6rem;
   }
 
   a {
-    color: $black;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-    &:hover {
+  .teaser p {
+    margin-bottom: 0;
+  }
+
+  &.next {
+    margin-left: auto;
+    
+    .nav {
+      text-align: right;
+  
+      .icon {
+        padding-right: 0;
+        padding-left: $icon_pad;
+      }
+    }
+  }
+
+  &:hover {
+    article {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+    h1 a, .nav a {
       color: $hover;
     }
   }
-
-  .article, .quiz {
-    h1 {
-      line-height: 2rem;
-      font-size: 1.8rem;
-    }
-  }
-
-  .news {
-    h1 {
-      font-size: 1.5rem;
-      font-style: italic;
-      line-height: normal;
-      color: $black;
-    }
-    .date {
-      font-style: italic;
-    }
-  }
 }
 
-nav.excerpts {
-  @include tablet-up {
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
-.excerpt.next .subhead{
-  text-align: right;
-
-  .icon {
-    padding-right: 0;
-    padding-left: $icon_pad;
-  }
-}
