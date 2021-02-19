@@ -20,7 +20,7 @@ var search = instantsearch({
 
 var searchBox = instantsearch.widgets.searchBox({
   container: '#search .search-input',
-  placeholder: 'votre recherche',
+  placeholder: 'Chercher devsante.org ...',
   showSubmit: false,
   showReset: false,
 });

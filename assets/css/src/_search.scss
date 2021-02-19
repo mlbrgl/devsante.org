@@ -10,6 +10,7 @@
   height: $search_box_height;
   line-height: $search_box_height;
   transition: 0.2s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   
   .container {
     @include smartphone-only {
@@ -35,7 +36,7 @@
       padding: 0 0 0 0.9rem;
       line-height: inherit;
       width: 100%;
-      color: $dark_grey;
+      color: $dark_blue;
       background-color:inherit;
       border: none;
 
