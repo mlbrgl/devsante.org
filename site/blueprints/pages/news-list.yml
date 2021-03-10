@@ -1,9 +1,7 @@
-<?php if(!defined('KIRBY')) exit ?>
-
-title: Articles
+title: Actualités
 files: false
 pages:
-  template: article
+  template: news
   sort: flip
   num:
     mode: date
