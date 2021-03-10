@@ -3,8 +3,8 @@
 /node_modules
 
 /content
+/kirby
 /site/accounts
 /site/cache
 /site/config/local.config.php
-/scripts
-/thumbs
+/vendor
