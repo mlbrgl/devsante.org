@@ -1,13 +1,11 @@
 title: Articles
-files: false
-pages:
-  template: article
-  sort: flip
-  num:
-    mode: date
-    field: datetime
-    format: %Y%m%d%H%I
+preset: pages
 options:
   status: false
-  template: false
   url: false
+  delete: false
+drafts:
+  template: article
+unlisted: true
+listed:
+  sortBy: datetime desc
