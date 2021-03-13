@@ -17,7 +17,7 @@
         </div>
 
         <div id="copyright">
-          <?php echo $site->copyright()->kirbytext() ?>
+          <?php echo "&copy; {$site->title()->html()} " . date("Y") ?>
         </div>
 
       </div>

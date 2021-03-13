@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-  <meta name="description" content="<?php echo $site->description()->html() ?>">
-  <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png?v=694NrnM4Ex">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v=694NrnM4Ex">
