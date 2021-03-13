@@ -30,7 +30,7 @@ var min = {
 }
 
 gulp.task('connect-sync', function() {
-  connect.server({}, function (){
+  connect.server({router: 'kirby/router.php'}, function (){
     browserSync.init({
       proxy: '127.0.0.1:8000'
     });
