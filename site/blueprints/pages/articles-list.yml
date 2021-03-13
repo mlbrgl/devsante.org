@@ -1,11 +1,19 @@
 title: Articles
-preset: pages
 options:
-  status: false
-  url: false
+  changeStatus: false
+  changeSlug: false
   delete: false
-drafts:
-  template: article
-unlisted: true
-listed:
-  sortBy: datetime desc
+sections:
+  drafts:
+    extends: sections/list
+    headline: Brouillons
+    status: draft
+    template: article
+  unlisted:
+    extends: sections/list
+    headline: Non listés
+    status: unlisted
+  published:
+    extends: sections/list
+    headline: Publiés
+    status: listed

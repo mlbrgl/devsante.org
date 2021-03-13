@@ -1,3 +1,5 @@
 title: Site
 sections:
-  pages: true
+  pages: 
+    image: false
+    create: default

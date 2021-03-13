@@ -1,13 +1,9 @@
 title: Actualités
-files: false
-pages:
-  template: news
-  sort: flip
-  num:
-    mode: date
-    field: datetime
-    format: %Y%m%d%H%I
+extends: pages/articles-list
 options:
-  status: false
-  template: false
-  url: false
+  changeStatus: false
+  changeSlug: false
+  delete: false
+sections:
+  drafts:
+    template: news
