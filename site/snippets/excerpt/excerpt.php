@@ -20,7 +20,7 @@ if(isset($excerpt)):
       <?php if($excerpt->author()->isNotEmpty()) : ?>
         <div class="author"><?php echo html($excerpt->author()) ?></div>
       <?php endif; ?>
-      <div class="date"><time datetime="<?php echo $excerpt->datetime() ?>"> <?php echo html($excerpt->date('%d %B %Y','datetime')) ?> </time></div>
+      <div class="date"><time datetime="<?php echo $excerpt->datetime() ?>"> <?php echo html($excerpt->datetime()->toDate('%d %B %Y')) ?> </time></div>
     </div>
 
     <div class="teaser">
