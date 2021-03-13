@@ -26,8 +26,8 @@
     <div class="back-to-top"><a href="#"><span class="icon i-back-to-top"></span></a></div>
 
     <div id="notifications">
-      <?php /* pattern("survey") */ ?>
-      <?php pattern("cookie-bar") ?>
+      <?php /* snippet("survey/survey") */ ?>
+      <?php snippet("cookie-bar/cookie-bar") ?>
     </div>
 
   </footer>

@@ -18,10 +18,6 @@ $top_height_tablet_desktop: $header_height_tablet_desktop + $search_box_height +
 
 $z_index_header_search: 1;
 
-@import "../../../site/patterns/menu-icon/menu-icon";
-@import "../../../site/patterns/menu/menu";
-@import "search";
-
 body, html {
   .navigation-open {
     overflow: hidden;

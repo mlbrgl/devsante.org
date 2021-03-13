@@ -8,7 +8,7 @@
   <?php if($next = $page->prevVisible()) : ?>
     <div class="excerpt next">
       <div class="nav"><a href="<?php echo $next->url(); ?>"><?php echo $label_next ?><span class="icon i-arrow-right"></span></a></div>
-      <?php snippet('excerpt', array('excerpt' => $next, 'hide_subhead' => true)); ?>
+      <?php snippet('excerpt/excerpt', array('excerpt' => $next, 'hide_subhead' => true)); ?>
     </div>
   <?php endif; ?>
 </nav>

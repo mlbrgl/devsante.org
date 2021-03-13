@@ -1,4 +1,4 @@
-<?php $articles = $page->children()->visible()->flip()->paginate(10) ?>
+<?php $articles = $page->children()->listed()->flip()->paginate(10) ?>
 
 <?php foreach($articles as $article): ?>
   <article>

@@ -1,4 +1,4 @@
-<?php snippet('top') ?>
+<?php snippet('top/top') ?>
 
   <main class="not-home">
 
@@ -12,4 +12,4 @@
 
   </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

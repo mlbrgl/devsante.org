@@ -41,9 +41,9 @@
 
     <header class="header cf">
 
-      <?php pattern('menu'); ?>
+      <?php snippet('menu/menu'); ?>
 
-      <?php pattern('menu-icon'); ?>
+      <?php snippet('menu-icon/menu-icon'); ?>
 
       <div id="baseline">
         Formation permanente
@@ -57,6 +57,6 @@
 
     </header>
 
-    <?php snippet('search'); ?>
+    <?php snippet('search/search'); ?>
 
   </div>

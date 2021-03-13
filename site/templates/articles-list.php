@@ -1,4 +1,4 @@
-<?php snippet('top') ?>
+<?php snippet('top/top') ?>
   <main class="not-home list">
     
     <div class="content">
@@ -11,4 +11,4 @@
     
   </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

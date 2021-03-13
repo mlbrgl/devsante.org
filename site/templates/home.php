@@ -1,4 +1,4 @@
-<?php snippet('top', array('context' => 'home')) ?>
+<?php snippet('top/top', array('context' => 'home')) ?>
 
 <main class="home">
 
@@ -38,4 +38,4 @@
 
 </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

@@ -36,7 +36,7 @@ gulp.task('connect-sync', function() {
     });
   });
 
-  gulp.watch(["assets/css/src/*.scss",'site/patterns/**/*.scss'], gulp.series('css'));
+  gulp.watch(["assets/css/src/*.scss",'site/snippets/**/*.scss'], gulp.series('css'));
   gulp.watch('assets/js/src/**/*.js', gulp.series('js'));
   gulp.watch(src.php).on('change', browserSync.reload);
 

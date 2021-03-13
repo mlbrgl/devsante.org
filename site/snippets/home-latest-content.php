@@ -20,6 +20,6 @@
 <div class="gutter-sizer"></div>
 <?php foreach($latest_content as $content): ?>
   <div class="excerpt">
-    <?php snippet('excerpt', array('excerpt' => $content)); ?>
+    <?php snippet('excerpt/excerpt', array('excerpt' => $content)); ?>
   </div>
 <?php endforeach ?>
