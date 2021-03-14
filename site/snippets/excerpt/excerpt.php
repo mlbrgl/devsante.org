@@ -1,7 +1,7 @@
 <?php
 if(isset($excerpt)):
   $excerpt_text = $excerpt->teaser()->isNotEmpty() ? $excerpt->teaser() : $excerpt->text();
-  $type = $excerpt->intendedTemplate();
+  $type = $excerpt->intendedTemplate()->name();
   $subhead = $type === "article" ? "Article" : ($type === "news" ? "Actualité" : "Quiz")
 ?>
 
