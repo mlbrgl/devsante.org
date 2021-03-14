@@ -69,7 +69,6 @@ $config = [
 ];
     
 // Include a local config file if it exists
-$local_config = __DIR__ . '/local.config.php';
-if (file_exists($local_config)) {
-  include $local_config;
-}
+$local_config = F::load(__DIR__ . '/local.config.php', []);
+
+return array_merge($config, $local_config);
