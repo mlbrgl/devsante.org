@@ -5,7 +5,7 @@
       
       <h1 class="page-title"><?php echo $page->title()->html() ?></h1>
 
-      <?php snippet('list') ?>
+      <?php snippet('list/list') ?>
 
     </div>
     
