@@ -47,14 +47,6 @@ c::set('kirby-algolia', array(
   )
 ));
 
-//Latest articles
-c::set('latest-content', array(
-  'search_phrase' => "drepanocy",
-  'length' => 1,
-  'blueprint' => 'article',
-  'cache_filename' => 'latest_content.txt'
-));
-
 // Server push headers (filename are fingerprinted during deployment)
 if(strpos($_SERVER['REQUEST_URI'],"/panel") !== 0) {
   header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
