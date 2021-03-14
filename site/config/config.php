@@ -56,7 +56,7 @@ c::set('latest-content', array(
 ));
 
 // Server push headers (filename are fingerprinted during deployment)
-if(!class_exists('Panel')){
+if(strpos($_SERVER['REQUEST_URI'],"/panel") !== 0) {
   header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
 }
 
