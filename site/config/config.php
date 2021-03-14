@@ -60,6 +60,14 @@ if(!class_exists('Panel')){
   header('Link: </assets/css/app.css>; rel=preload; as=style, </assets/js/app.js>; rel=preload; as=script');
 }
 
+$config = [
+  'cache' => [
+    'pages' => [
+      'active' => true,
+    ]
+  ]    
+];
+    
 // Include a local config file if it exists
 $local_config = __DIR__ . '/local.config.php';
 if (file_exists($local_config)) {
