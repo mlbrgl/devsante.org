@@ -17,5 +17,6 @@
 /package.json
 /yarn.lock
 /gulpfile.js
+/php.ini*
 
 /site/plugins/latest-content/latest_content.txt

@@ -16,5 +16,6 @@
 /package.json
 /yarn.lock
 /gulpfile.js
+/php.ini*
 
 /readme.md

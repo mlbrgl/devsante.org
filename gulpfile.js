@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect-php');
 var md5 = require("gulp-md5-plus");
 var browserSync = require('browser-sync').create();
+const existsSync = require('fs').existsSync;
 
 var src = {
   css: ['assets/css/src/app.scss', 'assets/fonts/devsante/style.css'],
@@ -30,7 +31,10 @@ var min = {
 }
 
 gulp.task('connect-sync', function() {
-  connect.server({router: 'kirby/router.php'}, function (){
+  const config = {router: 'kirby/router.php'}
+  // php.ini used for xdebug configuration
+  if(existsSync('./php.ini')) config.ini = './php.ini'
+  connect.server(config, function (){
     browserSync.init({
       proxy: '127.0.0.1:8000'
     });
