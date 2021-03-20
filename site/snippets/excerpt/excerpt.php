@@ -6,7 +6,7 @@ if(isset($excerpt)):
 ?>
 
   <article>
-    <?php if(!$hide_subhead): ?>
+    <?php if(!isset($hide_subhead) || !$hide_subhead): ?>
       <div class="subhead"><?php echo $subhead ?></div>
     <?php endif; ?>
     
