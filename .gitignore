@@ -8,6 +8,8 @@
 /site/accounts
 /site/cache
 /site/config/local.config.php
-/vendor/assets/css/app.css
 /assets/css/app.css
 /assets/js/app.js
+/vendor
+/media
+/site/sessions
