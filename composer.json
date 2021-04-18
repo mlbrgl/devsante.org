@@ -2,6 +2,9 @@
   "require": {
     "getkirby/cms": "^3.0"
   },
+  "scripts": {
+    "batch-index": "php -c php.ini site/plugins/kirby-algolia/batch-index.php"
+  },
   "config": {
     "optimize-autoloader": true
   }
