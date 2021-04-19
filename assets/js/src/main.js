@@ -19,8 +19,8 @@ var search = instantsearch({
 });
 
 var searchBox = instantsearch.widgets.searchBox({
-  container: '#search .search-input',
-  placeholder: 'Chercher devsante.org ...',
+  container: "#search .search-input",
+  placeholder: "Chercher sur devsante.org ...",
   showSubmit: false,
   showReset: false,
 });
