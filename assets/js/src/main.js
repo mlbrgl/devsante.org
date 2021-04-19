@@ -44,25 +44,26 @@ var hits = instantsearch.widgets.hits({
     })
   },
   templates: {
-    item: '<article>' +
-            '{{#title}}' + 
-              '<h1><a href="/{{_id}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h1>' +
-            '{{/title}}' + 
-            '{{#datetime}}' +
-              '<div class="date">{{datetime}}</div>' +
-            '{{/datetime}}' +
-            '{{#author}}' +
-              '<div class="author">{{author}}</div>' +
-            '{{/author}}' +
-            '{{#heading}}' +
-              '<div class="heading"><a href="/{{_id}}">{{#helpers.highlight}}{ "attribute": "heading" }{{/helpers.highlight}}</a></div>' +
-            '{{/heading}}'+
-            '{{#_content}}' +
-              '<div class="text"><a href="/{{_id}}">[...] {{#helpers.snippet}}{ "attribute": "_content" }{{/helpers.snippet}} [...] </a></div>' +
-            '{{/_content}}' +
-          '</article>',
-    empty: 'Votre recherche n\' a retourné aucun résultat'
-  }
+    item:
+      "<article>" +
+      "{{#title}}" +
+      '<h1><a href="/{{page_id}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a></h1>' +
+      "{{/title}}" +
+      "{{#datetime}}" +
+      '<div class="date">{{datetime}}</div>' +
+      "{{/datetime}}" +
+      "{{#author}}" +
+      '<div class="author">{{author}}</div>' +
+      "{{/author}}" +
+      "{{#heading}}" +
+      '<div class="heading"><a href="/{{page_id}}">{{#helpers.highlight}}{ "attribute": "heading" }{{/helpers.highlight}}</a></div>' +
+      "{{/heading}}" +
+      "{{#content}}" +
+      '<div class="text"><a href="/{{page_id}}">{{#helpers.snippet}}{ "attribute": "content" }{{/helpers.snippet}}</a></div>' +
+      "{{/content}}" +
+      "</article>",
+    empty: "Votre recherche n' a retourné aucun résultat",
+  },
 });
 
 // Pagination widget
