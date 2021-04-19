@@ -1,22 +1,16 @@
-/.htaccess
-/.htpasswd
-
 .DS_Store
-/devsante-kirby.sublime*
 /npm-debug.log
+/.nvmrc
+/.vscode
+/php.ini*
+/gulpfile.js
+/.git*
+/.rsyncexclude*
 /node_modules
 
 /site/accounts
 /site/cache
-/site/config/local.config.php
-/scripts
-/thumbs
+/media
 
-/.git*
-/.rsyncexclude*
-/package.json
-/yarn.lock
-/gulpfile.js
-/php.ini*
-
-/site/plugins/latest-content/latest_content.txt
+/.htaccess
+/.htpasswd
