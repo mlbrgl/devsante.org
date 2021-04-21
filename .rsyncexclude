@@ -8,9 +8,8 @@
 /.rsyncexclude*
 /node_modules
 
+/site/config/local.config.php
 /site/accounts
-/site/cache
 /media
 
-/site/config/local.config.php
 /content
