@@ -25,6 +25,7 @@ $config = [
     ],
   ],
   "mlbrgl.kirby-algolia" => [
+    "active" => true,
     "fields" => [
       "article" => [
         "meta" => ["title", "datetime", "author"],
