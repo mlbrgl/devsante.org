@@ -18,7 +18,7 @@ $config = [
     "handler" => "strftime",
   ],
   "timezone" => "Europe/Paris",
-  "locale" => "fr_FR",
+  "locale" => "fr_FR.utf8",
   "cache" => [
     "pages" => [
       "active" => true,
