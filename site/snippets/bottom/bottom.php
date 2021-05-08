@@ -11,13 +11,16 @@
       </div>
 
       <div id="footer-bottom">
-
+      
         <div id="honcode">
           <p><a href="https://www.healthonnet.org/HONcode/Conduct_f.html?HONConduct228684" onclick="window.open(this.href); return false;" > <img src="https://www.honcode.ch/HONcode/Seal/French/HONConduct228684_s2.gif" style="border:0px; width: 69px; height: 31px; float: left; margin: 2px;" title="Ce site respecte les principes de la charte HONcode de HON" alt="Ce site respecte les principes de la charte HONcode de HON" /></a> Ce site respecte les <a href="http://www.healthonnet.org/HONcode/Conduct_f.html" onclick="window.open(this.href); return false;"> principes de la charte HONcode</a>. <br /><a href="https://www.healthonnet.org/HONcode/Conduct_f.html?HONConduct228684" onclick="window.open(this.href); return false;">V&eacute;rifiez ici.</a> </p>
         </div>
 
-        <div id="copyright">
-          <?php echo "&copy; {$site->title()->html()} " . date("Y") ?>
+        <div class="license">
+          <div>Fait avec <a href="https://getkirby.com" target="_blank" rel="noopener">Kirby</a></div>
+            <div id="copyright">
+            <?php echo "&copy; {$site->title()->html()} " . date("Y"); ?>
+          </div>
         </div>
 
       </div>
@@ -26,8 +29,10 @@
     <div class="back-to-top"><a href="#"><span class="icon i-back-to-top"></span></a></div>
 
     <div id="notifications">
-      <?php /* snippet("survey/survey") */ ?>
-      <?php snippet("cookie-bar/cookie-bar") ?>
+      <?php
+/* snippet("survey/survey") */
+?>
+      <?php snippet("cookie-bar/cookie-bar"); ?>
     </div>
 
   </footer>
@@ -35,9 +40,18 @@
 
   <script type="text/javascript">
     <?php
-      echo 'algolia_appId = "' . option('mlbrgl.kirby-algolia.algolia.application_id') . '"' . PHP_EOL;
-      echo 'algolia_apiKey = "' . option('mlbrgl.kirby-algolia.algolia.api_key_search_only') . '"' . PHP_EOL;
-      echo 'algolia_indexName = "' . option('mlbrgl.kirby-algolia.algolia.index') . '"' . PHP_EOL;
+    echo 'algolia_appId = "' .
+      option("mlbrgl.kirby-algolia.algolia.application_id") .
+      '"' .
+      PHP_EOL;
+    echo 'algolia_apiKey = "' .
+      option("mlbrgl.kirby-algolia.algolia.api_key_search_only") .
+      '"' .
+      PHP_EOL;
+    echo 'algolia_indexName = "' .
+      option("mlbrgl.kirby-algolia.algolia.index") .
+      '"' .
+      PHP_EOL;
     ?>
   </script>
 
@@ -45,8 +59,8 @@
   <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
 
   <?php
-    echo js('//cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js');
-    echo js('assets/js/app.js');
+  echo js("//cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js");
+  echo js("assets/js/app.js");
   ?>
 
 </body>
