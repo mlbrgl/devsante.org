@@ -9,6 +9,7 @@
 /node_modules
 
 /site/config/local.config.php
+/site/config/.license
 /site/accounts
 /media
 
