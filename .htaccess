@@ -20,7 +20,8 @@ RewriteEngine on
 # In some environments it's necessary to
 # set the RewriteBase to:
 #
-# RewriteBase /
+# MB 10/06/2021 - Required on live environment
+RewriteBase /
 
 # MB 15/11/2016 - Rewrite www to non wwww
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
