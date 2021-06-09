@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect-php');
 var md5 = require("gulp-md5-plus");
 var browserSync = require('browser-sync').create();
+const existsSync = require('fs').existsSync;
 
 var src = {
   css: ['assets/css/src/app.scss', 'assets/fonts/devsante/style.css'],
@@ -29,35 +30,37 @@ var min = {
   js: 'assets/js/app.js'
 }
 
-gulp.task('connect-sync', function() {
-  connect.server({}, function (){
+function connectSync() {
+  const config = {router: 'kirby/router.php'}
+  // php.ini used for xdebug configuration
+  if(existsSync('./php.ini')) config.ini = './php.ini'
+  connect.server(config, function (){
     browserSync.init({
       proxy: '127.0.0.1:8000'
     });
   });
 
-  gulp.watch(["assets/css/src/*.scss",'site/patterns/**/*.scss'], gulp.series('css'));
-  gulp.watch('assets/js/src/**/*.js', gulp.series('js'));
+  gulp.watch(["assets/css/src/*.scss",'site/snippets/**/*.scss'], {ignoreInitial: false}, css);
+  gulp.watch('assets/js/src/**/*.js', {ignoreInitial: false}, js);
   gulp.watch(src.php).on('change', browserSync.reload);
+};
 
-});
-
-gulp.task('css', function () {
+function css() {
   return gulp.src(src.css)
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('app.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest(dist.css))
     .pipe(browserSync.stream());
-});
+};
 
-gulp.task('js', function () {
+function js() {
   return gulp.src(src.js)
     .pipe(gulpif('!**/*.min.js', uglify())) // only uglify() files that have not been minified yet.
     .pipe(concat('app.js'))
     .pipe(gulp.dest(dist.js))
     .pipe(browserSync.stream());
-});
+};
 
 gulp.task('cachebust-css', function(){
   return gulp.src(min.css)
@@ -73,5 +76,5 @@ gulp.task('cachebust-js', function(){
 });
 
 
-gulp.task("default", gulp.series("css", "js", "connect-sync"));
+exports.default = connectSync;
 gulp.task("prod", gulp.series("cachebust-css", "cachebust-js"));

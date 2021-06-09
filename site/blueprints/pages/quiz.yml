@@ -1,0 +1,9 @@
+title: Quiz
+extends: pages/article
+columns:
+  main:
+    fields:
+      author:
+        required: false
+      teaser:
+        required: false

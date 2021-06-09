@@ -1,0 +1,4 @@
+type: pages
+sortBy: datetime desc
+image: false
+info: "{{ page.datetime.toDate('%d %B %Y') }}"

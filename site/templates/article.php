@@ -1,4 +1,4 @@
-<?php snippet('top') ?>
+<?php snippet('top/top') ?>
 
   <main class="not-home">
 
@@ -8,7 +8,7 @@
 
       <div class="meta">
         <div class="author"><?php echo $page->author() ?></div>
-        <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->date('%d %B %Y','datetime') ?></time></div>
+        <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->datetime()->toDate('%d %B %Y') ?></time></div>
       </div>
 
       <div class="teaser">
@@ -25,4 +25,4 @@
 
   </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

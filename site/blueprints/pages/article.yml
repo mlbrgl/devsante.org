@@ -1,0 +1,36 @@
+title: Article
+pages: false
+num: '{{ page.datetime.toDate("%Y%m%d%H%M") }}'
+files:
+  sortable: true
+columns:
+  main: 
+    width: 2/3
+    fields:
+      author:
+        label: Auteur
+        type: text
+        width: 1/2
+        required: true
+      datetime:
+        label: Mis à jour le
+        type: date
+        display: DD/MM/YYYY
+        time: true
+        required: true
+        width: 1/2
+      teaser:
+        label: Accroche
+        type: textarea
+        required: true
+      text:
+        label: Texte
+        type: textarea
+        required: true
+  sidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      files:
+        headline:
+          label: Fichiers

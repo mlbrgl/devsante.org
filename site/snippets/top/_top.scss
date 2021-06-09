@@ -1,0 +1,90 @@
+$header_vertical_spacing: 1rem;
+
+$header_baseline_height_smartphone: 0.7rem;
+$header_baseline_height_tablet_desktop: 1.3rem;
+
+$header_logo_height_smartphone: 1.2rem;
+$header_logo_margin_bottom_smartphone: 1.2rem;
+$header_logo_height_tablet_desktop: 2.8rem;
+$header_logo_margin_bottom_tablet_desktop: 2.5rem;
+
+$header_height_smartphone: $header_baseline_height_smartphone + 7/4 * $header_vertical_spacing + $header_logo_height_smartphone + $header_logo_margin_bottom_smartphone; //cf. vertical margins for .baseline
+$header_height_tablet_desktop: $header_baseline_height_tablet_desktop + 2.5 * $header_vertical_spacing + $header_logo_height_tablet_desktop  + $header_logo_margin_bottom_tablet_desktop; //cf. vertical margins for .baseline
+
+$search_box_height: 2.5rem;
+
+$top_height_smartphone: $header_height_smartphone + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
+$top_height_tablet_desktop: $header_height_tablet_desktop + $search_box_height + 0.0625rem; // 0.0625 = 1 px @ 1rem = 16px, added because of rounding issues
+
+$z_index_header_search: 1;
+
+body, html {
+  .navigation-open {
+    overflow: hidden;
+    // Fix iOS
+    // position: fixed; // causes page to scroll back up
+  }
+}
+
+main {
+  margin-top: $top_height_smartphone + $default_bottom_margin;
+
+  @include tablet-up {
+    margin-top: $top_height_tablet_desktop + $default_bottom_margin;
+  }
+}
+
+.header-search {
+  position: fixed;
+  z-index: $z_index_header_search;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+  
+  @include smartphone-only {
+    &.headroom--unpinned {
+      transform: translate3d(0, - $top_height_smartphone, 0);
+    }
+  }
+}
+
+header {
+  position: relative;
+  z-index: $z_index_header_search;
+  color: #ffffff;
+  background-color: $dark_blue;
+  overflow: hidden; //prevent collapsing margin between child and parent
+
+  .logo {
+    height: $header_logo_height_smartphone;
+    margin-bottom: $header_logo_margin_bottom_smartphone;
+    text-align: center;
+
+    @include tablet-up {
+      height: $header_logo_height_tablet_desktop;
+      margin-bottom: $header_logo_margin_bottom_tablet_desktop;
+    }
+
+    a, img {
+      height: inherit;
+    }
+  }
+}
+
+#baseline {
+  height: $header_baseline_height_smartphone;
+  margin: $header_vertical_spacing auto $header_vertical_spacing * 3/4;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.7rem;
+
+  @include tablet-up {
+    font-size: 1.1rem;
+    height: $header_baseline_height_tablet_desktop;
+    margin: $header_vertical_spacing * 2 0 $header_vertical_spacing * 0.5;
+
+    br {
+      display: none;
+    }
+  }
+}

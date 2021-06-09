@@ -1,10 +1,15 @@
 .DS_Store
 /npm-debug.log
 /node_modules
+/php.ini
 
 /content
+/kirby
 /site/accounts
 /site/cache
 /site/config/local.config.php
-/scripts
-/thumbs
+/assets/css/app.css
+/assets/js/app.js
+/vendor
+/media
+/site/sessions

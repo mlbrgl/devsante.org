@@ -1,4 +1,4 @@
-<?php snippet('top') ?>
+<?php snippet('top/top') ?>
 
   <main class="not-home">
 
@@ -10,7 +10,7 @@
         <?php if($page->author()->isNotEmpty()): ?>
           <div class="author"><?php echo $page->author() ?></div>
         <?php endif; ?>
-        <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->date('%d %B %Y','datetime') ?></time></div>
+        <div class="date"><time datetime="<?php echo $page->datetime() ?>"><?php echo $page->datetime()->toDate('%d %B %Y') ?></time></div>
       </div>
 
       <?php if($page->teaser()->isNotEmpty()): ?>
@@ -29,4 +29,4 @@
 
   </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

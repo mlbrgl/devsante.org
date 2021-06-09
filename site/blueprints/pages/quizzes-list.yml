@@ -1,0 +1,9 @@
+title: Quizzes
+extends: pages/articles-list
+options:
+  changeStatus: false
+  changeSlug: false
+  delete: false
+sections:
+  drafts:
+    template: quiz

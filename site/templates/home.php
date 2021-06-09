@@ -1,11 +1,16 @@
-<?php snippet('top', array('context' => 'home')) ?>
+<?php snippet('top/top', array('context' => 'home')) ?>
 
 <main class="home">
 
   <div class="content">
 
     <section class="latest-content">
-      <?php snippet('home-latest-content'); ?>
+      <div class="gutter-sizer"></div>
+        <?php foreach($latest_content as $content): ?>
+          <div class="excerpt">
+            <?php snippet('excerpt/excerpt', array('excerpt' => $content)); ?>
+          </div>
+        <?php endforeach ?>
     </section>
 
 
@@ -38,4 +43,4 @@
 
 </main>
 
-<?php snippet('bottom') ?>
+<?php snippet('bottom/bottom') ?>

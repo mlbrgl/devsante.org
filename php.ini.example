@@ -1,0 +1,6 @@
+; check extensions path with "pecl config-get ext_dir"
+zend_extension="/usr/local/lib/php/pecl/20200930/xdebug.so"
+xdebug.mode = debug
+xdebug.start_with_request = yes
+xdebug.var_display_max_depth = 4
+; xdebug.client_port = 9003

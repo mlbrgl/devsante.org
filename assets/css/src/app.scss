@@ -9,13 +9,16 @@
 @import "grid";
 @import "colors";
 @import "common";
-@import "top";
+@import "../../../site/snippets/top/top";
+@import "../../../site/snippets/search/search";
 @import "home";
 @import "content";
-@import "excerpt";
-@import "list";
-@import "bottom";
 
-// Pattern
-@import "../../../site/patterns/cookie-bar/cookie-bar";
-// @import "../../../site/patterns/survey/survey";
+// Snippets
+@import "../../../site/snippets/excerpt/excerpt";
+@import "../../../site/snippets/list/list";
+@import "../../../site/snippets/bottom/bottom";
+@import "../../../site/snippets/menu-icon/menu-icon";
+@import "../../../site/snippets/menu/menu";
+@import "../../../site/snippets/cookie-bar/cookie-bar";
+// @import "../../../site/snippets/survey/survey";
